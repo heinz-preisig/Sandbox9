@@ -1,0 +1,255 @@
+{
+    "macroscopic.node.mass|constant|infinity.MaterialSource": {
+        "index_set": "N_cons",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_66": []
+            }
+        ],
+        "init_vars": [
+            "V_66"
+        ],
+        "input_vars": [],
+        "output_vars": [
+            "V_66"
+        ]
+    },
+    "macroscopic.node.mass|dynamic|lumped.MassControlVolume": {
+        "index_set": "N_dyna",
+        "integrators": {
+            "V_16": "E_86"
+        },
+        "var_eq_forest": [
+            {
+                "E_86": [
+                    "V_5",
+                    "V_101",
+                    "V_6",
+                    "V_7",
+                    "V_110"
+                ],
+                "V_5": [],
+                "V_101": [
+                    "E_76"
+                ],
+                "V_6": [],
+                "V_7": [],
+                "V_110": [],
+                "E_76": [
+                    "V_164",
+                    "V_100",
+                    "V_94"
+                ],
+                "V_164": [],
+                "V_100": [],
+                "V_94": []
+            }
+        ],
+        "init_vars": [
+            "V_6",
+            "V_164",
+            "V_94",
+            "V_7",
+            "V_110",
+            "V_100"
+        ],
+        "input_vars": [
+            "V_5"
+        ],
+        "output_vars": [
+            "V_16"
+        ]
+    },
+    "macroscopic.arc.mass|diffusion|lumped.MassDiffusion": {
+        "index_set": "A_diff",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_93": [
+                    "E_68"
+                ],
+                "E_68": [
+                    "V_71",
+                    "V_91",
+                    "V_19",
+                    "V_86"
+                ],
+                "V_71": [],
+                "V_91": [],
+                "V_19": [
+                    "E_136"
+                ],
+                "V_86": [],
+                "E_136": [
+                    "V_169",
+                    "V_166",
+                    "V_18"
+                ],
+                "V_169": [
+                    "E_135"
+                ],
+                "V_166": [
+                    "E_133"
+                ],
+                "V_18": [],
+                "E_135": [
+                    "V_168",
+                    "V_16"
+                ],
+                "V_168": [
+                    "E_134"
+                ],
+                "V_16": [],
+                "E_133": [
+                    "V_165",
+                    "V_24"
+                ],
+                "V_165": [],
+                "V_24": [],
+                "E_134": [
+                    "V_127"
+                ],
+                "V_127": []
+            }
+        ],
+        "init_vars": [
+            "V_71",
+            "V_18",
+            "V_127",
+            "V_24",
+            "V_165"
+        ],
+        "input_vars": [
+            "V_91",
+            "V_86",
+            "V_16"
+        ],
+        "output_vars": [
+            "V_93"
+        ]
+    },
+    "macroscopic.node.charge|constant|infinity.PowerSource": {
+        "index_set": "N_cons",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_27": []
+            }
+        ],
+        "init_vars": [
+            "V_27"
+        ],
+        "input_vars": [],
+        "output_vars": [
+            "V_27"
+        ]
+    },
+    "macroscopic.node.mass|event|lumped.SwitchMassFlow": {
+        "index_set": "N_even",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_173": [
+                    "E_141"
+                ],
+                "E_141": [
+                    "V_99",
+                    "V_172"
+                ],
+                "V_99": [],
+                "V_172": [
+                    "E_139"
+                ],
+                "E_139": [
+                    "V_171"
+                ],
+                "V_171": [
+                    "E_138"
+                ],
+                "E_138": [
+                    "V_6",
+                    "V_4",
+                    "V_2"
+                ],
+                "V_6": [],
+                "V_4": [],
+                "V_2": []
+            },
+            {
+                "V_101": [
+                    "E_142"
+                ],
+                "E_142": [
+                    "V_70"
+                ],
+                "V_70": []
+            }
+        ],
+        "init_vars": [
+            "V_6",
+            "V_99",
+            "V_4",
+            "V_2",
+            "V_101"
+        ],
+        "input_vars": [
+            "V_171",
+            "V_70"
+        ],
+        "output_vars": [
+            "V_173",
+            "V_101"
+        ]
+    },
+    "macroscopic.arc.mass|convection|lumped.ConvectiveFlowControlled": {
+        "index_set": "A_conv",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_173": [
+                    "E_141"
+                ],
+                "E_141": [
+                    "V_172",
+                    "V_99"
+                ],
+                "V_172": [],
+                "V_99": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_172",
+            "V_99"
+        ],
+        "output_vars": [
+            "V_173"
+        ]
+    },
+    "macroscopic.arc.mass|convection|lumped.ConvectiveFlow": {
+        "index_set": "A_conv",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_99": [
+                    "E_74"
+                ],
+                "E_74": [
+                    "V_92",
+                    "V_98"
+                ],
+                "V_92": [],
+                "V_98": []
+            }
+        ],
+        "init_vars": [
+            "V_92",
+            "V_98"
+        ],
+        "input_vars": [],
+        "output_vars": [
+            "V_99"
+        ]
+    }
+}

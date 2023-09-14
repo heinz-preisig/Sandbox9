@@ -1,0 +1,148 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+
+\newenvironment{eq}{\begin{minipage}{16cm}$}{$\end{minipage} }
+%\newenvironment{eq}{$}{$}
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section*{Equation assignment sequence for variable ${\hat{n}^{d}}$}
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{1cm}|p{1cm}|p{16cm}|p{4cm}|}\hline
+  no &var &equ &quations &token\\\hline\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+59 &14 &- &\begin{eq}{S}{_{N}} :: \text{port variable}\end{eq} & \\
+58 &147 &- &\begin{eq}{P}{_{{N K}}} :: \text{port variable}\end{eq} & \\
+57 &40 &- &\begin{eq}{\lambda}{_{S}} :: \text{port variable}\end{eq} & \\
+56 &24 &- &\begin{eq}{{A^v}}{_{}} :: \text{port variable}\end{eq} & \\
+55 &155 &- &\begin{eq}{B}{_{}} :: \text{port variable}\end{eq} & \\
+54 &8 &- &\begin{eq}{F}{_{N, A}} :: \text{port variable}\end{eq} & \\
+53 &38 &- &\begin{eq}{{K^o}}{_{K}} :: \text{port variable}\end{eq} & \\
+52 &33 &- &\begin{eq}{P}{_{K, {N K}}} :: \text{port variable}\end{eq} & \\
+51 &158 &- &\begin{eq}{N}{_{K, {K S}}} :: \text{port variable}\end{eq} & \\
+50 &90 &- &\begin{eq}{D}{_{N, A}} :: \text{port variable}\end{eq} & \\
+49 &36 &- &\begin{eq}{P}{_{{N S}, {K S}}} :: \text{port variable}\end{eq} & \\
+48 &35 &- &\begin{eq}{P}{_{N, {N K}}} :: \text{port variable}\end{eq} & \\
+47 &70 &- &\begin{eq}{F}{_{{N S}, {A S}}} :: \text{port variable}\end{eq} & \\
+46 &10 &- &\begin{eq}{{r_x}}{_{N}} :: \text{port variable}\end{eq} & \\
+45 &1 &- &\begin{eq}{\#}{_{}} :: \text{port variable}\end{eq} & \\
+44 &15 &- &\begin{eq}{V}{_{N}} :: \text{port variable}\end{eq} & \\
+43 &5 &- &\begin{eq}{t}{_{}} :: \text{port variable}\end{eq} & \\
+42 &12 &- &\begin{eq}{{r_z}}{_{N}} :: \text{port variable}\end{eq} & \\
+41 &11 &- &\begin{eq}{{r_y}}{_{N}} :: \text{port variable}\end{eq} & \\
+40 &13 &- &\begin{eq}{U}{_{N}} :: \text{port variable}\end{eq} & \\
+39 &91 &- &\begin{eq}{D}{_{{N S}, {A S}}} :: \text{port variable}\end{eq} & \\
+38 &41 &20 &\begin{eq}{\lambda}{_{S}} := {\lambda}{_{S}}\end{eq} & \\
+37 &57 &36 &\begin{eq}{m}{_{N}} := {\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} & \\
+36 &67 &45 &\begin{eq}{c}{_{{N S}}} := {c}{_{{N S}}}\end{eq} & \\
+35 &58 &37 &\begin{eq}{m}{_{N}} := {m}{_{N}}\end{eq} & \\
+34 &18 &7 &\begin{eq}{T}{_{N}} := \ParDiff{{U}{_{N}}}{{S}{_{N}}}\end{eq} & \\
+33 &152 &124 &\begin{eq}{{c^o}}{_{{N K}, {K S}}} := \text{Instantiate}({c}{_{{N K}, {K S}}}, {\#}{_{}})\end{eq} & \\
+32 &151 &123 &\begin{eq}{c}{_{{N K}, {K S}}} := {P}{_{{N K}}} \, . \, \left({P}{_{{N S}, {K S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\right)\end{eq} & \\
+31 &48 &27 &\begin{eq}{{k^c_x}}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {{v_x}}{_{N}}\end{eq} & \\
+30 &59 &38 &\begin{eq}{\rho}{_{N}} := {m}{_{N}} \, . \, \left( {V}{_{N}} \right)^{-1}\end{eq} & \\
+29 &62 &41 &\begin{eq}{{E^a}}{_{{N K}}} := \text{Instantiate}({R}{_{}} \, . \, {T}{_{{N K}}}, {\#}{_{}})\end{eq} & \\
+28 &60 &39 &\begin{eq}{T}{_{{N K}}} := {P}{_{N, {N K}}} \stackrel{N}{\,\star\,} {T}{_{N}}\end{eq} & \\
+27 &157 &127 &\begin{eq}{R}{_{}} := {{A^v}}{_{}} \, . \, {B}{_{}}\end{eq} & \\
+26 &153 &125 &\begin{eq}{x}{_{{N K}, {K S}}} := \left( {{c^o}}{_{{N K}, {K S}}} \right)^{-1} \, . \, {c}{_{{N K}, {K S}}}\end{eq} & \\
+25 &97 &72 &\begin{eq}{d}{_{A}} := \text{sign} \left( {F}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}} \right)\end{eq} & \\
+24 &66 &44 &\begin{eq}{c}{_{{N S}}} := \left( {V}{_{N}} \right)^{-1} \, {\odot} \, {n}{_{{N S}}}\end{eq} & \\
+23 &4 &3 &\begin{eq}{0.5}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} & \\
+22 &81 &58 &\begin{eq}{{k^c_x}}{_{N}} := {{k^c_x}}{_{N}}\end{eq} & \\
+21 &74 &51 &\begin{eq}{\rho}{_{N}} := {\rho}{_{N}}\end{eq} & \\
+20 &17 &6 &\begin{eq}{p}{_{N}} := \left( -\ParDiff{{U}{_{N}}}{{V}{_{N}}} \right)\end{eq} & \\
+19 &63 &42 &\begin{eq}{K}{_{{N K}}} := {{K^o}}{_{K}} \, {\odot} \, exp(\left( -{{E^a}}{_{{N K}}} \right) \, . \, \left( {R}{_{}} \, . \, {T}{_{{N K}}} \right)^{-1})\end{eq} & \\
+18 &160 &129 &\begin{eq}{\phi}{_{{N K}}} := \prod_{K S}  {x}{_{{N K}, {K S}}}^{{N}{_{{N K}, {K S}}}} \end{eq} & \\
+17 &159 &128 &\begin{eq}{N}{_{{N K}, {K S}}} := {P}{_{K, {N K}}} \stackrel{K}{\,\star\,} {N}{_{K, {K S}}}\end{eq} & \\
+16 &98 &73 &\begin{eq}{c}{_{{A S}}} := \left({0.5}{_{}} \, . \, \left({F}{_{{N S}, {A S}}}  - {d}{_{A}} \, {\odot} \, |{F}{_{{N S}, {A S}}}|\right)\right) \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} & \\
+15 &92 &67 &\begin{eq}{\hat{V}}{_{A}} := \left( {\rho}{_{N}} \right)^{-1} \, . \, {{k^c_x}}{_{N}} \, . \, {{A_{yz}}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}}\end{eq} & \\
+14 &163 &130 &\begin{eq}{\tilde{n}}{_{{N S}}} := {V}{_{N}} \stackrel{N}{\,\star\,} \left({P}{_{N, {N K}}} \stackrel{{N K}}{\,\star\,} \left(\left({K}{_{{N K}}} \, . \, {\phi}{_{{N K}}}\right) \, . \, \left({P}{_{{N S}, {K S}}} \stackrel{{K S}}{\,\star\,} {N}{_{{N K}, {K S}}}\right)\right)\right)\end{eq} & \\
+13 &99 &74 &\begin{eq}{{\hat{n}^c}}{_{{A S}}} := {\hat{V}}{_{A}} \, {\odot} \, {c}{_{{A S}}}\end{eq} & \\
+12 &94 &69 &\begin{eq}{{\hat{n}^{d}}}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} {{\hat{n}^{d}}}{_{{A S}}}\end{eq} & \\
+11 &164 &131 &\begin{eq}{\tilde{n}}{_{{N S}}} := {\tilde{n}}{_{{N S}}}\end{eq} & \\
+10 &100 &75 &\begin{eq}{{\hat{n}^c}}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} {{\hat{n}^c}}{_{{A S}}}\end{eq} & \\
+9 &28 &15 &\begin{eq}{{v_x}}{_{N}} := \ParDiff{{{r_x}}{_{N}}}{{t}{_{}}}\end{eq} & \\
+8 &7 &5 &\begin{eq}{{t^e}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} & \\
+7 &6 &4 &\begin{eq}{{t^o}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} & \\
+6 &101 &76 &\begin{eq}{\dot{n}}{_{{N S}}} := {{\hat{n}^c}}{_{{N S}}}  + {{\hat{n}^{d}}}{_{{N S}}}  + {\tilde{n}}{_{{N S}}}\end{eq} & \\
+5 &52 &31 &\begin{eq}{{k^d_x}}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({{v_x}}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} & \\
+4 &16 &86 &\begin{eq}{n}{_{{N S}}} := \int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \, {\dot{n}}{_{{N S}}} \enskip d\,{t}{_{}}\end{eq} & \\
+3 &86 &63 &\begin{eq}{{k^d_x}}{_{{N S}}} := {{k^d_x}}{_{{N S}}}\end{eq} & \\
+2 &71 &48 &\begin{eq}{{A_{yz}}}{_{N}} := {{r_y}}{_{N}} \, . \, {{r_z}}{_{N}}\end{eq} & \\
+1 &19 &8 &\begin{eq}{\mu}{_{{N S}}} := \ParDiff{{U}{_{N}}}{{n}{_{{N S}}}}\end{eq} & \\
+0 &93 &68 &\begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{N}} \, {\odot} \, \left( -{{k^d_x}}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} & \\
+
+\end{longtable}
+
+\end{document}
+% ================================== end =========================================

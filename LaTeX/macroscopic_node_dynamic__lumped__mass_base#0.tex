@@ -1,0 +1,114 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape, 12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+
+\newenvironment{eq}{\begin{minipage}{16cm}$}{$\end{minipage} }
+%\newenvironment{eq}{$}{$}
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section*{Equation assignment sequence for variable $n$}
+
+
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{longtable}{|p{1cm}|p{1cm}|p{1cm}|p{16cm}|p{4cm}|}\hline
+  no &var &equ &quations &token\\\hline\hline
+\endhead
+\hline \multicolumn{3}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+25 &8 &- &\begin{eq}{F}{_{N, A}} :: \text{port variable}\end{eq} & \\
+24 &15 &- &\begin{eq}{V}{_{N}} :: \text{port variable}\end{eq} & \\
+23 &12 &- &\begin{eq}{{r_z}}{_{N}} :: \text{port variable}\end{eq} & \\
+22 &11 &- &\begin{eq}{{r_y}}{_{N}} :: \text{port variable}\end{eq} & \\
+21 &13 &- &\begin{eq}{U}{_{N}} :: \text{port variable}\end{eq} & \\
+20 &90 &- &\begin{eq}{D}{_{N, A}} :: \text{port variable}\end{eq} & \\
+19 &91 &- &\begin{eq}{D}{_{{N S}, {A S}}} :: \text{port variable}\end{eq} & \\
+18 &70 &- &\begin{eq}{F}{_{{N S}, {A S}}} :: \text{port variable}\end{eq} & \\
+17 &1 &- &\begin{eq}{\#}{_{}} :: \text{port variable}\end{eq} & \\
+16 &5 &- &\begin{eq}{t}{_{}} :: \text{port variable}\end{eq} & \\
+15 &97 &72 &\begin{eq}{d}{_{A}} := \text{sign} \left( {F}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}} \right)\end{eq} & \\
+14 &66 &44 &\begin{eq}{c}{_{{N S}}} := \left( {V}{_{N}} \right)^{-1} \, {\odot} \, {n}{_{{N S}}}\end{eq} & \\
+13 &4 &3 &\begin{eq}{0.5}{_{}} := \text{Instantiate}({\#}{_{}}, {\#}{_{}})\end{eq} & \\
+12 &17 &6 &\begin{eq}{p}{_{N}} := \left( -\ParDiff{{U}{_{N}}}{{V}{_{N}}} \right)\end{eq} & \\
+11 &71 &48 &\begin{eq}{{A_{yz}}}{_{N}} := {{r_y}}{_{N}} \, . \, {{r_z}}{_{N}}\end{eq} & \\
+10 &19 &8 &\begin{eq}{\mu}{_{{N S}}} := \ParDiff{{U}{_{N}}}{{n}{_{{N S}}}}\end{eq} & \\
+9 &98 &73 &\begin{eq}{c}{_{{A S}}} := \left({0.5}{_{}} \, . \, \left({F}{_{{N S}, {A S}}}  - {d}{_{A}} \, {\odot} \, |{F}{_{{N S}, {A S}}}|\right)\right) \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} & \\
+8 &92 &67 &\begin{eq}{\hat{V}}{_{A}} := \left( {\rho}{_{N}} \right)^{-1} \, . \, {{k^c_x}}{_{N}} \, . \, {{A_{yz}}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}}\end{eq} & \\
+7 &93 &68 &\begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{N}} \, {\odot} \, \left( -{{k^d_x}}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} & \\
+6 &99 &74 &\begin{eq}{{\hat{n}^c}}{_{{A S}}} := {\hat{V}}{_{A}} \, {\odot} \, {c}{_{{A S}}}\end{eq} & \\
+5 &94 &69 &\begin{eq}{{\hat{n}^{d}}}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} {{\hat{n}^{d}}}{_{{A S}}}\end{eq} & \\
+4 &100 &75 &\begin{eq}{{\hat{n}^c}}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} {{\hat{n}^c}}{_{{A S}}}\end{eq} & \\
+3 &7 &5 &\begin{eq}{{t^e}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} & \\
+2 &6 &4 &\begin{eq}{{t^o}}{_{}} := \text{Instantiate}({t}{_{}}, {\#}{_{}})\end{eq} & \\
+1 &101 &76 &\begin{eq}{\dot{n}}{_{{N S}}} := {{\hat{n}^c}}{_{{N S}}}  + {{\hat{n}^{d}}}{_{{N S}}}  + {\tilde{n}}{_{{N S}}}\end{eq} & \\
+0 &16 &86 &\begin{eq}{n}{_{{N S}}} := \int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \, {\dot{n}}{_{{N S}}} \enskip d\,{t}{_{}}\end{eq} & \\
+
+\end{longtable}
+
+\end{document}
+% ================================== end =========================================

@@ -1,0 +1,325 @@
+{
+  "nodes": {
+    "1": {
+      "name": "default",
+      "network": "control",
+      "named_network": "control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {},
+      "variant": "default"
+    },
+    "2": {
+      "name": "default",
+      "network": "control",
+      "named_network": "control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "tokens": {
+        "signal": []
+      },
+      "conversions": {},
+      "variant": "default"
+    },
+    "3": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "injected_typed_tokens": {},
+      "variant": "electrical source",
+      "charge": []
+    },
+    "4": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "injected_typed_tokens": {},
+      "variant": "electrical source",
+      "charge": []
+    },
+    "5": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "conversions": {},
+      "variant": "default",
+      "charge": []
+    },
+    "6": {
+      "name": "default",
+      "network": "control",
+      "named_network": "control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "tokens": {
+        "information": []
+      },
+      "conversions": {},
+      "variant": "default"
+    },
+    "7": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "conversions": {},
+      "variant": "default"
+    }
+  },
+  "arcs": {
+    "0": {
+      "name": "3 | 6",
+      "source": 3,
+      "sink": 7,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "default"
+    },
+    "1": {
+      "name": "6 | 4",
+      "source": 5,
+      "sink": 4,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "default"
+    },
+    "2": {
+      "name": "1 | 2",
+      "source": 1,
+      "sink": 2,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "3": {
+      "name": "3 | 6",
+      "source": 3,
+      "sink": 6,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "4": {
+      "name": "4 | 6",
+      "source": 4,
+      "sink": 6,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "5": {
+      "name": "7 | 5",
+      "source": 7,
+      "sink": 5,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "default"
+    },
+    "6": {
+      "name": "7 | 6",
+      "source": 7,
+      "sink": 6,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "7": {
+      "name": "5 | 6",
+      "source": 5,
+      "sink": 6,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    }
+  },
+  "named_networks": {
+    "network__named_network": {
+      "control": [
+        "control"
+      ],
+      "gas": [
+        "A-gas"
+      ],
+      "liquid": [
+        "A-liquid"
+      ],
+      "material": [
+        "A-material"
+      ],
+      "reactions": [
+        "A-reactions"
+      ],
+      "solid": [
+        "A-solid"
+      ]
+    },
+    "A-control": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-gas": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-liquid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-material": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-reactions": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-solid": {
+      "colour": [
+        52,
+        101,
+        164,
+        255
+      ]
+    },
+    "control": {
+      "colour": [
+        252,
+        233,
+        79,
+        255
+      ]
+    }
+  },
+  "token_domains": {
+    "charge": {
+      "0": [
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    "energy": {},
+    "mass": {},
+    "signal": {
+      "0": [
+        1,
+        2
+      ]
+    }
+  },
+  "typed_token_domains": {
+    "charge": {
+      "0": {}
+    },
+    "signal": {
+      "0": {}
+    }
+  },
+  "token_incidence_matrix": {
+    "0": {
+      "signal": {
+        "1": [
+          2
+        ],
+        "2": [
+          2
+        ]
+      }
+    }
+  },
+  "typed_token_incidence_matrix": {
+    "charge": {
+      "0": {}
+    },
+    "signal": {
+      "0": {}
+    }
+  },
+  "typed_token_lists": {
+    "charge": {
+      "0": []
+    },
+    "signal": {
+      "0": []
+    }
+  }
+}

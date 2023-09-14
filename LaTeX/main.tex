@@ -1,0 +1,145 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+
+%% personal styles and definitions
+%\usepackage{mystyle}
+%\def\mydefs{defs}
+%\usepackage[english]{babel}
+%\usepackage{blindtext}
+%\usepackage{listings}
+%\usepackage{multirow}
+%\usepackage{inconsolata}
+%\usepackage{glossaries}
+%\usepackage{pdflscape}
+%\usepackage{caption} % For mimicing a figure in a minipage
+
+%\catcode`\&=12
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+\newenvironment{variables}{
+	\begin{itemize}[leftmargin=4cm, align=left, labelwidth=3cm, noitemsep]
+	}
+	{\end{itemize}}
+\newenvironment{lay}{\catcode`\_=12}{\catcode`\_=8}
+\newenvironment{IND}{\catcode`\&=12\catcode`\_=12}{\catcode`\&=4\catcode`\_=8}
+
+\newcolumntype{P}[1]{>{$}p{#1}<{$}}
+
+
+%\newenvironment{eq}{\begin{minipage}{10cm}$}{$\end{minipage} }
+%\newenvironment{lay}{\catcode`\_=12}{\catcode`\_=8}
+
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section{Variables}
+
+\section{ root } \input{variables_root.tex} \newpage
+\section{ physical } \input{variables_physical.tex} \newpage
+\section{ control } \input{variables_control.tex} \newpage
+\section{ reactions } \input{variables_reactions.tex} \newpage
+\section{ material } \input{variables_material.tex} \newpage
+\section{ macroscopic } \input{variables_macroscopic.tex} \newpage
+\section{ solid } \input{variables_solid.tex} \newpage
+\section{ fluid } \input{variables_fluid.tex} \newpage
+\section{ liquid } \input{variables_liquid.tex} \newpage
+\section{ gas } \input{variables_gas.tex} \newpage
+\section{ control--control } \input{variables_control--control.tex} \newpage
+\section{ gas--liquid } \input{variables_gas--liquid.tex} \newpage
+\section{ gas--gas } \input{variables_gas--gas.tex} \newpage
+\section{ liquid--liquid } \input{variables_liquid--liquid.tex} \newpage
+\section{ gas--solid } \input{variables_gas--solid.tex} \newpage
+\section{ solid--solid } \input{variables_solid--solid.tex} \newpage
+\section{ liquid--solid } \input{variables_liquid--solid.tex} \newpage
+\section{ material--material } \input{variables_material--material.tex} \newpage
+\section{ reactions--reactions } \input{variables_reactions--reactions.tex} \newpage
+\section{ control--reactions } \input{variables_control--reactions.tex} \newpage
+\section{ reactions--control } \input{variables_reactions--control.tex} \newpage
+\section{ control--material } \input{variables_control--material.tex} \newpage
+\section{ material--control } \input{variables_material--control.tex} \newpage
+\section{ control--macroscopic } \input{variables_control--macroscopic.tex} \newpage
+\section{ macroscopic--control } \input{variables_macroscopic--control.tex} \newpage
+\section{ reactions--material } \input{variables_reactions--material.tex} \newpage
+\section{ material--reactions } \input{variables_material--reactions.tex} \newpage
+\section{ reactions--macroscopic } \input{variables_reactions--macroscopic.tex} \newpage
+\section{ macroscopic--reactions } \input{variables_macroscopic--reactions.tex} \newpage
+\section{ material--macroscopic } \input{variables_material--macroscopic.tex} \newpage
+\section{ macroscopic--material } \input{variables_macroscopic--material.tex} \newpage
+
+\section{Equations}
+
+
+\section{ Generic } \input{equations_Generic.tex} \newpage
+\section{ Instantiate } \input{equations_Instantiate.tex} \newpage
+\section{ Instantiation Equation } \input{equations_Instantiation Equation.tex} \newpage
+\section{ Interface Link Equation } \input{equations_Interface Link Equation.tex} \newpage
+%\subsection{Selections}  			{ \input{equations_select}}
+%\newpage
+%\subsection{Model equations} 	{ \input{equations_generic}}
+%\newpage
+%\subsection{Instantiations}   { \input{equations_instantiate}}
+%\newpage
+
+
+\end{document}
+% ================================== end =========================================

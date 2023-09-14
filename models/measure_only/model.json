@@ -1,0 +1,448 @@
+{
+  "ID_tree": {
+    "0": {
+      "ancestors": [],
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "1": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "2": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "3": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "4": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "5": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    }
+  },
+  "named_networks": {
+    "network__named_network": {
+      "control": [
+        "A-control"
+      ],
+      "gas": [
+        "A-gas"
+      ],
+      "liquid": [
+        "A-liquid"
+      ],
+      "material": [
+        "A-material"
+      ],
+      "reactions": [
+        "A-reactions"
+      ],
+      "solid": [
+        "A-solid"
+      ]
+    },
+    "A-control": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-gas": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-liquid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-material": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-reactions": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-solid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    }
+  },
+  "nodes": {
+    "0": {
+      "name": "11 - control",
+      "network": "composite",
+      "named_network": "node_composite",
+      "class": "node_composite",
+      "type": "node_composite",
+      "variant": "measureCurrent"
+    },
+    "1": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "measureAdditive",
+      "tokens": {
+        "information": [],
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "2": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "measurePotential",
+      "tokens": {
+        "information": [],
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "3": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "computeResistance",
+      "tokens": {
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "4": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "store",
+      "tokens": {
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "5": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "measureCurrent",
+      "tokens": {
+        "information": [],
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    }
+  },
+  "domains": {},
+  "arcs": {
+    "0": {
+      "name": "7 | 8",
+      "source": 2,
+      "sink": 3,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "1": {
+      "name": "6 | 8",
+      "source": 5,
+      "sink": 3,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "2": {
+      "name": "8 | 9",
+      "source": 3,
+      "sink": 4,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "3": {
+      "name": "7 | 9",
+      "source": 2,
+      "sink": 4,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "4": {
+      "name": "6 | 9",
+      "source": 5,
+      "sink": 4,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "5": {
+      "name": "5 | 9",
+      "source": 1,
+      "sink": 4,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    }
+  },
+  "scenes": {
+    "0": {
+      "nodes": {
+        "1": {
+          "position_x": 146.0,
+          "position_y": -72.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": -15,
+            "position_y": 0
+          },
+          "named_network": {
+            "position_x": -20,
+            "position_y": 0
+          }
+        },
+        "2": {
+          "position_x": -234.0,
+          "position_y": -170.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": -15,
+            "position_y": 0
+          },
+          "named_network": {
+            "position_x": -20,
+            "position_y": 0
+          }
+        },
+        "3": {
+          "position_x": 129.0,
+          "position_y": -267.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": -15,
+            "position_y": 0
+          },
+          "named_network": {
+            "position_x": -20,
+            "position_y": 0
+          }
+        },
+        "4": {
+          "position_x": 364.0,
+          "position_y": -175.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": -15,
+            "position_y": 0
+          },
+          "named_network": {
+            "position_x": -20,
+            "position_y": 0
+          }
+        },
+        "5": {
+          "position_x": -60.0,
+          "position_y": -72.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": -15,
+            "position_y": 0
+          },
+          "named_network": {
+            "position_x": -20,
+            "position_y": 0
+          }
+        }
+      },
+      "arcs": {
+        "0": [
+          [
+            -9.5,
+            -246.0
+          ]
+        ],
+        "1": [
+          [
+            77.5,
+            -197.0
+          ]
+        ],
+        "2": [
+          [
+            276.5,
+            -191.0
+          ]
+        ],
+        "3": [
+          [
+            80.0,
+            -157.5
+          ]
+        ],
+        "4": [
+          [
+            152.0,
+            -123.5
+          ]
+        ],
+        "5": [
+          [
+            255.0,
+            -123.5
+          ]
+        ]
+      }
+    },
+    "1": {
+      "nodes": {},
+      "arcs": {
+        "5": []
+      }
+    },
+    "2": {
+      "nodes": {},
+      "arcs": {
+        "0": [],
+        "3": []
+      }
+    },
+    "3": {
+      "nodes": {},
+      "arcs": {
+        "0": [],
+        "1": [],
+        "2": []
+      }
+    },
+    "4": {
+      "nodes": {},
+      "arcs": {
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": []
+      }
+    },
+    "5": {
+      "nodes": {},
+      "arcs": {
+        "1": [],
+        "4": []
+      }
+    }
+  }
+}

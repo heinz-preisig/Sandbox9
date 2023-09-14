@@ -1,0 +1,433 @@
+{
+  "nodes": {
+    "3": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "injected_typed_tokens": {},
+      "variant": "electrical source",
+      "charge": []
+    },
+    "4": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "injected_typed_tokens": {},
+      "variant": "electrical source",
+      "charge": []
+    },
+    "5": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "conversions": {},
+      "variant": "A-meter",
+      "charge": []
+    },
+    "6": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "charge": [],
+        "information": []
+      },
+      "conversions": {},
+      "variant": "electrolyte",
+      "charge": []
+    },
+    "7": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "measureAdditive",
+      "tokens": {
+        "information": [],
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "8": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "measurePotential",
+      "tokens": {
+        "information": [],
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "9": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "computeResistance",
+      "tokens": {
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "10": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "store",
+      "tokens": {
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    },
+    "11": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "measureCurrent",
+      "tokens": {
+        "information": [],
+        "signal": []
+      },
+      "conversions": {},
+      "signal": []
+    }
+  },
+  "arcs": {
+    "0": {
+      "name": "1 | 3",
+      "source": 4,
+      "sink": 5,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "current"
+    },
+    "1": {
+      "name": "3 | 4",
+      "source": 5,
+      "sink": 6,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "current"
+    },
+    "2": {
+      "name": "4 | 2",
+      "source": 6,
+      "sink": 3,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "current"
+    },
+    "3": {
+      "name": "1 | 7",
+      "source": 4,
+      "sink": 8,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "4": {
+      "name": "2 | 7",
+      "source": 3,
+      "sink": 8,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "5": {
+      "name": "3 | 6",
+      "source": 5,
+      "sink": 11,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "6": {
+      "name": "4 | 5",
+      "source": 6,
+      "sink": 7,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "7": {
+      "name": "7 | 8",
+      "source": 8,
+      "sink": 9,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "8": {
+      "name": "6 | 8",
+      "source": 11,
+      "sink": 9,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "9": {
+      "name": "8 | 9",
+      "source": 9,
+      "sink": 10,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "10": {
+      "name": "7 | 9",
+      "source": 8,
+      "sink": 10,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "11": {
+      "name": "6 | 9",
+      "source": 11,
+      "sink": 10,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    },
+    "12": {
+      "name": "5 | 9",
+      "source": 7,
+      "sink": 10,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "default"
+    }
+  },
+  "named_networks": {
+    "network__named_network": {
+      "control": [
+        "A-control"
+      ],
+      "gas": [
+        "A-gas"
+      ],
+      "liquid": [
+        "A-liquid"
+      ],
+      "material": [
+        "A-material"
+      ],
+      "reactions": [
+        "A-reactions"
+      ],
+      "solid": [
+        "A-solid"
+      ]
+    },
+    "A-control": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-gas": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-liquid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-material": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-reactions": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-solid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    }
+  },
+  "token_domains": {
+    "charge": {
+      "0": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "energy": {},
+    "mass": {},
+    "signal": {
+      "0": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  },
+  "typed_token_domains": {
+    "charge": {
+      "0": {}
+    },
+    "signal": {
+      "0": {}
+    }
+  },
+  "token_incidence_matrix": {
+    "0": {
+      "signal": {
+        "8": [
+          7,
+          10
+        ],
+        "9": [
+          7,
+          8,
+          9
+        ],
+        "11": [
+          8,
+          11
+        ],
+        "10": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "7": [
+          12
+        ]
+      }
+    }
+  },
+  "typed_token_incidence_matrix": {
+    "charge": {
+      "0": {}
+    },
+    "signal": {
+      "0": {}
+    }
+  },
+  "typed_token_lists": {
+    "charge": {
+      "0": []
+    },
+    "signal": {
+      "0": []
+    }
+  },
+  "instantiation_info": {
+    "nodes": {},
+    "arcs": {}
+  }
+}

@@ -1,0 +1,12 @@
+*.dvi
+*.ps
+*.aux
+*.bbl
+*.blg
+*.log
+*.pyc
+*.out
+.idea
+__pycache__
+
+

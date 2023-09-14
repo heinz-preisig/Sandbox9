@@ -1,0 +1,2820 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="onto.owl"
+         xmlns="onto.owl#"
+         xmlns:demo="http://www.emmc.info/emmc-csa/demo#">
+
+<owl:Ontology rdf:about="onto.owl">
+  <owl:imports rdf:resource="http://emmo.info/emmo-inferred"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="http://www.emmc.info/emmc-csa/demo#is_function_of">
+  <rdfs:domain rdf:resource="http://www.emmc.info/emmc-csa/demo#VAR"/>
+  <rdfs:domain rdf:resource="http://www.emmc.info/emmc-csa/demo#ProMoVar"/>
+  <rdfs:range rdf:resource="http://www.emmc.info/emmc-csa/demo#VAR"/>
+  <rdfs:range rdf:resource="http://www.emmc.info/emmc-csa/demo#ProMoVar"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.emmc.info/emmc-csa/demo#has_function">
+  <rdfs:domain rdf:resource="http://www.emmc.info/emmc-csa/demo#ProMoVar"/>
+  <rdfs:range rdf:resource="http://www.emmc.info/emmc-csa/demo#ProMoVar"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.emmc.info/emmc-csa/demo#time">
+  <rdfs:domain rdf:resource="http://emmo.info/emmo/middle/units#EMMO_314ba716_2d3d_4462_9a4f_d3419ae1df43"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.emmc.info/emmc-csa/demo#length">
+  <rdfs:domain rdf:resource="http://emmo.info/emmo/middle/units#EMMO_7db11dbf_a643_464a_9b56_07eabcc3e9c5"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.emmc.info/emmc-csa/demo#amount">
+  <rdfs:domain rdf:resource="http://emmo.info/emmo/middle/units#EMMO_df6eeb01_1b41_4bd8_9257_a04fbd7cf000"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.emmc.info/emmc-csa/demo#mass">
+  <rdfs:domain rdf:resource="http://emmo.info/emmo/middle/units#EMMO_9bfd6f1e_b0ce_459c_beb7_8f1f41708bba"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.emmc.info/emmc-csa/demo#temperature">
+  <rdfs:domain rdf:resource="http://emmo.info/emmo/middle/units#EMMO_2e5e45fc_f52c_4294_bdc2_5ed7a06dfce7"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.emmc.info/emmc-csa/demo#current">
+  <rdfs:domain rdf:resource="http://emmo.info/emmo/middle/units#EMMO_db5dd38d_ac79_4af6_8782_fee7e7150ae8"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.emmc.info/emmc-csa/demo#light">
+  <rdfs:domain rdf:resource="http://emmo.info/emmo/middle/units#EMMO_8d00f093_3f45_4ea3_986c_b3545c3c2f4c"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="http://www.emmc.info/emmc-csa/demo#VAR">
+  <rdfs:subClassOf rdf:resource="http://emmo.info/emmo/middle/units#EMMO_02c0621e_a527_4790_8a0f_2bb51973c819"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.emmc.info/emmc-csa/demo#ProMoVar">
+  <rdfs:subClassOf rdf:resource="http://www.emmc.info/emmc-csa/demo#VAR"/>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.emmc.info/emmc-csa/demo#function">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numerical value</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">value</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_1"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numerical value one</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">one</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_2"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numerical value zero</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zero</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_3"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numerical value one half</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">onehalf</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_4"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starting time</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_5"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">end time</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">te</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fudamental incidence matrix</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F_N_A</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection from node to arc for arc properties</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_N_A</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-coordinate</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y-coordinate</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_12">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z_coordinate</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_13">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fundamental state -- internal energy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_14">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fundamental state -- entropy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_15">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fundamental state -- volume</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_16">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_86"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fundamental state -- molar mass</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_6"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thermodynamic pressure</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_18">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_7"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temperature</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_19">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_8"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical potential</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemPot</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_20">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_9"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_87"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enthalpy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_21">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_10"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helmholtz energy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_22">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_11"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibbs free energy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_23">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fundamental state -- charge</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charge</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_24">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avogadro number</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avogadro</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_27">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_14"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_95"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electrical potential -- voltage</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ue</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_28">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_15"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">velocitiy in x-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_16"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">velocity in y-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_30">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_17"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">velocity in z-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_32">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection node species to arc species</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_NS_AS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_33">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection of conversion to node conversion</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_K_NK</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_34">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection species to node species</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_S_NS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_35">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection node to node conversion</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_N_NK</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_36">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection node species to conversion species</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_NS_KS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_37">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection arc to node species for conductivity</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_A_NS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_38">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arrhenius frequency factor</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ko</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_40">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">species molecular mass</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mm</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_41">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_20"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable Mm to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_Mm</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_42">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_21"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total heat capacity at constant pressure</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cp</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_43">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_22"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total heat capacity at constant volume</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cv</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_44">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_23"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thermal conductivity in x-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kq_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_45">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_24"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thermal conductivity in y-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kq_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_46">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_25"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thermal conductivity in z-direction'</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kq_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_47">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_26"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thermal conductivity</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kq</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_48">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_27"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">convecitve mass conductivity in x-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kc_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_49">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_28"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">convecitve mass conductivity in y-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kc_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_50">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_29"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">convecitve mass conductivity in z-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kc_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_51">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_30"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">convective mass conductivity</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kc</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_52">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_31"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diffusional mass conductivity in x-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kd_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_53">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_32"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diffusional mass conductivity in y-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kd_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_54">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_33"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diffusional mass conductivity in z-direction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kd_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_55">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_34"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diffusional mass condctivity</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kd</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_56">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_35"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partial molar enthalpies</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_57">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_36"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total mass</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_58">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_37"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable m to interface macroscopic &gt;&gt;&gt; material</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_m</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_59">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_38"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">density</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">density</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_60">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_39"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temperature of the reactive system</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T_NK</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_62">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_41"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arrhenius activation energy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ea</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_63">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_42"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arrhenius reaction 'constant'</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K_NK</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_65">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection node conversion to conversion species</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_NK_KS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_66">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_44"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molar composition</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_67">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_45"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable c to interface macroscopic &gt;&gt;&gt; reactions</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_c</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_70">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">species related incidence matrix</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F_NS_AS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_71">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_48"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross sectional area yz</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ayz</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_72">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_49"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross sectional area xz</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Axz</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_73">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_50"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cross sectional area xy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Axy</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_74">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_51"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable density to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_density</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_75">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_52"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable h to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_h</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_76">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_53"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kq_x to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kq_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_77">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_54"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable Cv to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_Cv</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_78">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_55"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kq_y to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kq_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_79">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_56"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kq_z to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kq_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_80">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_57"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kq to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kq</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_81">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_58"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kc_x to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kc_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_82">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_59"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable Cp to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_Cp</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_83">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_60"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kc_y to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kc_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_84">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_61"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kc_z to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kc_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_85">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_62"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kc to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kc</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_86">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_63"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kd_x to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kd_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_87">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_64"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kd_y to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kd_y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_65"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kd_z to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kd_z</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_89">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_66"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable kd to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_kd</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-4</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_90">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">difference operator</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_91">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">difference operator for species topology</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D_NS_AS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_92">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_67"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volumetric flow</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fV</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_93">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_68"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diffusional mass flow in a given stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fnd_AS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_94">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_69"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net diffusional mass flow</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fnd</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_95">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_70"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enthalpy flow per diffusional mass stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fHd_A</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_96">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_71"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net enthaply stream due to diffusion</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fHd</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_97">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_72"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flow direction of convectional flow</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_98">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_73"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concentration in convectional flow</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c_AS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_99">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_74"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molar convetional mass flow in the given stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fnc_AS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_100">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_75"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net molar convectional mass flow</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fnc</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_101">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_76"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">differential species balance</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dndt</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_102">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_77"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">convective enthalpy flow for given stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fHc_A</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_103">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_78"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net convectional enthalpy stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fHc</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_104">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_79"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sample work stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fw_A</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_105">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_80"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net work stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fw</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_106">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_81"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heat flow in x-direction for given stream</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fq_A_x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_107">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_82"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net heat flow</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fq</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_108">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_83"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">differential enthalpy balance</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dHdt</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_109">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_84"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initial enthalpy</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ho</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_110">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_85"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initial species</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_112">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_88"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fraction of additives</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">additive</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_113">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_89"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electrical current definition</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_114">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_90"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable i to interface macroscopic &gt;&gt;&gt; material</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_i</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_115">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_91"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_92"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electrical resistant</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elResist</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_116">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_93"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">simple model for the electrical conductivity as a function of the additive</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elConductC</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_117">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_94"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable elConductC to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_elConductC</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_118">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_96"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_97"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_98"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirkhoff first law</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dUedt</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_119">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_99"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable i to interface macroscopic &gt;&gt;&gt; control</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_i</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_124">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_104"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable additive to interface material &gt;&gt;&gt; control</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_additive</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_125">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_105"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable T to interface macroscopic &gt;&gt;&gt; control</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_T</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_126">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_106"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">collected intensities</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intensities</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_127">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a vector of ones with the length of the ordinal number of S</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">one_S</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_128">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_107"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total number of moles</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nTotal</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_129">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dynamic matrix</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_130">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">input matrix</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_131">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measurement matrix</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_132">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">diagonal event matrix (no dimensional problems)</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_133">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_119"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">set point</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">setPoint</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_134">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measurements</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meas</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_135">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_108"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">control error</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_136">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_111"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_137">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_109"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">initial state</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xo</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_138">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_110"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">differential state (ABCD) model</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dxdt</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_139">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">space transformation D to N</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I_N_D</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_140">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_112"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable additive to interface material &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_additive</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_141">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_113"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measured current</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imeasured</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_142">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_114"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable Ue to interface macroscopic &gt;&gt;&gt; control</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_Ue</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_143">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_115"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measured electrical potential</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UeMeasured</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_144">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_116"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measured additive fraction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">addMeasured</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_145">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_117"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">measured resistance </rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RComputed</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_146">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_118"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantities to be stored</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_147">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reactions per node</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_NK</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_151">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_123"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concentration matrix reaction per node and species per reaction</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_152">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_124"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">norming concentration</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">co</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_153">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_125"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">matrix of normed, dimensionless mole fractions </rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_154">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_126"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">output equation</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_155">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boltzmann constant</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boltzmann</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_157">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_127"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gas constant</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GasConstant</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-2</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_158">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stoichiometry</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N_K_KS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_159">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_128"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extended stoichiometrix matrix</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N_NK_KS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_160">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_129"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">probability function for reactions</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phi</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_162">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projection of nodes onto the node species</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P_N_NS</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_163">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_130"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the species production term</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nProd</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:ProMoVar rdf:about="http://www.emmc.info/emmc-csa/demo#V_164">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:has_function rdf:resource="http://www.emmc.info/emmc-csa/demo#F_131"/>
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">link variable nProd to interface reactions &gt;&gt;&gt; macroscopic</rdfs:comment>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">_nProd</rdfs:label>
+  <demo:time rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</demo:time>
+  <demo:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:length>
+  <demo:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</demo:amount>
+  <demo:mass rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:mass>
+  <demo:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:temperature>
+  <demo:current rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:current>
+  <demo:light rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</demo:light>
+</demo:ProMoVar>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_86">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_7"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_6"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_101"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_14"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_16"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_87">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_7"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_108"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_6"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_14"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_14"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_14">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_23"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_95">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_113"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_117"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_15">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_10"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_16">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_11"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_12"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_20">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_40"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_21">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_20"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_22">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_23">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_28"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_24">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_29"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_25">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_30"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_26">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_46"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_44"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_45"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_27">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_40"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_28"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_28">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_40"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_29"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_30"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_40"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_30">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_48"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_49"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_50"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_31">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_28"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_32">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_29"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_33">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_30"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_13"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_34">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_54"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_52"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_53"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_35">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_20"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_16"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_36">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_41"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_16"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_37">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_57"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_38">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_58"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_39">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_35"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_41">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_60"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_157"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_42">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_157"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_60"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_38"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_62"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_44">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_16"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_45">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_66"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_48">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_12"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_11"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_49">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_12"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_10"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_50">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_10"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_11"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_51">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_59"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_52">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_56"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_53">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_44"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_54">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_43"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_55">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_45"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_56">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_46"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_57">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_47"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_58">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_48"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_59">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_42"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_60">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_49"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_61">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_50"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_62">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_51"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_63">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_52"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_64">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_53"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_65">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_54"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_66">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_55"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_67">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_74"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_90"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_81"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_71"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_68">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_71"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_86"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_91"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_69">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_70"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_93"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_70">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_75"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_70"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_93"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_71">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_8"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_95"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_72">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_8"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_73">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_4"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_97"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_70"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_66"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_74">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_92"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_98"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_75">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_99"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_70"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_76">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_164"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_94"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_100"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_77">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_99"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_75"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_70"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_78">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_102"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_8"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_79">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_102"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_80">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_104"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_8"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_81">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_76"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_71"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_90"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_82">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_8"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_106"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_83">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_96"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_107"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_105"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_103"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_84">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_20"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_85">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_16"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_112"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_89">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_23"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_90">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_113"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_91">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_114"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_27"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_92">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_115"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_93">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_112"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_115"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_94">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_116"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_96">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_2"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_27"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_97">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_27"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_98">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_3"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_118"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_99">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_113"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_104">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_112"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_105">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_106">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_66"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_18"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_19"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_27"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_17"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_107">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_16"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_127"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_119">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_133"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_108">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_133"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_134"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_111">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_7"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_138"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_5"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_139"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_6"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_109">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_136"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_110">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_135"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_130"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_136"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_129"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_112">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_112"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_113">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_119"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_114">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_27"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_115">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_142"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_116">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_124"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_117">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_143"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_141"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_118">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_143"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_141"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_144"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_145"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_123">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_67"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_147"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_36"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_124">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_151"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_1"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_125">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_151"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_152"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_126">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_132"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_135"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_136"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_131"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_127">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_24"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_155"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_128">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_158"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_33"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_129">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_159"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_153"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_130">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_160"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_15"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_63"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_35"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_159"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_36"/>
+</demo:function>
+
+<demo:function rdf:about="http://www.emmc.info/emmc-csa/demo#F_131">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <demo:is_function_of rdf:resource="http://www.emmc.info/emmc-csa/demo#V_163"/>
+</demo:function>
+
+
+</rdf:RDF>
