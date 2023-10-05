@@ -199,8 +199,8 @@
     "network": "macroscopic",
     "rhs": " F_NS_AS | A & S | Stack ( fnc_AS , fnc_AS_controlled )"
   },
-  "E_144": {
-    "lhs": "gugus",
+  "E_145": {
+    "lhs": "g",
     "network": "macroscopic",
     "rhs": " n + n"
   },
@@ -216,7 +216,7 @@
   },
   "E_17": {
     "lhs": "v_z",
-    "network": "physical",
+    "network": "macroscopic",
     "rhs": " ParDiff ( r_z , t )"
   },
   "E_2": {

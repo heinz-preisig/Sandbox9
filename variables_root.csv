@@ -1,9 +1,0 @@
-label,type,network,doc,units,IRI
-value,constant,root,numerical value,"[0, 0, 0, 0, 0, 0, 0, 0]",promo:value
-one,constant,root,numerical value one,"[0, 0, 0, 0, 0, 0, 0, 0]",promo:one
-zero,constant,root,numerical value zero,"[0, 0, 0, 0, 0, 0, 0, 0]",promo:zero
-onehalf,constant,root,numerical value one half,"[0, 0, 0, 0, 0, 0, 0, 0]",promo:onehalf
-t,frame,root,time,"[1, 0, 0, 0, 0, 0, 0, 0]",qudt:Time
-to,frame,root,starting time,"[1, 0, 0, 0, 0, 0, 0, 0]",promo:to
-te,frame,root,end time,"[1, 0, 0, 0, 0, 0, 0, 0]",promo:te
-F_N_A,network,root,fundamental incidence matrix,"[0, 0, 0, 0, 0, 0, 0, 0]",promo:F_N_A

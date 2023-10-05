@@ -45,7 +45,7 @@ from Common.ontology_container import OntologyContainer
 
 from owlready2 import *
 
-ontology = OntologyContainer("ProMo_Sandbox8") #'flash_03')
+ontology = OntologyContainer("Sandbox9") #'flash_03')
 
 
 variables = ontology.variables
@@ -1660,27 +1660,27 @@ V_V_173.temperature = [ units[4] ]
 V_V_173.current = [ units[5] ]
 V_V_173.light = [ units[6] ]
 
-# V_175
-label = variables[V_175]["label"]
-network = variables[V_175]["network"]
-variable_type = variables[V_175]["type"]
-label = variables[V_175]["label"]
-doc = variables[V_175]["doc"]
-onto_ID = "V_V_175"
-V_V_175 = onto.ProMoVar( onto_ID )
-V_V_175.label = label
-V_V_175.network = network
-V_V_175.variable_type = variable_type
-V_V_175.comment = doc
+# V_176
+label = variables[V_176]["label"]
+network = variables[V_176]["network"]
+variable_type = variables[V_176]["type"]
+label = variables[V_176]["label"]
+doc = variables[V_176]["doc"]
+onto_ID = "V_V_176"
+V_V_176 = onto.ProMoVar( onto_ID )
+V_V_176.label = label
+V_V_176.network = network
+V_V_176.variable_type = variable_type
+V_V_176.comment = doc
 
-units = variables[V_175]["units"].asList()
-V_V_175.time = [ units[0] ]
-V_V_175.length = [ units[1] ]
-V_V_175.amount = [ units[2] ]
-V_V_175.mass = [ units[3] ]
-V_V_175.temperature = [ units[4] ]
-V_V_175.current = [ units[5] ]
-V_V_175.light = [ units[6] ]
+units = variables[V_176]["units"].asList()
+V_V_176.time = [ units[0] ]
+V_V_176.length = [ units[1] ]
+V_V_176.amount = [ units[2] ]
+V_V_176.mass = [ units[3] ]
+V_V_176.temperature = [ units[4] ]
+V_V_176.current = [ units[5] ]
+V_V_176.light = [ units[6] ]
 
 # V_18
 label = variables[V_18]["label"]
@@ -4124,16 +4124,16 @@ F_ID = "F_E_141"
 F_E_141 = onto.function( F_ID )
 F_E_141.is_function_of = incidence_list
 V_V_173.has_function.append( F_E_141 )
-#V_175
+#V_176
 
-V_V_175.has_function = []
+V_V_176.has_function = []
 incidence_list = []
 incidence_list.append( V_16 )
 incidence_list.append( V_16 )
-F_ID = "F_E_144"
-F_E_144 = onto.function( F_ID )
-F_E_144.is_function_of = incidence_list
-V_V_175.has_function.append( F_E_144 )
+F_ID = "F_E_145"
+F_E_145 = onto.function( F_ID )
+F_E_145.is_function_of = incidence_list
+V_V_176.has_function.append( F_E_145 )
 #V_18
 
 V_V_18.has_function = []
