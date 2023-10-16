@@ -173,7 +173,6 @@
       "variant": "MassControlVolume",
       "tokens": {
         "mass": [
-          "A",
           "B"
         ]
       },
@@ -194,7 +193,6 @@
       "variant": "MassControlVolume",
       "tokens": {
         "mass": [
-          "A",
           "B"
         ]
       },
@@ -215,7 +213,6 @@
       "variant": "MassControlVolume",
       "tokens": {
         "mass": [
-          "A",
           "B"
         ]
       },
@@ -233,7 +230,6 @@
       "variant": "MassControlVolume",
       "tokens": {
         "mass": [
-          "A",
           "B"
         ]
       },
@@ -254,7 +250,6 @@
       "variant": "MassControlVolume",
       "tokens": {
         "mass": [
-          "A",
           "B"
         ]
       },
@@ -275,7 +270,6 @@
       "variant": "MassControlVolume",
       "tokens": {
         "mass": [
-          "A",
           "B"
         ]
       },
@@ -311,13 +305,10 @@
       "type": "intra",
       "variant": "",
       "tokens": {
-        "mass": [
-          "A"
-        ]
+        "mass": []
       },
       "tokens_right": {
         "mass": [
-          "A",
           "B"
         ]
       },
@@ -381,7 +372,6 @@
       "sink": 5,
       "token": "mass",
       "typed_tokens": [
-        "A",
         "B"
       ],
       "network": "liquid",
@@ -397,7 +387,6 @@
       "sink": 2,
       "token": "mass",
       "typed_tokens": [
-        "A",
         "B"
       ],
       "network": "liquid",
@@ -413,7 +402,6 @@
       "sink": 1,
       "token": "mass",
       "typed_tokens": [
-        "A",
         "B"
       ],
       "network": "liquid",
@@ -429,7 +417,6 @@
       "sink": 3,
       "token": "mass",
       "typed_tokens": [
-        "A",
         "B"
       ],
       "network": "liquid",
@@ -445,7 +432,6 @@
       "sink": 6,
       "token": "mass",
       "typed_tokens": [
-        "A",
         "B"
       ],
       "network": "liquid",
@@ -476,7 +462,6 @@
       "sink": 4,
       "token": "mass",
       "typed_tokens": [
-        "A",
         "B"
       ],
       "network": "liquid",

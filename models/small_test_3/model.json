@@ -6,7 +6,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ]
     },
     "1": {
@@ -28,6 +29,12 @@
       "children": []
     },
     "4": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "5": {
       "ancestors": [
         0
       ],
@@ -204,6 +211,21 @@
       },
       "conversions": {},
       "mass": []
+    },
+    "5": {
+      "name": "default",
+      "network": "gas",
+      "named_network": "A-gas",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "variant": "MaterialSource",
+      "instantiated_variables": {},
+      "tokens": {
+        "mass": [
+          "A"
+        ]
+      },
+      "injected_typed_tokens": {}
     }
   },
   "domains": {},
@@ -264,6 +286,21 @@
         "V_92": 1.0,
         "V_98": 2.0
       }
+    },
+    "3": {
+      "name": "5 | 1",
+      "source": 5,
+      "sink": 1,
+      "token": "mass",
+      "typed_tokens": [
+        "A"
+      ],
+      "network": "gas",
+      "named_network": "A-gas",
+      "mechanism": "diffusion",
+      "nature": "lumped",
+      "variant": "",
+      "instantiated_variables": {}
     }
   },
   "scenes": {
@@ -348,6 +385,26 @@
             "position_x": -20,
             "position_y": 0
           }
+        },
+        "5": {
+          "position_x": -287.0,
+          "position_y": 162.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": -15,
+            "position_y": 0
+          },
+          "named_network": {
+            "position_x": -20,
+            "position_y": 0
+          }
         }
       },
       "arcs": {
@@ -368,13 +425,20 @@
             -16.0,
             -11.0
           ]
+        ],
+        "3": [
+          [
+            -279.0,
+            15.5
+          ]
         ]
       }
     },
     "1": {
       "nodes": {},
       "arcs": {
-        "0": []
+        "0": [],
+        "3": []
       }
     },
     "2": {
@@ -395,6 +459,12 @@
       "arcs": {
         "2": [],
         "0": []
+      }
+    },
+    "5": {
+      "nodes": {},
+      "arcs": {
+        "3": []
       }
     }
   }

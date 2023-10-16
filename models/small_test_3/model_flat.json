@@ -90,6 +90,21 @@
       },
       "conversions": {},
       "mass": []
+    },
+    "5": {
+      "name": "default",
+      "network": "gas",
+      "named_network": "A-gas",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "variant": "MaterialSource",
+      "instantiated_variables": {},
+      "tokens": {
+        "mass": [
+          "A"
+        ]
+      },
+      "injected_typed_tokens": {}
     }
   },
   "arcs": {
@@ -149,6 +164,21 @@
         "V_92": 1.0,
         "V_98": 2.0
       }
+    },
+    "3": {
+      "name": "5 | 1",
+      "source": 5,
+      "sink": 1,
+      "token": "mass",
+      "typed_tokens": [
+        "A"
+      ],
+      "network": "gas",
+      "named_network": "A-gas",
+      "mechanism": "diffusion",
+      "nature": "lumped",
+      "variant": "",
+      "instantiated_variables": {}
     }
   },
   "named_networks": {
@@ -229,7 +259,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ]
     },
     "signal": {}
@@ -242,7 +273,8 @@
             1,
             2,
             3,
-            4
+            4,
+            5
           ]
         }
       }
@@ -252,7 +284,8 @@
     "0": {
       "mass": {
         "1": [
-          0
+          0,
+          3
         ],
         "4": [
           0,
@@ -264,6 +297,9 @@
         ],
         "3": [
           1
+        ],
+        "5": [
+          3
         ]
       }
     }
@@ -273,7 +309,8 @@
       "0": {
         "A": {
           "1": [
-            0
+            0,
+            3
           ],
           "4": [
             0,
@@ -285,6 +322,9 @@
           ],
           "3": [
             1
+          ],
+          "5": [
+            3
           ]
         }
       }

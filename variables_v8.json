@@ -236,7 +236,7 @@
           "rhs": {
             "global_ID": " D_0 V_70  O_5  I_5 O_5  V_75 D_1 O_5 I_3 O_14 I_6 O_5 V_99",
             "matlab": "blockreduce((reduceproduct(F_NS_AS(N, A), \"N_x_S\", _h(N))), \"S\", \"A_x_S\", fnc_AS(A))",
-            "latex": "\\left({F}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {_h}{_{{N S}}}\\right) \\stackrel{ S \\, \\in \\, {A S} }{\\,\\star\\,} {{\\hat{n}^c}}{_{{A S}}}"
+            "latex": "\\left({F}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {\\_h}{_{{N S}}}\\right) \\stackrel{ S \\, \\in \\, {A S} }{\\,\\star\\,} {{\\hat{n}^c}}{_{{A S}}}"
           },
           "type": "generic",
           "doc": "convective enthalpy flow for given stream",
@@ -356,7 +356,7 @@
         "E_79": {
           "rhs": {
             "global_ID": " O_11 D_0 V_102 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(fHc_A(A), value)",
             "latex": "\\text{Instantiate}({{\\hat{H}^c}}{_{A}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -477,7 +477,7 @@
           "rhs": {
             "global_ID": "V_71 O_4 V_76 O_4 V_90  O_5  I_1 O_5  V_18",
             "matlab": "reduceproduct(Ayz(N) .* _kq_x(N) .* D(N, A), \"N\", T(N))",
-            "latex": "{{A_{yz}}}{_{N}} \\, . \\, {{k^q_x}}{_{N}} \\, . \\, {D}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {T}{_{N}}"
+            "latex": "{{A_{yz}}}{_{N}} \\, . \\, {{\\_k^q_x}}{_{N}} \\, . \\, {D}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {T}{_{N}}"
           },
           "type": "generic",
           "doc": "heat flow in x-direction for given stream",
@@ -660,7 +660,7 @@
         "E_84": {
           "rhs": {
             "global_ID": " O_11 D_0 V_20 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(H(N), value)",
             "latex": "\\text{Instantiate}({H}{_{N}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -756,7 +756,7 @@
         "E_85": {
           "rhs": {
             "global_ID": " O_11 D_0 V_16 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(n(N), value)",
             "latex": "\\text{Instantiate}({n}{_{{N S}}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -816,7 +816,7 @@
         "E_88": {
           "rhs": {
             "global_ID": " O_11 D_0 V_112 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(additive, value)",
             "latex": "\\text{Instantiate}({\\xi}{_{}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -874,7 +874,7 @@
         "E_89": {
           "rhs": {
             "global_ID": " O_8 D_0 V_23 D_7 V_5 D_1",
-            "matlab": null,
+            "matlab": "totaldiff(charge(N), t)",
             "latex": "\\TotDiff{{C}{_{N}}}{{t}{_{}}}"
           },
           "type": "generic",
@@ -897,7 +897,7 @@
         "I_1"
       ],
       "label": "i",
-      "modified": "2023-09-06 09:59:12",
+      "modified": "2023-10-12 10:33:44",
       "network": "macroscopic",
       "port_variable": false,
       "tokens": [],
@@ -1014,7 +1014,7 @@
         "E_92": {
           "rhs": {
             "global_ID": " O_11 D_0 V_115 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(elResist(N), value)",
             "latex": "\\text{Instantiate}({{R^e}}{_{N}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -1120,13 +1120,13 @@
         "python": "_elConductC",
         "cpp": "_elConductC",
         "matlab": "_elConductC",
-        "latex": "{R^e}",
+        "latex": "{\\_R^e}",
         "internal_code": "_elConductC"
       },
       "compiled_lhs": {
         "global_ID": "V_117",
         "matlab": "_elConductC(N)",
-        "latex": "{{R^e}}{_{N}}"
+        "latex": "{{\\_R^e}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable elConductC to interface material >>> macroscopic",
@@ -1148,7 +1148,7 @@
           "lhs": {
             "global_ID": "V_117",
             "matlab": "_elConductC(N)",
-            "latex": "{{R^e}}{_{N}}"
+            "latex": "{{\\_R^e}}{_{N}}"
           }
         }
       },
@@ -1214,7 +1214,7 @@
         "E_97": {
           "rhs": {
             "global_ID": " F_18 D_0 V_27 D_1",
-            "matlab": null,
+            "matlab": "root(Ue(N))",
             "latex": "Root\\left( {Ue}{_{N}}\\right)"
           },
           "type": "generic",
@@ -1234,7 +1234,7 @@
         "E_98": {
           "rhs": {
             "global_ID": " O_11 D_0 V_118 D_7 V_3 D_1",
-            "matlab": null,
+            "matlab": "instantiate(dUedt(N), zero)",
             "latex": "\\text{Instantiate}({{\\dot{U}^e}}{_{N}}, {0}{_{}})"
           },
           "type": "instantiate",
@@ -1845,7 +1845,7 @@
         "E_119": {
           "rhs": {
             "global_ID": " O_11 D_0 V_133 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(setPoint(A), value)",
             "latex": "\\text{Instantiate}({{y^o}}{_{A}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -2001,7 +2001,7 @@
         "E_111": {
           "rhs": {
             "global_ID": " O_9 D_0 V_139  O_5  I_9 O_5  V_138 D_8 V_5 O_14 D_2 V_6 D_7 V_7 D_3 D_1",
-            "matlab": null,
+            "matlab": "integral(reduceproduct(I_N_D(N, D), \"D\", dxdt(D)), t, to, te)",
             "latex": "\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {1}{_{N, D}} \\stackrel{D}{\\,\\star\\,} {{\\dot{x}}}{_{D}} \\enskip d\\,{t}{_{}}"
           },
           "type": "generic",
@@ -2064,7 +2064,7 @@
         "E_109": {
           "rhs": {
             "global_ID": " O_11 D_0 V_136 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(x(N), value)",
             "latex": "\\text{Instantiate}({x}{_{N}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -2245,13 +2245,13 @@
         "python": "_additive",
         "cpp": "_additive",
         "matlab": "_additive",
-        "latex": "\\xi",
+        "latex": "\\_\\xi",
         "internal_code": "_additive"
       },
       "compiled_lhs": {
         "global_ID": "V_140",
         "matlab": "_additive",
-        "latex": "{\\xi}{_{}}"
+        "latex": "{\\_\\xi}{_{}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable additive to interface material >>> macroscopic",
@@ -2273,7 +2273,7 @@
           "lhs": {
             "global_ID": "V_140",
             "matlab": "_additive",
-            "latex": "{\\xi}{_{}}"
+            "latex": "{\\_\\xi}{_{}}"
           }
         }
       },
@@ -2804,7 +2804,7 @@
         "E_124": {
           "rhs": {
             "global_ID": " O_11 D_0 V_151 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(c(N, K), value)",
             "latex": "\\text{Instantiate}({c}{_{{N K}, {K S}}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -3178,7 +3178,7 @@
         "E_86": {
           "rhs": {
             "global_ID": " O_9 D_0 V_101 D_8 V_5 O_14 D_2 V_6 D_7 V_7 D_3 D_1 O_0 V_110",
-            "matlab": "no(N)",
+            "matlab": "integral(dndt(N), t, to, te) + no(N)",
             "latex": "\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {\\dot{n}}{_{{N S}}} \\enskip d\\,{t}{_{}}  + {{n^o}}{_{{N S}}}"
           },
           "type": "generic",
@@ -3241,7 +3241,7 @@
         "E_129": {
           "rhs": {
             "global_ID": " O_10 D_0 V_153 O_2 D_0 V_159 D_1 D_7 I_8 D_1",
-            "matlab": null,
+            "matlab": "product(x(N, K) .^ (N_NK_KS(N, K)), \"K_x_S\")",
             "latex": "\\prod_{K S}  {x}{_{{N K}, {K S}}}^{{N}{_{{N K}, {K S}}}} "
           },
           "type": "generic",
@@ -3447,13 +3447,13 @@
         "python": "boz",
         "cpp": "boz",
         "matlab": "boz",
-        "latex": "boz",
+        "latex": "B",
         "internal_code": "boz"
       },
       "compiled_lhs": {
         "global_ID": "V_165",
         "matlab": "boz(N)",
-        "latex": "{boz}{_{N}}"
+        "latex": "{B}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "Boltzmann constant",
@@ -3461,7 +3461,7 @@
         "E_132": {
           "rhs": {
             "global_ID": " O_11 D_0 V_14 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(S(N), value)",
             "latex": "\\text{Instantiate}({S}{_{N}}, {\\#}{_{}})"
           },
           "type": "generic",
@@ -3476,7 +3476,7 @@
           "lhs": {
             "global_ID": "V_165",
             "matlab": "boz(N)",
-            "latex": "{boz}{_{N}}"
+            "latex": "{B}{_{N}}"
           }
         }
       },
@@ -3484,7 +3484,7 @@
         "I_1"
       ],
       "label": "boz",
-      "modified": "2023-09-06 11:29:29",
+      "modified": "2023-10-12 10:31:40",
       "network": "physical",
       "port_variable": false,
       "tokens": [],
@@ -3522,7 +3522,7 @@
           "rhs": {
             "global_ID": "V_24 O_4 V_165",
             "matlab": "Avogadro .* boz(N)",
-            "latex": "{{A^v}}{_{}} \\, . \\, {boz}{_{N}}"
+            "latex": "{{A^v}}{_{}} \\, . \\, {B}{_{N}}"
           },
           "type": "generic",
           "doc": "gas constant",
@@ -3701,7 +3701,7 @@
         "E_6": {
           "rhs": {
             "global_ID": " F_11 D_0 O_7 D_0 V_13 D_7 V_15 D_1 D_1",
-            "matlab": null,
+            "matlab": "-1 .* pardiff(U(N), V(N))",
             "latex": "\\left( -\\ParDiff{{U}{_{N}}}{{V}{_{N}}} \\right)"
           },
           "type": "generic",
@@ -3986,7 +3986,7 @@
       "compiled_lhs": {
         "global_ID": "V_176",
         "latex": "{g}{_{{N S}}}",
-        "matlab": " g"
+        "matlab": "g(N)"
       },
       "created": "2023-09-19 16:19:24",
       "doc": "",
@@ -3995,7 +3995,7 @@
           "rhs": {
             "global_ID": "V_16 O_0 V_16",
             "latex": "{n}{_{{N S}}}  + {n}{_{{N S}}}",
-            "matlab": " n +  n"
+            "matlab": "n(N) + n(N)"
           },
           "type": "generic",
           "doc": "",
@@ -4008,7 +4008,7 @@
           "lhs": {
             "global_ID": "V_176",
             "latex": "{g}{_{{N S}}}",
-            "matlab": " g"
+            "matlab": "g(N)"
           }
         }
       },
@@ -4053,7 +4053,7 @@
         "E_7": {
           "rhs": {
             "global_ID": " O_7 D_0 V_13 D_7 V_14 D_1",
-            "matlab": null,
+            "matlab": "pardiff(U(N), S(N))",
             "latex": "\\ParDiff{{U}{_{N}}}{{S}{_{N}}}"
           },
           "type": "generic",
@@ -4092,6 +4092,98 @@
         0
       ]
     },
+    "V_183": {
+      "IRI": "promo:k_d_Fick",
+      "aliases": {
+        "matlab": "k_d_Fick",
+        "latex": "k_d_Fick",
+        "internal_code": "k_d_Fick",
+        "global_ID": "V_183"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_183",
+        "latex": "{k_d_Fick}{_{{N S}}}"
+      },
+      "created": "2023-10-16 16:01:45",
+      "doc": "Fick's diffusivity",
+      "equations": {},
+      "index_structures": [
+        "I_5"
+      ],
+      "label": "k_d_Fick",
+      "modified": "2023-10-16 16:02:30",
+      "network": "material",
+      "port_variable": true,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_184": {
+      "IRI": "promo:_k_d_Fick",
+      "aliases": {
+        "matlab": "_k_d_Fick",
+        "latex": "{\\_k^{d,Fick}}",
+        "internal_code": "_k_d_Fick",
+        "global_ID": "V_184"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_184",
+        "matlab": "_k_d_Fick(N)",
+        "latex": "{{\\_k^{d,Fick}}}{_{{N S}}}"
+      },
+      "created": "2023-10-16 16:02:56",
+      "doc": "link variable k_d_Fick to interface material >>> macroscopic",
+      "equations": {
+        "E_151": {
+          "rhs": {
+            "global_ID": " V_183",
+            "matlab": "k_d_Fick(N)",
+            "latex": "{k_d_Fick}{_{{N S}}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_183"
+          ],
+          "created": "2023-10-16 16:02:56",
+          "modified": "2023-10-16 16:02:56",
+          "lhs": {
+            "global_ID": "V_184",
+            "matlab": "_k_d_Fick(N)",
+            "latex": "{{\\_k^{d,Fick}}}{_{{N S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_5"
+      ],
+      "label": "_k_d_Fick",
+      "modified": "2023-10-16 16:02:56",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
     "V_19": {
       "IRI": "qudt:ChemicalPotential",
       "aliases": {
@@ -4113,7 +4205,7 @@
         "E_8": {
           "rhs": {
             "global_ID": " O_7 D_0 V_13 D_7 V_16 D_1",
-            "matlab": null,
+            "matlab": "pardiff(U(N), n(N))",
             "latex": "\\ParDiff{{U}{_{N}}}{{n}{_{{N S}}}}"
           },
           "type": "generic",
@@ -4195,7 +4287,7 @@
         "E_1": {
           "rhs": {
             "global_ID": " O_11 D_0 V_1 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(value, value)",
             "latex": "\\text{Instantiate}({\\#}{_{}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -4274,7 +4366,7 @@
         "E_87": {
           "rhs": {
             "global_ID": " O_9 D_0 V_108 D_8 V_5 O_14 D_2 V_6 D_7 V_7 D_3 D_1",
-            "matlab": null,
+            "matlab": "integral(dHdt(N), t, to, te)",
             "latex": "\\int_{ {{t^o}}{_{}} }^{ {{t^e}}{_{}} } \\, {{\\dot{H}}}{_{N}} \\enskip d\\,{t}{_{}}"
           },
           "type": "generic",
@@ -4552,7 +4644,7 @@
           "rhs": {
             "global_ID": " F_15 D_0 V_117 D_1 O_4 V_113",
             "matlab": "1 ./ _elConductC(N) .* i(N)",
-            "latex": "\\left( {{R^e}}{_{N}} \\right)^{-1} \\, . \\, {I}{_{N}}"
+            "latex": "\\left( {{\\_R^e}}{_{N}} \\right)^{-1} \\, . \\, {I}{_{N}}"
           },
           "type": "generic",
           "doc": "electrical potential -- voltage",
@@ -4611,7 +4703,7 @@
         "E_15": {
           "rhs": {
             "global_ID": " O_7 D_0 V_10 D_7 V_5 D_1",
-            "matlab": null,
+            "matlab": "pardiff(r_x(N), t)",
             "latex": "\\ParDiff{{{r_x}}{_{N}}}{{t}{_{}}}"
           },
           "type": "generic",
@@ -4671,7 +4763,7 @@
         "E_16": {
           "rhs": {
             "global_ID": " O_7 D_0 V_11 D_7 V_5 D_1",
-            "matlab": null,
+            "matlab": "pardiff(r_y(N), t)",
             "latex": "\\ParDiff{{{r_y}}{_{N}}}{{t}{_{}}}"
           },
           "type": "generic",
@@ -4731,7 +4823,7 @@
         "E_2": {
           "rhs": {
             "global_ID": " O_11 D_0 V_1 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(value, value)",
             "latex": "\\text{Instantiate}({\\#}{_{}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -4788,7 +4880,7 @@
         "E_17": {
           "rhs": {
             "global_ID": " O_7 D_0 V_12 D_7 V_5 D_1",
-            "matlab": null,
+            "matlab": "pardiff(r_z(N), t)",
             "latex": "\\ParDiff{{{r_z}}{_{N}}}{{t}{_{}}}"
           },
           "type": "generic",
@@ -5106,7 +5198,7 @@
         "E_3": {
           "rhs": {
             "global_ID": " O_11 D_0 V_1 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(value, value)",
             "latex": "\\text{Instantiate}({\\#}{_{}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -5185,13 +5277,13 @@
         "python": "_Mm",
         "cpp": "_Mm",
         "matlab": "_Mm",
-        "latex": "\\lambda",
+        "latex": "\\_\\lambda",
         "internal_code": "_Mm"
       },
       "compiled_lhs": {
         "global_ID": "V_41",
         "matlab": "_Mm(S)",
-        "latex": "{\\lambda}{_{S}}"
+        "latex": "{\\_\\lambda}{_{S}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable Mm to interface material >>> macroscopic",
@@ -5213,7 +5305,7 @@
           "lhs": {
             "global_ID": "V_41",
             "matlab": "_Mm(S)",
-            "latex": "{\\lambda}{_{S}}"
+            "latex": "{\\_\\lambda}{_{S}}"
           }
         }
       },
@@ -5258,7 +5350,7 @@
         "E_21": {
           "rhs": {
             "global_ID": " O_7 D_0 V_20 D_7 V_18 D_1",
-            "matlab": null,
+            "matlab": "pardiff(H(N), T(N))",
             "latex": "\\ParDiff{{H}{_{N}}}{{T}{_{N}}}"
           },
           "type": "generic",
@@ -5318,7 +5410,7 @@
         "E_22": {
           "rhs": {
             "global_ID": " O_7 D_0 V_13 D_7 V_18 D_1",
-            "matlab": null,
+            "matlab": "pardiff(U(N), T(N))",
             "latex": "\\ParDiff{{U}{_{N}}}{{T}{_{N}}}"
           },
           "type": "generic",
@@ -5378,7 +5470,7 @@
         "E_23": {
           "rhs": {
             "global_ID": " F_15 D_0 V_15 D_1 O_4 O_7 D_0 V_13 D_7 V_18 D_1 O_4 V_28",
-            "matlab": "v_x(N)",
+            "matlab": "1 ./ V(N) .* pardiff(U(N), T(N)) .* v_x(N)",
             "latex": "\\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\ParDiff{{U}{_{N}}}{{T}{_{N}}} \\, . \\, {{v_x}}{_{N}}"
           },
           "type": "generic",
@@ -5440,7 +5532,7 @@
         "E_24": {
           "rhs": {
             "global_ID": " F_15 D_0 V_15 D_1 O_4 O_7 D_0 V_13 D_7 V_18 D_1 O_4 V_29",
-            "matlab": "v_y(N)",
+            "matlab": "1 ./ V(N) .* pardiff(U(N), T(N)) .* v_y(N)",
             "latex": "\\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\ParDiff{{U}{_{N}}}{{T}{_{N}}} \\, . \\, {{v_y}}{_{N}}"
           },
           "type": "generic",
@@ -5502,7 +5594,7 @@
         "E_25": {
           "rhs": {
             "global_ID": " F_15 D_0 V_15 D_1 O_4 O_7 D_0 V_13 D_7 V_18 D_1 O_4 V_30",
-            "matlab": "v_z(N)",
+            "matlab": "1 ./ V(N) .* pardiff(U(N), T(N)) .* v_z(N)",
             "latex": "\\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\ParDiff{{U}{_{N}}}{{T}{_{N}}} \\, . \\, {{v_z}}{_{N}}"
           },
           "type": "generic",
@@ -5625,7 +5717,7 @@
         "E_27": {
           "rhs": {
             "global_ID": " D_0 V_40 O_5 I_3 O_14 I_5 O_5 F_15 D_0 V_19 D_1 D_1 O_4 F_15 D_0 V_15 D_1 O_4 O_7 D_0 V_13 D_7 V_17 D_1 O_4 V_28",
-            "matlab": "v_x(N)",
+            "matlab": "(blockreduce(Mm(S), \"S\", \"N_x_S\", 1 ./ chemPot(N))) .* 1 ./ V(N) .* pardiff(U(N), p(N)) .* v_x(N)",
             "latex": "\\left({\\lambda}{_{S}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} \\left( {\\mu}{_{{N S}}} \\right)^{-1}\\right) \\, . \\, \\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\ParDiff{{U}{_{N}}}{{p}{_{N}}} \\, . \\, {{v_x}}{_{N}}"
           },
           "type": "generic",
@@ -5689,7 +5781,7 @@
         "E_28": {
           "rhs": {
             "global_ID": " D_0 V_40 O_5 I_3 O_14 I_5 O_5 F_15 D_0 V_19 D_1 D_1 O_4 F_15 D_0 V_15 D_1 O_4 O_7 D_0 V_13 D_7 V_17 D_1 O_4 V_29",
-            "matlab": "v_y(N)",
+            "matlab": "(blockreduce(Mm(S), \"S\", \"N_x_S\", 1 ./ chemPot(N))) .* 1 ./ V(N) .* pardiff(U(N), p(N)) .* v_y(N)",
             "latex": "\\left({\\lambda}{_{S}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} \\left( {\\mu}{_{{N S}}} \\right)^{-1}\\right) \\, . \\, \\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\ParDiff{{U}{_{N}}}{{p}{_{N}}} \\, . \\, {{v_y}}{_{N}}"
           },
           "type": "generic",
@@ -5787,7 +5879,7 @@
         "E_29": {
           "rhs": {
             "global_ID": " D_0 V_40 O_5 I_3 O_14 I_5 O_5 F_15 D_0 V_19 D_1 D_1 O_4 F_15 D_0 V_15 D_1 O_4 O_7 D_0 V_13 D_7 V_17 D_1 O_4 V_30",
-            "matlab": "v_z(N)",
+            "matlab": "(blockreduce(Mm(S), \"S\", \"N_x_S\", 1 ./ chemPot(N))) .* 1 ./ V(N) .* pardiff(U(N), p(N)) .* v_z(N)",
             "latex": "\\left({\\lambda}{_{S}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} \\left( {\\mu}{_{{N S}}} \\right)^{-1}\\right) \\, . \\, \\left( {V}{_{N}} \\right)^{-1} \\, . \\, \\ParDiff{{U}{_{N}}}{{p}{_{N}}} \\, . \\, {{v_z}}{_{N}}"
           },
           "type": "generic",
@@ -5912,7 +6004,7 @@
         "E_31": {
           "rhs": {
             "global_ID": " F_15 D_0 V_19 D_1 O_4 D_0 V_28 O_3 D_0 F_15 D_0 V_15 D_1 O_3 O_7 D_0 V_13 D_7 V_19 D_1 D_1 D_1",
-            "matlab": null,
+            "matlab": "1 ./ chemPot(N) .* (khatrirao(v_x(N), (khatrirao(1 ./ V(N), pardiff(U(N), chemPot(N))))))",
             "latex": "\\left( {\\mu}{_{{N S}}} \\right)^{-1} \\, . \\, \\left({{v_x}}{_{N}} \\, {\\odot} \\, \\left(\\left( {V}{_{N}} \\right)^{-1} \\, {\\odot} \\, \\ParDiff{{U}{_{N}}}{{\\mu}{_{{N S}}}}\\right)\\right)"
           },
           "type": "generic",
@@ -5974,7 +6066,7 @@
         "E_32": {
           "rhs": {
             "global_ID": " F_15 D_0 V_19 D_1 O_4 D_0 V_29 O_3 D_0 F_15 D_0 V_15 D_1 O_3 O_7 D_0 V_13 D_7 V_19 D_1 D_1 D_1",
-            "matlab": null,
+            "matlab": "1 ./ chemPot(N) .* (khatrirao(v_y(N), (khatrirao(1 ./ V(N), pardiff(U(N), chemPot(N))))))",
             "latex": "\\left( {\\mu}{_{{N S}}} \\right)^{-1} \\, . \\, \\left({{v_y}}{_{N}} \\, {\\odot} \\, \\left(\\left( {V}{_{N}} \\right)^{-1} \\, {\\odot} \\, \\ParDiff{{U}{_{N}}}{{\\mu}{_{{N S}}}}\\right)\\right)"
           },
           "type": "generic",
@@ -6036,7 +6128,7 @@
         "E_33": {
           "rhs": {
             "global_ID": " F_15 D_0 V_19 D_1 O_4 D_0 V_30 O_3 D_0 F_15 D_0 V_15 D_1 O_3 O_7 D_0 V_13 D_7 V_19 D_1 D_1 D_1",
-            "matlab": null,
+            "matlab": "1 ./ chemPot(N) .* (khatrirao(v_z(N), (khatrirao(1 ./ V(N), pardiff(U(N), chemPot(N))))))",
             "latex": "\\left( {\\mu}{_{{N S}}} \\right)^{-1} \\, . \\, \\left({{v_z}}{_{N}} \\, {\\odot} \\, \\left(\\left( {V}{_{N}} \\right)^{-1} \\, {\\odot} \\, \\ParDiff{{U}{_{N}}}{{\\mu}{_{{N S}}}}\\right)\\right)"
           },
           "type": "generic",
@@ -6220,7 +6312,7 @@
           "rhs": {
             "global_ID": "V_41 O_5 I_3 O_14 I_5 O_5 V_16",
             "matlab": "blockreduce(_Mm(S), \"S\", \"N_x_S\", n(N))",
-            "latex": "{\\lambda}{_{S}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} {n}{_{{N S}}}"
+            "latex": "{\\_\\lambda}{_{S}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} {n}{_{{N S}}}"
           },
           "type": "generic",
           "doc": "total mass",
@@ -6398,7 +6490,7 @@
         "E_4": {
           "rhs": {
             "global_ID": " O_11 D_0 V_5 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(t, value)",
             "latex": "\\text{Instantiate}({t}{_{}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -6516,7 +6608,7 @@
         "E_41": {
           "rhs": {
             "global_ID": " O_11 D_0 V_157 O_4 V_60 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(GasConstant .* T_NK(N), value)",
             "latex": "\\text{Instantiate}({R}{_{}} \\, . \\, {T}{_{{N K}}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -6656,7 +6748,7 @@
       ]
     },
     "V_66": {
-      "IRI": "qudt:Concentration",
+      "IRI": "qudt:c",
       "aliases": {
         "global_ID": "V_66",
         "python": "c",
@@ -6699,7 +6791,7 @@
         "I_5"
       ],
       "label": "c",
-      "modified": "2023-09-06 09:59:12",
+      "modified": "2023-10-06 15:30:33",
       "network": "macroscopic",
       "port_variable": false,
       "tokens": [],
@@ -6795,7 +6887,7 @@
         "E_5": {
           "rhs": {
             "global_ID": " O_11 D_0 V_5 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(t, value)",
             "latex": "\\text{Instantiate}({t}{_{}}, {\\#}{_{}})"
           },
           "type": "instantiate",
@@ -7056,13 +7148,13 @@
         "python": "_density",
         "cpp": "_density",
         "matlab": "_density",
-        "latex": "\\rho",
+        "latex": "\\_\\rho",
         "internal_code": "_density"
       },
       "compiled_lhs": {
         "global_ID": "V_74",
         "matlab": "_density(N)",
-        "latex": "{\\rho}{_{N}}"
+        "latex": "{\\_\\rho}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable density to interface material >>> macroscopic",
@@ -7084,7 +7176,7 @@
           "lhs": {
             "global_ID": "V_74",
             "matlab": "_density(N)",
-            "latex": "{\\rho}{_{N}}"
+            "latex": "{\\_\\rho}{_{N}}"
           }
         }
       },
@@ -7115,13 +7207,13 @@
         "python": "_h",
         "cpp": "_h",
         "matlab": "_h",
-        "latex": "_h",
+        "latex": "\\_h",
         "internal_code": "_h"
       },
       "compiled_lhs": {
         "global_ID": "V_75",
         "matlab": "_h(N)",
-        "latex": "{_h}{_{{N S}}}"
+        "latex": "{\\_h}{_{{N S}}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable h to interface material >>> macroscopic",
@@ -7143,7 +7235,7 @@
           "lhs": {
             "global_ID": "V_75",
             "matlab": "_h(N)",
-            "latex": "{_h}{_{{N S}}}"
+            "latex": "{\\_h}{_{{N S}}}"
           }
         }
       },
@@ -7174,13 +7266,13 @@
         "python": "_kq_x",
         "cpp": "_kq_x",
         "matlab": "_kq_x",
-        "latex": "{k^q_x}",
+        "latex": "{\\_k^q_x}",
         "internal_code": "_kq_x"
       },
       "compiled_lhs": {
         "global_ID": "V_76",
         "matlab": "_kq_x(N)",
-        "latex": "{{k^q_x}}{_{N}}"
+        "latex": "{{\\_k^q_x}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kq_x to interface material >>> macroscopic",
@@ -7202,7 +7294,7 @@
           "lhs": {
             "global_ID": "V_76",
             "matlab": "_kq_x(N)",
-            "latex": "{{k^q_x}}{_{N}}"
+            "latex": "{{\\_k^q_x}}{_{N}}"
           }
         }
       },
@@ -7233,13 +7325,13 @@
         "python": "_Cv",
         "cpp": "_Cv",
         "matlab": "_Cv",
-        "latex": "_Cv",
+        "latex": "{\\_Cv}",
         "internal_code": "_Cv"
       },
       "compiled_lhs": {
         "global_ID": "V_77",
         "matlab": "_Cv(N)",
-        "latex": "{_Cv}{_{N}}"
+        "latex": "{{\\_Cv}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable Cv to interface material >>> macroscopic",
@@ -7261,7 +7353,7 @@
           "lhs": {
             "global_ID": "V_77",
             "matlab": "_Cv(N)",
-            "latex": "{_Cv}{_{N}}"
+            "latex": "{{\\_Cv}}{_{N}}"
           }
         }
       },
@@ -7292,13 +7384,13 @@
         "python": "_kq_y",
         "cpp": "_kq_y",
         "matlab": "_kq_y",
-        "latex": "{k^q_y}",
+        "latex": "{\\_k^q_y}",
         "internal_code": "_kq_y"
       },
       "compiled_lhs": {
         "global_ID": "V_78",
         "matlab": "_kq_y(N)",
-        "latex": "{{k^q_y}}{_{N}}"
+        "latex": "{{\\_k^q_y}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kq_y to interface material >>> macroscopic",
@@ -7320,7 +7412,7 @@
           "lhs": {
             "global_ID": "V_78",
             "matlab": "_kq_y(N)",
-            "latex": "{{k^q_y}}{_{N}}"
+            "latex": "{{\\_k^q_y}}{_{N}}"
           }
         }
       },
@@ -7351,13 +7443,13 @@
         "python": "_kq_z",
         "cpp": "_kq_z",
         "matlab": "_kq_z",
-        "latex": "{k^q_z}",
+        "latex": "{\\_k^q_z}",
         "internal_code": "_kq_z"
       },
       "compiled_lhs": {
         "global_ID": "V_79",
         "matlab": "_kq_z(N)",
-        "latex": "{{k^q_z}}{_{N}}"
+        "latex": "{{\\_k^q_z}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kq_z to interface material >>> macroscopic",
@@ -7379,7 +7471,7 @@
           "lhs": {
             "global_ID": "V_79",
             "matlab": "_kq_z(N)",
-            "latex": "{{k^q_z}}{_{N}}"
+            "latex": "{{\\_k^q_z}}{_{N}}"
           }
         }
       },
@@ -7447,13 +7539,13 @@
         "python": "_kq",
         "cpp": "_kq",
         "matlab": "_kq",
-        "latex": "{k^q}",
+        "latex": "{\\_k^q}",
         "internal_code": "_kq"
       },
       "compiled_lhs": {
         "global_ID": "V_80",
         "matlab": "_kq(N)",
-        "latex": "{{k^q}}{_{N}}"
+        "latex": "{{\\_k^q}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kq to interface material >>> macroscopic",
@@ -7475,7 +7567,7 @@
           "lhs": {
             "global_ID": "V_80",
             "matlab": "_kq(N)",
-            "latex": "{{k^q}}{_{N}}"
+            "latex": "{{\\_k^q}}{_{N}}"
           }
         }
       },
@@ -7506,13 +7598,13 @@
         "python": "_kc_x",
         "cpp": "_kc_x",
         "matlab": "_kc_x",
-        "latex": "{k^c_x}",
+        "latex": "{\\_k^c_x}",
         "internal_code": "_kc_x"
       },
       "compiled_lhs": {
         "global_ID": "V_81",
         "matlab": "_kc_x(N)",
-        "latex": "{{k^c_x}}{_{N}}"
+        "latex": "{{\\_k^c_x}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kc_x to interface material >>> macroscopic",
@@ -7534,7 +7626,7 @@
           "lhs": {
             "global_ID": "V_81",
             "matlab": "_kc_x(N)",
-            "latex": "{{k^c_x}}{_{N}}"
+            "latex": "{{\\_k^c_x}}{_{N}}"
           }
         }
       },
@@ -7565,13 +7657,13 @@
         "python": "_Cp",
         "cpp": "_Cp",
         "matlab": "_Cp",
-        "latex": "_Cp",
+        "latex": "{\\_Cp}",
         "internal_code": "_Cp"
       },
       "compiled_lhs": {
         "global_ID": "V_82",
         "matlab": "_Cp(N)",
-        "latex": "{_Cp}{_{N}}"
+        "latex": "{{\\_Cp}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable Cp to interface material >>> macroscopic",
@@ -7593,7 +7685,7 @@
           "lhs": {
             "global_ID": "V_82",
             "matlab": "_Cp(N)",
-            "latex": "{_Cp}{_{N}}"
+            "latex": "{{\\_Cp}}{_{N}}"
           }
         }
       },
@@ -7624,13 +7716,13 @@
         "python": "_kc_y",
         "cpp": "_kc_y",
         "matlab": "_kc_y",
-        "latex": "{k^c_y}",
+        "latex": "{\\_k^c_y}",
         "internal_code": "_kc_y"
       },
       "compiled_lhs": {
         "global_ID": "V_83",
         "matlab": "_kc_y(N)",
-        "latex": "{{k^c_y}}{_{N}}"
+        "latex": "{{\\_k^c_y}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kc_y to interface material >>> macroscopic",
@@ -7652,7 +7744,7 @@
           "lhs": {
             "global_ID": "V_83",
             "matlab": "_kc_y(N)",
-            "latex": "{{k^c_y}}{_{N}}"
+            "latex": "{{\\_k^c_y}}{_{N}}"
           }
         }
       },
@@ -7683,13 +7775,13 @@
         "python": "_kc_z",
         "cpp": "_kc_z",
         "matlab": "_kc_z",
-        "latex": "{k^c_z}",
+        "latex": "{\\_k^c_z}",
         "internal_code": "_kc_z"
       },
       "compiled_lhs": {
         "global_ID": "V_84",
         "matlab": "_kc_z(N)",
-        "latex": "{{k^c_z}}{_{N}}"
+        "latex": "{{\\_k^c_z}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kc_z to interface material >>> macroscopic",
@@ -7711,7 +7803,7 @@
           "lhs": {
             "global_ID": "V_84",
             "matlab": "_kc_z(N)",
-            "latex": "{{k^c_z}}{_{N}}"
+            "latex": "{{\\_k^c_z}}{_{N}}"
           }
         }
       },
@@ -7742,13 +7834,13 @@
         "python": "_kc",
         "cpp": "_kc",
         "matlab": "_kc",
-        "latex": "{k^c}",
+        "latex": "{\\_k^c}",
         "internal_code": "_kc"
       },
       "compiled_lhs": {
         "global_ID": "V_85",
         "matlab": "_kc(N)",
-        "latex": "{{k^c}}{_{N}}"
+        "latex": "{{\\_k^c}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kc to interface material >>> macroscopic",
@@ -7770,7 +7862,7 @@
           "lhs": {
             "global_ID": "V_85",
             "matlab": "_kc(N)",
-            "latex": "{{k^c}}{_{N}}"
+            "latex": "{{\\_k^c}}{_{N}}"
           }
         }
       },
@@ -7801,13 +7893,13 @@
         "python": "_kd_x",
         "cpp": "_kd_x",
         "matlab": "_kd_x",
-        "latex": "{k^d_x}",
+        "latex": "{\\_k^d_x}",
         "internal_code": "_kd_x"
       },
       "compiled_lhs": {
         "global_ID": "V_86",
         "matlab": "_kd_x(N)",
-        "latex": "{{k^d_x}}{_{{N S}}}"
+        "latex": "{{\\_k^d_x}}{_{{N S}}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kd_x to interface material >>> macroscopic",
@@ -7829,7 +7921,7 @@
           "lhs": {
             "global_ID": "V_86",
             "matlab": "_kd_x(N)",
-            "latex": "{{k^d_x}}{_{{N S}}}"
+            "latex": "{{\\_k^d_x}}{_{{N S}}}"
           }
         }
       },
@@ -7860,13 +7952,13 @@
         "python": "_kd_y",
         "cpp": "_kd_y",
         "matlab": "_kd_y",
-        "latex": "{k^d_y}",
+        "latex": "{\\_k^d_y}",
         "internal_code": "_kd_y"
       },
       "compiled_lhs": {
         "global_ID": "V_87",
         "matlab": "_kd_y(N)",
-        "latex": "{{k^d_y}}{_{{N S}}}"
+        "latex": "{{\\_k^d_y}}{_{{N S}}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kd_y to interface material >>> macroscopic",
@@ -7888,7 +7980,7 @@
           "lhs": {
             "global_ID": "V_87",
             "matlab": "_kd_y(N)",
-            "latex": "{{k^d_y}}{_{{N S}}}"
+            "latex": "{{\\_k^d_y}}{_{{N S}}}"
           }
         }
       },
@@ -7919,13 +8011,13 @@
         "python": "_kd_z",
         "cpp": "_kd_z",
         "matlab": "_kd_z",
-        "latex": "{k^d_z}",
+        "latex": "{\\_k^d_z}",
         "internal_code": "_kd_z"
       },
       "compiled_lhs": {
         "global_ID": "V_88",
         "matlab": "_kd_z(N)",
-        "latex": "{{k^d_z}}{_{{N S}}}"
+        "latex": "{{\\_k^d_z}}{_{{N S}}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kd_z to interface material >>> macroscopic",
@@ -7947,7 +8039,7 @@
           "lhs": {
             "global_ID": "V_88",
             "matlab": "_kd_z(N)",
-            "latex": "{{k^d_z}}{_{{N S}}}"
+            "latex": "{{\\_k^d_z}}{_{{N S}}}"
           }
         }
       },
@@ -7978,13 +8070,13 @@
         "python": "_kd",
         "cpp": "_kd",
         "matlab": "_kd",
-        "latex": "{k^d}",
+        "latex": "{\\_k^d}",
         "internal_code": "_kd"
       },
       "compiled_lhs": {
         "global_ID": "V_89",
         "matlab": "_kd(N)",
-        "latex": "{{k^d}}{_{{N S}}}"
+        "latex": "{{\\_k^d}}{_{{N S}}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "link variable kd to interface material >>> macroscopic",
@@ -8006,7 +8098,7 @@
           "lhs": {
             "global_ID": "V_89",
             "matlab": "_kd(N)",
-            "latex": "{{k^d}}{_{{N S}}}"
+            "latex": "{{\\_k^d}}{_{{N S}}}"
           }
         }
       },
@@ -8163,7 +8255,7 @@
           "rhs": {
             "global_ID": " F_15 D_0 V_74 D_1 O_4 V_81 O_4 V_71 O_4 V_90  O_5  I_1 O_5  V_17",
             "matlab": "reduceproduct(1 ./ _density(N) .* _kc_x(N) .* Ayz(N) .* D(N, A), \"N\", p(N))",
-            "latex": "\\left( {\\rho}{_{N}} \\right)^{-1} \\, . \\, {{k^c_x}}{_{N}} \\, . \\, {{A_{yz}}}{_{N}} \\, . \\, {D}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {p}{_{N}}"
+            "latex": "\\left( {\\_\\rho}{_{N}} \\right)^{-1} \\, . \\, {{\\_k^c_x}}{_{N}} \\, . \\, {{A_{yz}}}{_{N}} \\, . \\, {D}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {p}{_{N}}"
           },
           "type": "generic",
           "doc": "volumetric flow",
@@ -8186,7 +8278,7 @@
         "E_140": {
           "rhs": {
             "global_ID": " O_11 D_0 V_92 D_7 V_1 D_1",
-            "matlab": null,
+            "matlab": "instantiate(fV(A), value)",
             "latex": "\\text{Instantiate}({\\hat{V}}{_{A}}, {\\#}{_{}})"
           },
           "type": "instantiation_equation",
@@ -8247,7 +8339,7 @@
           "rhs": {
             "global_ID": "V_71 O_3 F_11 D_0 V_86 D_1 O_4 V_91  O_5  I_5 O_5  V_19",
             "matlab": "reduceproduct(khatrirao(Ayz(N), -1 .* _kd_x(N)) .* D_NS_AS(N, A), \"N_x_S\", chemPot(N))",
-            "latex": "{{A_{yz}}}{_{N}} \\, {\\odot} \\, \\left( -{{k^d_x}}{_{{N S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {\\mu}{_{{N S}}}"
+            "latex": "{{A_{yz}}}{_{N}} \\, {\\odot} \\, \\left( -{{\\_k^d_x}}{_{{N S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {\\mu}{_{{N S}}}"
           },
           "type": "generic",
           "doc": "diffusional mass flow in a given stream",
@@ -8260,6 +8352,28 @@
           ],
           "created": "2023-09-06 09:59:12",
           "modified": "2023-09-06 09:59:12",
+          "lhs": {
+            "global_ID": "V_93",
+            "matlab": "fnd_AS(A)",
+            "latex": "{{\\hat{n}^{d}}}{_{{A S}}}"
+          }
+        },
+        "E_152": {
+          "rhs": {
+            "global_ID": " V_71 O_3 F_11 D_0 V_184 D_1 O_4 V_91  O_5 I_5 O_5 V_66",
+            "latex": "{{A_{yz}}}{_{N}} \\, {\\odot} \\, \\left( -{{\\_k^{d,Fick}}}{_{{N S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {c}{_{{N S}}}"
+          },
+          "type": "generic",
+          "doc": "diffusional mass flow in a given stream",
+          "network": "macroscopic",
+          "incidence_list": [
+            "V_184",
+            "V_66",
+            "V_71",
+            "V_91"
+          ],
+          "created": "2023-10-16 16:14:41",
+          "modified": "2023-10-16 16:14:41",
           "lhs": {
             "global_ID": "V_93",
             "matlab": "fnd_AS(A)",
@@ -8369,7 +8483,7 @@
           "rhs": {
             "global_ID": " D_0 V_70  O_5  I_5 O_5  V_75 D_1 O_5 I_3 O_14 I_6 O_5 V_93",
             "matlab": "blockreduce((reduceproduct(F_NS_AS(N, A), \"N_x_S\", _h(N))), \"S\", \"A_x_S\", fnd_AS(A))",
-            "latex": "\\left({F}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {_h}{_{{N S}}}\\right) \\stackrel{ S \\, \\in \\, {A S} }{\\,\\star\\,} {{\\hat{n}^{d}}}{_{{A S}}}"
+            "latex": "\\left({F}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {\\_h}{_{{N S}}}\\right) \\stackrel{ S \\, \\in \\, {A S} }{\\,\\star\\,} {{\\hat{n}^{d}}}{_{{A S}}}"
           },
           "type": "generic",
           "doc": "enthalpy flow per diffusional mass stream",
@@ -8967,7 +9081,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 181,
-    "equation": 150
+    "variable": 184,
+    "equation": 152
   }
 }

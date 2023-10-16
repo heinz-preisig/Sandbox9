@@ -209,6 +209,16 @@
     "network": "physical",
     "rhs": " ParDiff ( r_x , t )"
   },
+  "E_151": {
+    "lhs": "_k_d_Fick",
+    "network": "material >>> macroscopic",
+    "rhs": " k_d_Fick"
+  },
+  "E_152": {
+    "lhs": "fnd_AS",
+    "network": "macroscopic",
+    "rhs": " Ayz : neg ( _k_d_Fick ) . D_NS_AS | N & S | c"
+  },
   "E_16": {
     "lhs": "v_y",
     "network": "physical",

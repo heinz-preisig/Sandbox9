@@ -89,11 +89,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}the species production term\end{lay} &
     \begin{lay}reactions\end{lay} \\
         \hyperlink{"v:165"}{ 132 }\hypertarget{"e:132"}{  } &
-    \begin{eq}{boz}{_{N}} := \text{Instantiate}({S}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{B}{_{N}} := \text{Instantiate}({S}{_{N}}, {\#}{_{}})\end{eq} &
     \begin{lay}Boltzmann constant\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:166"}{ 133 }\hypertarget{"e:133"}{  } &
-    \begin{eq}{R}{_{N}} := {{A^v}}{_{}} \, . \, {boz}{_{N}}\end{eq} &
+    \begin{eq}{R}{_{N}} := {{A^v}}{_{}} \, . \, {B}{_{N}}\end{eq} &
     \begin{lay}gas constant\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:168"}{ 134 }\hypertarget{"e:134"}{  } &
@@ -140,6 +140,10 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{v_x}}{_{N}} := \ParDiff{{{r_x}}{_{N}}}{{t}{_{}}}\end{eq} &
     \begin{lay}velocitiy in x-direction\end{lay} &
     \begin{lay}physical\end{lay} \\
+        \hyperlink{"v:93"}{ 152 }\hypertarget{"e:152"}{  } &
+    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{N}} \, {\odot} \, \left( -{{\_k^{d,Fick}}}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} &
+    \begin{lay}diffusional mass flow in a given stream\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:29"}{ 16 }\hypertarget{"e:16"}{  } &
     \begin{eq}{{v_y}}{_{N}} := \ParDiff{{{r_y}}{_{N}}}{{t}{_{}}}\end{eq} &
     \begin{lay}velocity in y direction\end{lay} &
@@ -209,7 +213,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}partial molar enthalpies\end{lay} &
     \begin{lay}material\end{lay} \\
         \hyperlink{"v:57"}{ 36 }\hypertarget{"e:36"}{  } &
-    \begin{eq}{m}{_{N}} := {\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
+    \begin{eq}{m}{_{N}} := {\_\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
     \begin{lay}total mass\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:59"}{ 38 }\hypertarget{"e:38"}{  } &
@@ -245,11 +249,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}thermodynamic pressure\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:92"}{ 67 }\hypertarget{"e:67"}{  } &
-    \begin{eq}{\hat{V}}{_{A}} := \left( {\rho}{_{N}} \right)^{-1} \, . \, {{k^c_x}}{_{N}} \, . \, {{A_{yz}}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}}\end{eq} &
+    \begin{eq}{\hat{V}}{_{A}} := \left( {\_\rho}{_{N}} \right)^{-1} \, . \, {{\_k^c_x}}{_{N}} \, . \, {{A_{yz}}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}}\end{eq} &
     \begin{lay}volumetric flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:93"}{ 68 }\hypertarget{"e:68"}{  } &
-    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{N}} \, {\odot} \, \left( -{{k^d_x}}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} &
+    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{N}} \, {\odot} \, \left( -{{\_k^d_x}}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} &
     \begin{lay}diffusional mass flow in a given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:94"}{ 69 }\hypertarget{"e:69"}{  } &
@@ -261,7 +265,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}temperature\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:95"}{ 70 }\hypertarget{"e:70"}{  } &
-    \begin{eq}{{\hat{H}^d}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {_h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^{d}}}{_{{A S}}}\end{eq} &
+    \begin{eq}{{\hat{H}^d}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\_h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^{d}}}{_{{A S}}}\end{eq} &
     \begin{lay}enthalpy flow per diffusional mass stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:96"}{ 71 }\hypertarget{"e:71"}{  } &
@@ -289,7 +293,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}differential species balance\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:102"}{ 77 }\hypertarget{"e:77"}{  } &
-    \begin{eq}{{\hat{H}^c}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {_h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^c}}{_{{A S}}}\end{eq} &
+    \begin{eq}{{\hat{H}^c}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\_h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^c}}{_{{A S}}}\end{eq} &
     \begin{lay}convective enthalpy flow for given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:103"}{ 78 }\hypertarget{"e:78"}{  } &
@@ -305,7 +309,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}net work stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:106"}{ 81 }\hypertarget{"e:81"}{  } &
-    \begin{eq}{{\hat{q}_{x}}}{_{A}} := {{A_{yz}}}{_{N}} \, . \, {{k^q_x}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {T}{_{N}}\end{eq} &
+    \begin{eq}{{\hat{q}_{x}}}{_{A}} := {{A_{yz}}}{_{N}} \, . \, {{\_k^q_x}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {T}{_{N}}\end{eq} &
     \begin{lay}heat flow in x-direction for given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:107"}{ 82 }\hypertarget{"e:82"}{  } &
@@ -337,7 +341,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}simple model for the electrical conductivity as a function of the additive\end{lay} &
     \begin{lay}material\end{lay} \\
         \hyperlink{"v:27"}{ 95 }\hypertarget{"e:95"}{  } &
-    \begin{eq}{Ue}{_{N}} := \left( {{R^e}}{_{N}} \right)^{-1} \, . \, {I}{_{N}}\end{eq} &
+    \begin{eq}{Ue}{_{N}} := \left( {{\_R^e}}{_{N}} \right)^{-1} \, . \, {I}{_{N}}\end{eq} &
     \begin{lay}electrical potential -- voltage\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:118"}{ 96 }\hypertarget{"e:96"}{  } &
