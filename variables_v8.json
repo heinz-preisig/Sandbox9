@@ -8361,6 +8361,7 @@
         "E_152": {
           "rhs": {
             "global_ID": " V_71 O_3 F_11 D_0 V_184 D_1 O_4 V_91  O_5 I_5 O_5 V_66",
+            "matlab": "reduceproduct(khatrirao(Ayz(N), -1 .* _k_d_Fick(N)) .* D_NS_AS(N, A), \"N_x_S\", c(N))",
             "latex": "{{A_{yz}}}{_{N}} \\, {\\odot} \\, \\left( -{{\\_k^{d,Fick}}}{_{{N S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {c}{_{{N S}}}"
           },
           "type": "generic",
@@ -8373,7 +8374,7 @@
             "V_91"
           ],
           "created": "2023-10-16 16:14:41",
-          "modified": "2023-10-16 16:14:41",
+          "modified": "2023-10-17 22:52:52",
           "lhs": {
             "global_ID": "V_93",
             "matlab": "fnd_AS(A)",
