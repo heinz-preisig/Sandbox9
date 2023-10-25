@@ -6,9 +6,7 @@
         1,
         2,
         3,
-        4,
-        5,
-        6
+        4
       ]
     },
     "1": {
@@ -30,18 +28,6 @@
       "children": []
     },
     "4": {
-      "ancestors": [
-        0
-      ],
-      "children": []
-    },
-    "5": {
-      "ancestors": [
-        0
-      ],
-      "children": []
-    },
-    "6": {
       "ancestors": [
         0
       ],
@@ -133,21 +119,20 @@
       "network": "liquid",
       "named_network": "A-liquid",
       "class": "node_simple",
-      "type": "constant|infinity",
-      "variant": "MaterialSource",
+      "type": "dynamic|lumped",
+      "variant": "MassControlVolume",
       "instantiated_variables": {
-        "V_66": 1.0
+        "V_100": 0.0,
+        "V_110": 0.0,
+        "V_15": 1e-06,
+        "V_164": 0.0,
+        "V_6": 0.0,
+        "V_7": 100.0
       },
       "tokens": {
-        "mass": [
-          "A"
-        ]
+        "mass": []
       },
-      "injected_typed_tokens": {
-        "mass": [
-          "A"
-        ]
-      },
+      "conversions": {},
       "mass": []
     },
     "2": {
@@ -158,15 +143,15 @@
       "type": "dynamic|lumped",
       "variant": "MassControlVolume",
       "instantiated_variables": {
-        "V_6": 0.0,
-        "V_7": 100.0,
         "V_100": 0.0,
-        "V_110": 0.0
+        "V_110": 0.0,
+        "V_15": 1e-06,
+        "V_164": 0.0,
+        "V_6": 0.0,
+        "V_7": 100.0
       },
       "tokens": {
-        "mass": [
-          "A"
-        ]
+        "mass": []
       },
       "conversions": {},
       "mass": []
@@ -179,15 +164,15 @@
       "type": "dynamic|lumped",
       "variant": "MassControlVolume",
       "instantiated_variables": {
-        "V_6": 0.0,
-        "V_7": 100.0,
         "V_100": 0.0,
-        "V_110": 0.0
+        "V_110": 0.0,
+        "V_15": 1e-06,
+        "V_164": 0.0,
+        "V_6": 0.0,
+        "V_7": 100.0
       },
       "tokens": {
-        "mass": [
-          "A"
-        ]
+        "mass": []
       },
       "conversions": {},
       "mass": []
@@ -200,57 +185,15 @@
       "type": "dynamic|lumped",
       "variant": "MassControlVolume",
       "instantiated_variables": {
-        "V_6": 0.0,
-        "V_7": 100.0,
         "V_100": 0.0,
-        "V_110": 0.0
+        "V_110": 0.0,
+        "V_15": 1e-06,
+        "V_164": 0.0,
+        "V_6": 0.0,
+        "V_7": 100.0
       },
       "tokens": {
-        "mass": [
-          "A"
-        ]
-      },
-      "conversions": {},
-      "mass": []
-    },
-    "5": {
-      "name": "default",
-      "network": "liquid",
-      "named_network": "A-liquid",
-      "class": "node_simple",
-      "type": "dynamic|lumped",
-      "variant": "MassControlVolume",
-      "instantiated_variables": {
-        "V_6": 0.0,
-        "V_7": 100.0,
-        "V_100": 0.0,
-        "V_110": 0.0
-      },
-      "tokens": {
-        "mass": [
-          "A"
-        ]
-      },
-      "conversions": {},
-      "mass": []
-    },
-    "6": {
-      "name": "default",
-      "network": "liquid",
-      "named_network": "A-liquid",
-      "class": "node_simple",
-      "type": "dynamic|lumped",
-      "variant": "MassControlVolume",
-      "instantiated_variables": {
-        "V_6": 0.0,
-        "V_7": 100.0,
-        "V_100": 0.0,
-        "V_110": 0.0
-      },
-      "tokens": {
-        "mass": [
-          "A"
-        ]
+        "mass": []
       },
       "conversions": {},
       "mass": []
@@ -263,17 +206,15 @@
       "source": 1,
       "sink": 2,
       "token": "mass",
-      "typed_tokens": [
-        "A"
-      ],
+      "typed_tokens": [],
       "network": "liquid",
       "named_network": "A-liquid",
       "mechanism": "diffusion",
       "nature": "lumped",
       "variant": "MassDiffusionFick",
       "instantiated_variables": {
-        "V_71": 0.001,
-        "V_184": 0.0002
+        "V_184": 6e-06,
+        "V_71": 1e-07
       }
     },
     "1": {
@@ -281,17 +222,15 @@
       "source": 2,
       "sink": 3,
       "token": "mass",
-      "typed_tokens": [
-        "A"
-      ],
+      "typed_tokens": [],
       "network": "liquid",
       "named_network": "A-liquid",
       "mechanism": "diffusion",
       "nature": "lumped",
       "variant": "MassDiffusionFick",
       "instantiated_variables": {
-        "V_71": 0.001,
-        "V_184": 0.0002
+        "V_184": 6e-06,
+        "V_71": 1e-07
       }
     },
     "2": {
@@ -299,53 +238,15 @@
       "source": 3,
       "sink": 4,
       "token": "mass",
-      "typed_tokens": [
-        "A"
-      ],
+      "typed_tokens": [],
       "network": "liquid",
       "named_network": "A-liquid",
       "mechanism": "diffusion",
       "nature": "lumped",
       "variant": "MassDiffusionFick",
       "instantiated_variables": {
-        "V_71": 0.001,
-        "V_184": 0.0002
-      }
-    },
-    "3": {
-      "name": "4 | 5",
-      "source": 4,
-      "sink": 5,
-      "token": "mass",
-      "typed_tokens": [
-        "A"
-      ],
-      "network": "liquid",
-      "named_network": "A-liquid",
-      "mechanism": "diffusion",
-      "nature": "lumped",
-      "variant": "MassDiffusionFick",
-      "instantiated_variables": {
-        "V_71": 0.001,
-        "V_184": 0.0002
-      }
-    },
-    "4": {
-      "name": "5 | 6",
-      "source": 5,
-      "sink": 6,
-      "token": "mass",
-      "typed_tokens": [
-        "A"
-      ],
-      "network": "liquid",
-      "named_network": "A-liquid",
-      "mechanism": "diffusion",
-      "nature": "lumped",
-      "variant": "MassDiffusionFick",
-      "instantiated_variables": {
-        "V_71": 0.001,
-        "V_184": 0.0002
+        "V_184": 6e-06,
+        "V_71": 1e-07
       }
     }
   },
@@ -353,8 +254,8 @@
     "0": {
       "nodes": {
         "1": {
-          "position_x": -287.0,
-          "position_y": -249.0,
+          "position_x": -314.0,
+          "position_y": -41.0,
           "root": {
             "position_x": 0,
             "position_y": 0
@@ -373,8 +274,8 @@
           }
         },
         "2": {
-          "position_x": 65.0,
-          "position_y": -173.0,
+          "position_x": -124.0,
+          "position_y": -45.0,
           "root": {
             "position_x": 0,
             "position_y": 0
@@ -393,8 +294,8 @@
           }
         },
         "3": {
-          "position_x": -256.0,
-          "position_y": -1.0,
+          "position_x": 69.0,
+          "position_y": -43.0,
           "root": {
             "position_x": 0,
             "position_y": 0
@@ -413,48 +314,8 @@
           }
         },
         "4": {
-          "position_x": 68.0,
-          "position_y": -8.0,
-          "root": {
-            "position_x": 0,
-            "position_y": 0
-          },
-          "name": {
-            "position_x": 0,
-            "position_y": 50
-          },
-          "network": {
-            "position_x": -15,
-            "position_y": 0
-          },
-          "named_network": {
-            "position_x": -20,
-            "position_y": 0
-          }
-        },
-        "5": {
-          "position_x": -264.0,
-          "position_y": 152.0,
-          "root": {
-            "position_x": 0,
-            "position_y": 0
-          },
-          "name": {
-            "position_x": 0,
-            "position_y": 50
-          },
-          "network": {
-            "position_x": -15,
-            "position_y": 0
-          },
-          "named_network": {
-            "position_x": -20,
-            "position_y": 0
-          }
-        },
-        "6": {
-          "position_x": 57.0,
-          "position_y": 165.0,
+          "position_x": 262.0,
+          "position_y": -43.0,
           "root": {
             "position_x": 0,
             "position_y": 0
@@ -474,36 +335,9 @@
         }
       },
       "arcs": {
-        "0": [
-          [
-            -109.5,
-            -174.5
-          ]
-        ],
-        "1": [
-          [
-            -95.5,
-            -87.0
-          ]
-        ],
-        "2": [
-          [
-            -94.0,
-            -4.5
-          ]
-        ],
-        "3": [
-          [
-            -98.0,
-            72.0
-          ]
-        ],
-        "4": [
-          [
-            -103.5,
-            158.5
-          ]
-        ]
+        "0": [],
+        "1": [],
+        "2": []
       }
     },
     "1": {
@@ -529,21 +363,7 @@
     "4": {
       "nodes": {},
       "arcs": {
-        "2": [],
-        "3": []
-      }
-    },
-    "5": {
-      "nodes": {},
-      "arcs": {
-        "3": [],
-        "4": []
-      }
-    },
-    "6": {
-      "nodes": {},
-      "arcs": {
-        "4": []
+        "2": []
       }
     }
   }
