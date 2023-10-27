@@ -25,7 +25,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}interface equation\end{lay} &
     \begin{lay}material --> macroscopic\end{lay} \\
         \hyperlink{"v:142"}{ 114 }\hypertarget{"e:114"}{  } &
-    \begin{eq}{Ue}{_{N}} := {Ue}{_{N}}\end{eq} &
+    \begin{eq}{Ue}{_{N}} := {{U^e}}{_{N}}\end{eq} &
     \begin{lay}interface equation\end{lay} &
     \begin{lay}macroscopic --> control\end{lay} \\
         \hyperlink{"v:164"}{ 131 }\hypertarget{"e:131"}{  } &
@@ -33,7 +33,59 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}interface equation\end{lay} &
     \begin{lay}reactions --> macroscopic\end{lay} \\
         \hyperlink{"v:184"}{ 151 }\hypertarget{"e:151"}{  } &
-    \begin{eq}{{\_k^{d,Fick}}}{_{{N S}}} := {k_d_Fick}{_{{N S}}}\end{eq} &
+    \begin{eq}{{\_k^{d,Fick}}}{_{{N S}}} := {{k^{d,Fick}}}{_{{N S}}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:202"}{ 166 }\hypertarget{"e:166"}{  } &
+    \begin{eq}{_density_A}{_{A}} := {\rho}{_{A}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:203"}{ 167 }\hypertarget{"e:167"}{  } &
+    \begin{eq}{_elConductC_A}{_{A}} := {{k^{e,\xi}}}{_{A}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:204"}{ 168 }\hypertarget{"e:168"}{  } &
+    \begin{eq}{_h_A}{_{{A S}}} := {h}{_{{A S}}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:205"}{ 169 }\hypertarget{"e:169"}{  } &
+    \begin{eq}{{\_k^{d,Fick,A}}}{_{{A S}}} := {{k^{d,Fick}}}{_{{A S}}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:206"}{ 170 }\hypertarget{"e:170"}{  } &
+    \begin{eq}{_kc_x_A}{_{A}} := {{k^c_x}}{_{A}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:207"}{ 171 }\hypertarget{"e:171"}{  } &
+    \begin{eq}{_kc_y_A}{_{A}} := {{k^c_y}}{_{A}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:208"}{ 172 }\hypertarget{"e:172"}{  } &
+    \begin{eq}{_kc_z_A}{_{A}} := {{k^c_z}}{_{A}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:209"}{ 173 }\hypertarget{"e:173"}{  } &
+    \begin{eq}{_kd_x_A}{_{{A S}}} := {{k^d_x}}{_{{A S}}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:210"}{ 174 }\hypertarget{"e:174"}{  } &
+    \begin{eq}{_kd_y_A}{_{{A S}}} := {{k^d_y}}{_{{A S}}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:211"}{ 175 }\hypertarget{"e:175"}{  } &
+    \begin{eq}{_kd_z_A}{_{{A S}}} := {{k^d_z}}{_{{A S}}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:212"}{ 176 }\hypertarget{"e:176"}{  } &
+    \begin{eq}{_kq_x_A}{_{A}} := {{k^q_x}}{_{A}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:213"}{ 177 }\hypertarget{"e:177"}{  } &
+    \begin{eq}{_kq_y_A}{_{A}} := {{k^q_y}}{_{A}}\end{eq} &
+    \begin{lay}interface equation\end{lay} &
+    \begin{lay}material --> macroscopic\end{lay} \\
+        \hyperlink{"v:214"}{ 178 }\hypertarget{"e:178"}{  } &
+    \begin{eq}{_kq_z_A}{_{A}} := {{k^q_z}}{_{A}}\end{eq} &
     \begin{lay}interface equation\end{lay} &
     \begin{lay}material --> macroscopic\end{lay} \\
         \hyperlink{"v:41"}{ 20 }\hypertarget{"e:20"}{  } &
@@ -72,10 +124,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{\_k^q_z}}{_{N}} := {{k^q_z}}{_{N}}\end{eq} &
     \begin{lay}interface equation\end{lay} &
     \begin{lay}material --> macroscopic\end{lay} \\
-        \hyperlink{"v:80"}{ 57 }\hypertarget{"e:57"}{  } &
-    \begin{eq}{{\_k^q}}{_{N}} := {{k^q}}{_{N}}\end{eq} &
-    \begin{lay}interface equation\end{lay} &
-    \begin{lay}material --> macroscopic\end{lay} \\
         \hyperlink{"v:81"}{ 58 }\hypertarget{"e:58"}{  } &
     \begin{eq}{{\_k^c_x}}{_{N}} := {{k^c_x}}{_{N}}\end{eq} &
     \begin{lay}interface equation\end{lay} &
@@ -92,10 +140,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{\_k^c_z}}{_{N}} := {{k^c_z}}{_{N}}\end{eq} &
     \begin{lay}interface equation\end{lay} &
     \begin{lay}material --> macroscopic\end{lay} \\
-        \hyperlink{"v:85"}{ 62 }\hypertarget{"e:62"}{  } &
-    \begin{eq}{{\_k^c}}{_{N}} := {{k^c}}{_{N}}\end{eq} &
-    \begin{lay}interface equation\end{lay} &
-    \begin{lay}material --> macroscopic\end{lay} \\
         \hyperlink{"v:86"}{ 63 }\hypertarget{"e:63"}{  } &
     \begin{eq}{{\_k^d_x}}{_{{N S}}} := {{k^d_x}}{_{{N S}}}\end{eq} &
     \begin{lay}interface equation\end{lay} &
@@ -106,10 +150,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}material --> macroscopic\end{lay} \\
         \hyperlink{"v:88"}{ 65 }\hypertarget{"e:65"}{  } &
     \begin{eq}{{\_k^d_z}}{_{{N S}}} := {{k^d_z}}{_{{N S}}}\end{eq} &
-    \begin{lay}interface equation\end{lay} &
-    \begin{lay}material --> macroscopic\end{lay} \\
-        \hyperlink{"v:89"}{ 66 }\hypertarget{"e:66"}{  } &
-    \begin{eq}{{\_k^d}}{_{{N S}}} := {{k^d}}{_{{N S}}}\end{eq} &
     \begin{lay}interface equation\end{lay} &
     \begin{lay}material --> macroscopic\end{lay} \\
         \hyperlink{"v:114"}{ 90 }\hypertarget{"e:90"}{  } &

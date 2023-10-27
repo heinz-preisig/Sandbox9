@@ -994,7 +994,7 @@
           "rhs": {
             "global_ID": " F_15 D_0 V_114 D_1 O_4 V_27",
             "matlab": "1 ./ _i(N) .* Ue(N)",
-            "latex": "\\left( {I}{_{N}} \\right)^{-1} \\, . \\, {Ue}{_{N}}"
+            "latex": "\\left( {I}{_{N}} \\right)^{-1} \\, . \\, {{U^e}}{_{N}}"
           },
           "type": "instantiate",
           "doc": "electrical resistant",
@@ -1194,7 +1194,7 @@
           "rhs": {
             "global_ID": "V_2 O_4 V_27",
             "matlab": "one .* Ue(N)",
-            "latex": "{1}{_{}} \\, . \\, {Ue}{_{N}}"
+            "latex": "{1}{_{}} \\, . \\, {{U^e}}{_{N}}"
           },
           "type": "generic",
           "doc": "Kirkhoff first law",
@@ -1215,7 +1215,7 @@
           "rhs": {
             "global_ID": " F_18 D_0 V_27 D_1",
             "matlab": "root(Ue(N))",
-            "latex": "Root\\left( {Ue}{_{N}}\\right)"
+            "latex": "Root\\left( {{U^e}}{_{N}}\\right)"
           },
           "type": "generic",
           "doc": "Kirkhoff first law",
@@ -1506,7 +1506,7 @@
           "rhs": {
             "global_ID": " F_19 D_0 V_17 D_7 V_18 D_7 V_19 D_7 V_66 D_7 V_27 D_1",
             "matlab": null,
-            "latex": "\\text{MixedStack}\\left( {p}{_{N}},{T}{_{N}},{\\mu}{_{{N S}}},{c}{_{{N S}}},{Ue}{_{N}} \\right)"
+            "latex": "\\text{MixedStack}\\left( {p}{_{N}},{T}{_{N}},{\\mu}{_{{N S}}},{c}{_{{N S}}},{{U^e}}{_{N}} \\right)"
           },
           "type": "generic",
           "doc": "collected intensities",
@@ -2376,7 +2376,7 @@
           "rhs": {
             "global_ID": "V_27",
             "matlab": "Ue(N)",
-            "latex": "{Ue}{_{N}}"
+            "latex": "{{U^e}}{_{N}}"
           },
           "type": "interface_link_equation",
           "doc": "interface equation",
@@ -4096,13 +4096,13 @@
       "IRI": "promo:k_d_Fick",
       "aliases": {
         "matlab": "k_d_Fick",
-        "latex": "k_d_Fick",
+        "latex": "{k^{d,Fick}}",
         "internal_code": "k_d_Fick",
         "global_ID": "V_183"
       },
       "compiled_lhs": {
         "global_ID": "V_183",
-        "latex": "{k_d_Fick}{_{{N S}}}"
+        "latex": "{{k^{d,Fick}}}{_{{N S}}}"
       },
       "created": "2023-10-16 16:01:45",
       "doc": "Fick's diffusivity",
@@ -4147,7 +4147,7 @@
           "rhs": {
             "global_ID": " V_183",
             "matlab": "k_d_Fick(N)",
-            "latex": "{k_d_Fick}{_{{N S}}}"
+            "latex": "{{k^{d,Fick}}}{_{{N S}}}"
           },
           "type": "interface_link_equation",
           "doc": "interface equation",
@@ -4178,6 +4178,180 @@
         1,
         0,
         0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_187": {
+      "IRI": "promo:h_A",
+      "aliases": {
+        "matlab": "h_A",
+        "latex": "h",
+        "internal_code": "h_A",
+        "global_ID": "V_187"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_187",
+        "matlab": "h_A(A)",
+        "latex": "{h}{_{{A S}}}"
+      },
+      "created": "2023-10-26 15:44:13",
+      "doc": "partial molar enthalpies (arc)",
+      "equations": {
+        "E_153": {
+          "rhs": {
+            "global_ID": " V_200  O_5 I_5 O_5 V_56",
+            "matlab": "reduceproduct(I_NS_AS(N, A), \"N_x_S\", h(N))",
+            "latex": "{I}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {h}{_{{N S}}}"
+          },
+          "type": "generic",
+          "doc": "partial molar enthalpies (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_200",
+            "V_56"
+          ],
+          "created": "2023-10-26 15:44:13",
+          "modified": "2023-10-27 09:26:07",
+          "lhs": {
+            "global_ID": "V_187",
+            "matlab": "h_A(A)",
+            "latex": "{h}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "h_A",
+      "modified": "2023-10-26 15:44:13",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        -2,
+        2,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_188": {
+      "IRI": "promo:k_d_Fick_A",
+      "aliases": {
+        "matlab": "k_d_Fick_A",
+        "latex": "{k^{d,Fick}}",
+        "internal_code": "k_d_Fick_A",
+        "global_ID": "V_188"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_188",
+        "matlab": "k_d_Fick_A(A)",
+        "latex": "{{k^{d,Fick}}}{_{{A S}}}"
+      },
+      "created": "2023-10-26 15:45:40",
+      "doc": "Fick's diffusivity (arc)",
+      "equations": {
+        "E_154": {
+          "rhs": {
+            "global_ID": " V_200  O_5 I_5 O_5 V_183",
+            "matlab": "reduceproduct(I_NS_AS(N, A), \"N_x_S\", k_d_Fick(N))",
+            "latex": "{I}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {{k^{d,Fick}}}{_{{N S}}}"
+          },
+          "type": "generic",
+          "doc": "Fick's diffusivity (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_183",
+            "V_200"
+          ],
+          "created": "2023-10-26 15:45:40",
+          "modified": "2023-10-27 09:27:14",
+          "lhs": {
+            "global_ID": "V_188",
+            "matlab": "k_d_Fick_A(A)",
+            "latex": "{{k^{d,Fick}}}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "k_d_Fick_A",
+      "modified": "2023-10-26 15:45:40",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_189": {
+      "IRI": "promo:density_A",
+      "aliases": {
+        "matlab": "density_A",
+        "latex": "\\rho",
+        "internal_code": "density_A",
+        "global_ID": "V_189"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_189",
+        "matlab": "density_A(A)",
+        "latex": "{\\rho}{_{A}}"
+      },
+      "created": "2023-10-26 15:59:43",
+      "doc": "density (arc)",
+      "equations": {
+        "E_155": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_59",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", density(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {\\rho}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "density (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_201",
+            "V_59"
+          ],
+          "created": "2023-10-26 15:59:43",
+          "modified": "2023-10-27 09:26:38",
+          "lhs": {
+            "global_ID": "V_189",
+            "matlab": "density_A(A)",
+            "latex": "{\\rho}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "density_A",
+      "modified": "2023-10-26 15:59:43",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        0,
+        -3,
+        0,
+        1,
         0,
         0,
         0,
@@ -4261,6 +4435,586 @@
         -1,
         1,
         0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_190": {
+      "IRI": "promo:elConductC_A",
+      "aliases": {
+        "matlab": "elConductC_A",
+        "latex": "{k^{e,\\xi}}",
+        "internal_code": "elConductC_A",
+        "global_ID": "V_190"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_190",
+        "matlab": "elConductC_A(A)",
+        "latex": "{{k^{e,\\xi}}}{_{A}}"
+      },
+      "created": "2023-10-26 16:00:40",
+      "doc": "simple model for the electrical conductivity as a function of the additive (arc)",
+      "equations": {
+        "E_156": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_116",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", elConductC(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{k^{e,\\xi}}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "simple model for the electrical conductivity as a function of the additive (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_116",
+            "V_201"
+          ],
+          "created": "2023-10-26 16:00:40",
+          "modified": "2023-10-27 09:26:51",
+          "lhs": {
+            "global_ID": "V_190",
+            "matlab": "elConductC_A(A)",
+            "latex": "{{k^{e,\\xi}}}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "elConductC_A",
+      "modified": "2023-10-26 16:00:40",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        3,
+        -2,
+        0,
+        -1,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    "V_191": {
+      "IRI": "promo:kc_x_A",
+      "aliases": {
+        "matlab": "kc_x_A",
+        "latex": "{k^c_x}",
+        "internal_code": "kc_x_A",
+        "global_ID": "V_191"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_191",
+        "matlab": "kc_x_A(A)",
+        "latex": "{{k^c_x}}{_{A}}"
+      },
+      "created": "2023-10-26 16:02:15",
+      "doc": "convective mass conductivity in x-direction (arc)",
+      "equations": {
+        "E_157": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_48",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", kc_x(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{k^c_x}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "convective mass conductivity in x-direction (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_201",
+            "V_48"
+          ],
+          "created": "2023-10-26 16:02:15",
+          "modified": "2023-10-27 09:27:40",
+          "lhs": {
+            "global_ID": "V_191",
+            "matlab": "kc_x_A(A)",
+            "latex": "{{k^c_x}}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "kc_x_A",
+      "modified": "2023-10-26 16:02:15",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_192": {
+      "IRI": "promo:kc_y_A",
+      "aliases": {
+        "matlab": "kc_y_A",
+        "latex": "{k^c_y}",
+        "internal_code": "kc_y_A",
+        "global_ID": "V_192"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_192",
+        "matlab": "kc_y_A(A)",
+        "latex": "{{k^c_y}}{_{A}}"
+      },
+      "created": "2023-10-26 16:03:00",
+      "doc": "convective mass conductivity in y-direction (arc)",
+      "equations": {
+        "E_158": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_49",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", kc_y(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{k^c_y}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "convective mass conductivity in y-direction (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_201",
+            "V_49"
+          ],
+          "created": "2023-10-26 16:03:00",
+          "modified": "2023-10-27 09:28:03",
+          "lhs": {
+            "global_ID": "V_192",
+            "matlab": "kc_y_A(A)",
+            "latex": "{{k^c_y}}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "kc_y_A",
+      "modified": "2023-10-26 16:03:00",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_193": {
+      "IRI": "promo:kc_z_A",
+      "aliases": {
+        "matlab": "kc_z_A",
+        "latex": "{k^c_z}",
+        "internal_code": "kc_z_A",
+        "global_ID": "V_193"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_193",
+        "matlab": "kc_z_A(A)",
+        "latex": "{{k^c_z}}{_{A}}"
+      },
+      "created": "2023-10-26 16:03:35",
+      "doc": "convective mass conductivity in z-direction",
+      "equations": {
+        "E_159": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_50",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", kc_z(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{k^c_z}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "convective mass conductivity in z-direction",
+          "network": "material",
+          "incidence_list": [
+            "V_201",
+            "V_50"
+          ],
+          "created": "2023-10-26 16:03:35",
+          "modified": "2023-10-27 09:28:19",
+          "lhs": {
+            "global_ID": "V_193",
+            "matlab": "kc_z_A(A)",
+            "latex": "{{k^c_z}}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "kc_z_A",
+      "modified": "2023-10-26 16:03:35",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_194": {
+      "IRI": "promo:kd_x_A",
+      "aliases": {
+        "matlab": "kd_x_A",
+        "latex": "{k^d_x}",
+        "internal_code": "kd_x_A",
+        "global_ID": "V_194"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_194",
+        "matlab": "kd_x_A(A)",
+        "latex": "{{k^d_x}}{_{{A S}}}"
+      },
+      "created": "2023-10-26 16:06:07",
+      "doc": "diffusional mass conductivity in x-direction (arc)",
+      "equations": {
+        "E_160": {
+          "rhs": {
+            "global_ID": " V_200  O_5 I_5 O_5 V_52",
+            "matlab": "reduceproduct(I_NS_AS(N, A), \"N_x_S\", kd_x(N))",
+            "latex": "{I}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {{k^d_x}}{_{{N S}}}"
+          },
+          "type": "generic",
+          "doc": "diffusional mass conductivity in x-direction (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_200",
+            "V_52"
+          ],
+          "created": "2023-10-26 16:06:07",
+          "modified": "2023-10-27 09:32:00",
+          "lhs": {
+            "global_ID": "V_194",
+            "matlab": "kd_x_A(A)",
+            "latex": "{{k^d_x}}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "kd_x_A",
+      "modified": "2023-10-26 16:06:07",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        1,
+        -4,
+        2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_195": {
+      "IRI": "promo:kd_y_A",
+      "aliases": {
+        "matlab": "kd_y_A",
+        "latex": "{k^d_y}",
+        "internal_code": "kd_y_A",
+        "global_ID": "V_195"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_195",
+        "matlab": "kd_y_A(A)",
+        "latex": "{{k^d_y}}{_{{A S}}}"
+      },
+      "created": "2023-10-26 16:06:53",
+      "doc": "diffusional mass conductivity in y-direction (arc)",
+      "equations": {
+        "E_161": {
+          "rhs": {
+            "global_ID": " V_200  O_5 I_5 O_5 V_53",
+            "matlab": "reduceproduct(I_NS_AS(N, A), \"N_x_S\", kd_y(N))",
+            "latex": "{I}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {{k^d_y}}{_{{N S}}}"
+          },
+          "type": "generic",
+          "doc": "diffusional mass conductivity in y-direction (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_200",
+            "V_53"
+          ],
+          "created": "2023-10-26 16:06:53",
+          "modified": "2023-10-27 09:28:54",
+          "lhs": {
+            "global_ID": "V_195",
+            "matlab": "kd_y_A(A)",
+            "latex": "{{k^d_y}}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "kd_y_A",
+      "modified": "2023-10-26 16:06:53",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        1,
+        -4,
+        2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_196": {
+      "IRI": "promo:kd_z_A",
+      "aliases": {
+        "matlab": "kd_z_A",
+        "latex": "{k^d_z}",
+        "internal_code": "kd_z_A",
+        "global_ID": "V_196"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_196",
+        "matlab": "kd_z_A(A)",
+        "latex": "{{k^d_z}}{_{{A S}}}"
+      },
+      "created": "2023-10-26 16:07:36",
+      "doc": "diffusional mass conductivity in z-direction (arc)",
+      "equations": {
+        "E_162": {
+          "rhs": {
+            "global_ID": " V_200  O_5 I_5 O_5 V_54",
+            "matlab": "reduceproduct(I_NS_AS(N, A), \"N_x_S\", kd_z(N))",
+            "latex": "{I}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {{k^d_z}}{_{{N S}}}"
+          },
+          "type": "generic",
+          "doc": "diffusional mass conductivity in z-direction (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_200",
+            "V_54"
+          ],
+          "created": "2023-10-26 16:07:36",
+          "modified": "2023-10-27 09:29:09",
+          "lhs": {
+            "global_ID": "V_196",
+            "matlab": "kd_z_A(A)",
+            "latex": "{{k^d_z}}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "kd_z_A",
+      "modified": "2023-10-26 16:07:36",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        1,
+        -4,
+        2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_197": {
+      "IRI": "promo:kq_x_A",
+      "aliases": {
+        "matlab": "kq_x_A",
+        "latex": "{k^q_x}",
+        "internal_code": "kq_x_A",
+        "global_ID": "V_197"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_197",
+        "matlab": "kq_x_A(A)",
+        "latex": "{{k^q_x}}{_{A}}"
+      },
+      "created": "2023-10-26 16:09:16",
+      "doc": "thermal conductivity in x-direction (arc)",
+      "equations": {
+        "E_163": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_44",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", kq_x(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{k^q_x}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "thermal conductivity in x-direction",
+          "network": "material",
+          "incidence_list": [
+            "V_201",
+            "V_44"
+          ],
+          "created": "2023-10-26 16:09:16",
+          "modified": "2023-10-27 09:29:35",
+          "lhs": {
+            "global_ID": "V_197",
+            "matlab": "kq_x_A(A)",
+            "latex": "{{k^q_x}}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "kq_x_A",
+      "modified": "2023-10-26 16:10:04",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        -3,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_198": {
+      "IRI": "promo:kq_y_A",
+      "aliases": {
+        "matlab": "kq_y_A",
+        "latex": "{k^q_y}",
+        "internal_code": "kq_y_A",
+        "global_ID": "V_198"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_198",
+        "matlab": "kq_y_A(A)",
+        "latex": "{{k^q_y}}{_{A}}"
+      },
+      "created": "2023-10-26 16:09:57",
+      "doc": "thermal conductivity in y-direction (arc)",
+      "equations": {
+        "E_164": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_45",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", kq_y(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{k^q_y}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "thermal conductivity in y-direction (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_201",
+            "V_45"
+          ],
+          "created": "2023-10-26 16:09:57",
+          "modified": "2023-10-27 09:29:58",
+          "lhs": {
+            "global_ID": "V_198",
+            "matlab": "kq_y_A(A)",
+            "latex": "{{k^q_y}}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "kq_y_A",
+      "modified": "2023-10-26 16:09:57",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        -3,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_199": {
+      "IRI": "promo:kq_z_A",
+      "aliases": {
+        "matlab": "kq_z_A",
+        "latex": "{k^q_z}",
+        "internal_code": "kq_z_A",
+        "global_ID": "V_199"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_199",
+        "matlab": "kq_z_A(A)",
+        "latex": "{{k^q_z}}{_{A}}"
+      },
+      "created": "2023-10-26 16:10:51",
+      "doc": "thermal conductivity in z-direction (arc)",
+      "equations": {
+        "E_165": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_46",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", kq_z(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{k^q_z}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "thermal conductivity in z-direction (arc)",
+          "network": "material",
+          "incidence_list": [
+            "V_201",
+            "V_46"
+          ],
+          "created": "2023-10-26 16:10:51",
+          "modified": "2023-10-27 09:30:21",
+          "lhs": {
+            "global_ID": "V_199",
+            "matlab": "kq_z_A(A)",
+            "latex": "{{k^q_z}}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "kq_z_A",
+      "modified": "2023-10-26 16:10:51",
+      "network": "material",
+      "port_variable": false,
+      "tokens": [],
+      "type": "property",
+      "units": [
+        -3,
+        0,
+        0,
+        1,
+        -1,
         0,
         0,
         0
@@ -4407,6 +5161,534 @@
         0
       ]
     },
+    "V_200": {
+      "IRI": "promo:I_NS_AS",
+      "aliases": {
+        "matlab": "I_NS_AS",
+        "latex": "I",
+        "internal_code": "I_NS_AS",
+        "global_ID": "V_200"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_200",
+        "latex": "{I}{_{{N S}, {A S}}}"
+      },
+      "created": "2023-10-27 09:24:02",
+      "doc": "projection species to node species",
+      "equations": {},
+      "index_structures": [
+        "I_5",
+        "I_6"
+      ],
+      "label": "I_NS_AS",
+      "modified": "2023-10-27 09:32:47",
+      "network": "physical",
+      "port_variable": true,
+      "tokens": [],
+      "type": "projection",
+      "units": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_201": {
+      "IRI": "promo:I_N_A",
+      "aliases": {
+        "matlab": "I_N_A",
+        "latex": "I",
+        "internal_code": "I_N_A",
+        "global_ID": "V_201"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_201",
+        "latex": "{I}{_{N, A}}"
+      },
+      "created": "2023-10-27 09:24:04",
+      "doc": "projection of nodes and arcs",
+      "equations": {},
+      "index_structures": [
+        "I_1",
+        "I_2"
+      ],
+      "label": "I_N_A",
+      "modified": "2023-10-27 09:32:55",
+      "network": "physical",
+      "port_variable": true,
+      "tokens": [],
+      "type": "projection",
+      "units": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_202": {
+      "IRI": "promo:_density_A",
+      "aliases": {
+        "matlab": "_density_A",
+        "latex": "_density_A",
+        "internal_code": "_density_A",
+        "global_ID": "V_202"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_202",
+        "matlab": "_density_A(A)",
+        "latex": "{_density_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:38",
+      "doc": "link variable density_A to interface material >>> macroscopic",
+      "equations": {
+        "E_166": {
+          "rhs": {
+            "global_ID": " V_189",
+            "matlab": "density_A(A)",
+            "latex": "{\\rho}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_189"
+          ],
+          "created": "2023-10-27 12:01:38",
+          "modified": "2023-10-27 12:01:38",
+          "lhs": {
+            "global_ID": "V_202",
+            "matlab": "_density_A(A)",
+            "latex": "{_density_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_density_A",
+      "modified": "2023-10-27 12:01:38",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        0,
+        -3,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_203": {
+      "IRI": "promo:_elConductC_A",
+      "aliases": {
+        "matlab": "_elConductC_A",
+        "latex": "_elConductC_A",
+        "internal_code": "_elConductC_A",
+        "global_ID": "V_203"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_203",
+        "matlab": "_elConductC_A(A)",
+        "latex": "{_elConductC_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:39",
+      "doc": "link variable elConductC_A to interface material >>> macroscopic",
+      "equations": {
+        "E_167": {
+          "rhs": {
+            "global_ID": " V_190",
+            "matlab": "elConductC_A(A)",
+            "latex": "{{k^{e,\\xi}}}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_190"
+          ],
+          "created": "2023-10-27 12:01:39",
+          "modified": "2023-10-27 12:01:39",
+          "lhs": {
+            "global_ID": "V_203",
+            "matlab": "_elConductC_A(A)",
+            "latex": "{_elConductC_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_elConductC_A",
+      "modified": "2023-10-27 12:01:39",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        3,
+        -2,
+        0,
+        -1,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    "V_204": {
+      "IRI": "promo:_h_A",
+      "aliases": {
+        "matlab": "_h_A",
+        "latex": "_h_A",
+        "internal_code": "_h_A",
+        "global_ID": "V_204"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_204",
+        "matlab": "_h_A(A)",
+        "latex": "{_h_A}{_{{A S}}}"
+      },
+      "created": "2023-10-27 12:01:42",
+      "doc": "link variable h_A to interface material >>> macroscopic",
+      "equations": {
+        "E_168": {
+          "rhs": {
+            "global_ID": " V_187",
+            "matlab": "h_A(A)",
+            "latex": "{h}{_{{A S}}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_187"
+          ],
+          "created": "2023-10-27 12:01:42",
+          "modified": "2023-10-27 12:01:42",
+          "lhs": {
+            "global_ID": "V_204",
+            "matlab": "_h_A(A)",
+            "latex": "{_h_A}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "_h_A",
+      "modified": "2023-10-27 12:01:42",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        -2,
+        2,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_205": {
+      "IRI": "promo:_k_d_Fick_A",
+      "aliases": {
+        "matlab": "_k_d_Fick_A",
+        "latex": "{\\_k^{d,Fick,A}}",
+        "internal_code": "_k_d_Fick_A",
+        "global_ID": "V_205"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_205",
+        "matlab": "_k_d_Fick_A(A)",
+        "latex": "{{\\_k^{d,Fick,A}}}{_{{A S}}}"
+      },
+      "created": "2023-10-27 12:01:43",
+      "doc": "link variable k_d_Fick_A to interface material >>> macroscopic",
+      "equations": {
+        "E_169": {
+          "rhs": {
+            "global_ID": " V_188",
+            "matlab": "k_d_Fick_A(A)",
+            "latex": "{{k^{d,Fick}}}{_{{A S}}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_188"
+          ],
+          "created": "2023-10-27 12:01:43",
+          "modified": "2023-10-27 12:01:43",
+          "lhs": {
+            "global_ID": "V_205",
+            "matlab": "_k_d_Fick_A(A)",
+            "latex": "{{\\_k^{d,Fick,A}}}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "_k_d_Fick_A",
+      "modified": "2023-10-27 12:01:43",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_206": {
+      "IRI": "promo:_kc_x_A",
+      "aliases": {
+        "matlab": "_kc_x_A",
+        "latex": "_kc_x_A",
+        "internal_code": "_kc_x_A",
+        "global_ID": "V_206"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_206",
+        "matlab": "_kc_x_A(A)",
+        "latex": "{_kc_x_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:44",
+      "doc": "link variable kc_x_A to interface material >>> macroscopic",
+      "equations": {
+        "E_170": {
+          "rhs": {
+            "global_ID": " V_191",
+            "matlab": "kc_x_A(A)",
+            "latex": "{{k^c_x}}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_191"
+          ],
+          "created": "2023-10-27 12:01:44",
+          "modified": "2023-10-27 12:01:44",
+          "lhs": {
+            "global_ID": "V_206",
+            "matlab": "_kc_x_A(A)",
+            "latex": "{_kc_x_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_kc_x_A",
+      "modified": "2023-10-27 12:01:44",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_207": {
+      "IRI": "promo:_kc_y_A",
+      "aliases": {
+        "matlab": "_kc_y_A",
+        "latex": "_kc_y_A",
+        "internal_code": "_kc_y_A",
+        "global_ID": "V_207"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_207",
+        "matlab": "_kc_y_A(A)",
+        "latex": "{_kc_y_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:45",
+      "doc": "link variable kc_y_A to interface material >>> macroscopic",
+      "equations": {
+        "E_171": {
+          "rhs": {
+            "global_ID": " V_192",
+            "matlab": "kc_y_A(A)",
+            "latex": "{{k^c_y}}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_192"
+          ],
+          "created": "2023-10-27 12:01:45",
+          "modified": "2023-10-27 12:01:45",
+          "lhs": {
+            "global_ID": "V_207",
+            "matlab": "_kc_y_A(A)",
+            "latex": "{_kc_y_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_kc_y_A",
+      "modified": "2023-10-27 12:01:45",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_208": {
+      "IRI": "promo:_kc_z_A",
+      "aliases": {
+        "matlab": "_kc_z_A",
+        "latex": "_kc_z_A",
+        "internal_code": "_kc_z_A",
+        "global_ID": "V_208"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_208",
+        "matlab": "_kc_z_A(A)",
+        "latex": "{_kc_z_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:46",
+      "doc": "link variable kc_z_A to interface material >>> macroscopic",
+      "equations": {
+        "E_172": {
+          "rhs": {
+            "global_ID": " V_193",
+            "matlab": "kc_z_A(A)",
+            "latex": "{{k^c_z}}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_193"
+          ],
+          "created": "2023-10-27 12:01:46",
+          "modified": "2023-10-27 12:01:46",
+          "lhs": {
+            "global_ID": "V_208",
+            "matlab": "_kc_z_A(A)",
+            "latex": "{_kc_z_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_kc_z_A",
+      "modified": "2023-10-27 12:01:46",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_209": {
+      "IRI": "promo:_kd_x_A",
+      "aliases": {
+        "matlab": "_kd_x_A",
+        "latex": "_kd_x_A",
+        "internal_code": "_kd_x_A",
+        "global_ID": "V_209"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_209",
+        "matlab": "_kd_x_A(A)",
+        "latex": "{_kd_x_A}{_{{A S}}}"
+      },
+      "created": "2023-10-27 12:01:46",
+      "doc": "link variable kd_x_A to interface material >>> macroscopic",
+      "equations": {
+        "E_173": {
+          "rhs": {
+            "global_ID": " V_194",
+            "matlab": "kd_x_A(A)",
+            "latex": "{{k^d_x}}{_{{A S}}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_194"
+          ],
+          "created": "2023-10-27 12:01:46",
+          "modified": "2023-10-27 12:01:46",
+          "lhs": {
+            "global_ID": "V_209",
+            "matlab": "_kd_x_A(A)",
+            "latex": "{_kd_x_A}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "_kd_x_A",
+      "modified": "2023-10-27 12:01:46",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        1,
+        -4,
+        2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
     "V_21": {
       "IRI": "qudt:HelmholtzEnergy",
       "aliases": {
@@ -4462,6 +5744,349 @@
         2,
         0,
         1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_210": {
+      "IRI": "promo:_kd_y_A",
+      "aliases": {
+        "matlab": "_kd_y_A",
+        "latex": "_kd_y_A",
+        "internal_code": "_kd_y_A",
+        "global_ID": "V_210"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_210",
+        "matlab": "_kd_y_A(A)",
+        "latex": "{_kd_y_A}{_{{A S}}}"
+      },
+      "created": "2023-10-27 12:01:47",
+      "doc": "link variable kd_y_A to interface material >>> macroscopic",
+      "equations": {
+        "E_174": {
+          "rhs": {
+            "global_ID": " V_195",
+            "matlab": "kd_y_A(A)",
+            "latex": "{{k^d_y}}{_{{A S}}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_195"
+          ],
+          "created": "2023-10-27 12:01:47",
+          "modified": "2023-10-27 12:01:47",
+          "lhs": {
+            "global_ID": "V_210",
+            "matlab": "_kd_y_A(A)",
+            "latex": "{_kd_y_A}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "_kd_y_A",
+      "modified": "2023-10-27 12:01:47",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        1,
+        -4,
+        2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_211": {
+      "IRI": "promo:_kd_z_A",
+      "aliases": {
+        "matlab": "_kd_z_A",
+        "latex": "_kd_z_A",
+        "internal_code": "_kd_z_A",
+        "global_ID": "V_211"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_211",
+        "matlab": "_kd_z_A(A)",
+        "latex": "{_kd_z_A}{_{{A S}}}"
+      },
+      "created": "2023-10-27 12:01:48",
+      "doc": "link variable kd_z_A to interface material >>> macroscopic",
+      "equations": {
+        "E_175": {
+          "rhs": {
+            "global_ID": " V_196",
+            "matlab": "kd_z_A(A)",
+            "latex": "{{k^d_z}}{_{{A S}}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_196"
+          ],
+          "created": "2023-10-27 12:01:48",
+          "modified": "2023-10-27 12:01:48",
+          "lhs": {
+            "global_ID": "V_211",
+            "matlab": "_kd_z_A(A)",
+            "latex": "{_kd_z_A}{_{{A S}}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_6"
+      ],
+      "label": "_kd_z_A",
+      "modified": "2023-10-27 12:01:48",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        1,
+        -4,
+        2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_212": {
+      "IRI": "promo:_kq_x_A",
+      "aliases": {
+        "matlab": "_kq_x_A",
+        "latex": "_kq_x_A",
+        "internal_code": "_kq_x_A",
+        "global_ID": "V_212"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_212",
+        "matlab": "_kq_x_A(A)",
+        "latex": "{_kq_x_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:49",
+      "doc": "link variable kq_x_A to interface material >>> macroscopic",
+      "equations": {
+        "E_176": {
+          "rhs": {
+            "global_ID": " V_197",
+            "matlab": "kq_x_A(A)",
+            "latex": "{{k^q_x}}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_197"
+          ],
+          "created": "2023-10-27 12:01:49",
+          "modified": "2023-10-27 12:01:49",
+          "lhs": {
+            "global_ID": "V_212",
+            "matlab": "_kq_x_A(A)",
+            "latex": "{_kq_x_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_kq_x_A",
+      "modified": "2023-10-27 12:01:49",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        -3,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_213": {
+      "IRI": "promo:_kq_y_A",
+      "aliases": {
+        "matlab": "_kq_y_A",
+        "latex": "_kq_y_A",
+        "internal_code": "_kq_y_A",
+        "global_ID": "V_213"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_213",
+        "matlab": "_kq_y_A(A)",
+        "latex": "{_kq_y_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:50",
+      "doc": "link variable kq_y_A to interface material >>> macroscopic",
+      "equations": {
+        "E_177": {
+          "rhs": {
+            "global_ID": " V_198",
+            "matlab": "kq_y_A(A)",
+            "latex": "{{k^q_y}}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_198"
+          ],
+          "created": "2023-10-27 12:01:50",
+          "modified": "2023-10-27 12:01:50",
+          "lhs": {
+            "global_ID": "V_213",
+            "matlab": "_kq_y_A(A)",
+            "latex": "{_kq_y_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_kq_y_A",
+      "modified": "2023-10-27 12:01:50",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        -3,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_214": {
+      "IRI": "promo:_kq_z_A",
+      "aliases": {
+        "matlab": "_kq_z_A",
+        "latex": "_kq_z_A",
+        "internal_code": "_kq_z_A",
+        "global_ID": "V_214"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_214",
+        "matlab": "_kq_z_A(A)",
+        "latex": "{_kq_z_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:01:52",
+      "doc": "link variable kq_z_A to interface material >>> macroscopic",
+      "equations": {
+        "E_178": {
+          "rhs": {
+            "global_ID": " V_199",
+            "matlab": "kq_z_A(A)",
+            "latex": "{{k^q_z}}{_{A}}"
+          },
+          "type": "interface_link_equation",
+          "doc": "interface equation",
+          "network": "material >>> macroscopic",
+          "incidence_list": [
+            "V_199"
+          ],
+          "created": "2023-10-27 12:01:52",
+          "modified": "2023-10-27 12:01:52",
+          "lhs": {
+            "global_ID": "V_214",
+            "matlab": "_kq_z_A(A)",
+            "latex": "{_kq_z_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "_kq_z_A",
+      "modified": "2023-10-27 12:01:52",
+      "network": "material >>> macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "get",
+      "units": [
+        -3,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ]
+    },
+    "V_215": {
+      "IRI": "promo:Ayz_A",
+      "aliases": {
+        "matlab": "Ayz_A",
+        "latex": "Ayz_A",
+        "internal_code": "Ayz_A",
+        "global_ID": "V_215"
+      },
+      "compiled_lhs": {
+        "global_ID": "V_215",
+        "matlab": "Ayz_A(A)",
+        "latex": "{Ayz_A}{_{A}}"
+      },
+      "created": "2023-10-27 12:05:25",
+      "doc": "cross sectional area yz (arc)",
+      "equations": {
+        "E_179": {
+          "rhs": {
+            "global_ID": " V_201  O_5 I_1 O_5 V_71",
+            "matlab": "reduceproduct(I_N_A(N, A), \"N\", Ayz(N))",
+            "latex": "{I}{_{N, A}} \\stackrel{N}{\\,\\star\\,} {{A_{yz}}}{_{N}}"
+          },
+          "type": "generic",
+          "doc": "cross sectional area yz (arc)",
+          "network": "macroscopic",
+          "incidence_list": [
+            "V_201",
+            "V_71"
+          ],
+          "created": "2023-10-27 12:05:25",
+          "modified": "2023-10-27 12:05:25",
+          "lhs": {
+            "global_ID": "V_215",
+            "matlab": "Ayz_A(A)",
+            "latex": "{Ayz_A}{_{A}}"
+          }
+        }
+      },
+      "index_structures": [
+        "I_2"
+      ],
+      "label": "Ayz_A",
+      "modified": "2023-10-27 12:05:25",
+      "network": "macroscopic",
+      "port_variable": false,
+      "tokens": [],
+      "type": "geometry",
+      "units": [
+        0,
+        2,
+        0,
+        0,
         0,
         0,
         0,
@@ -4608,13 +6233,13 @@
         "python": "Ue",
         "cpp": "Ue",
         "matlab": "Ue",
-        "latex": "Ue",
+        "latex": "{U^e}",
         "internal_code": "Ue"
       },
       "compiled_lhs": {
         "global_ID": "V_27",
         "matlab": "Ue(N)",
-        "latex": "{Ue}{_{N}}"
+        "latex": "{{U^e}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
       "doc": "electrical potential -- voltage",
@@ -4637,7 +6262,7 @@
           "lhs": {
             "global_ID": "V_27",
             "matlab": "Ue(N)",
-            "latex": "{Ue}{_{N}}"
+            "latex": "{{U^e}}{_{N}}"
           }
         },
         "E_95": {
@@ -4658,7 +6283,7 @@
           "lhs": {
             "global_ID": "V_27",
             "matlab": "Ue(N)",
-            "latex": "{Ue}{_{N}}"
+            "latex": "{{U^e}}{_{N}}"
           }
         }
       },
@@ -5589,7 +7214,7 @@
         "latex": "{{k^q_z}}{_{N}}"
       },
       "created": "2023-09-06 09:59:12",
-      "doc": "thermal conductivity in z-direction'",
+      "doc": "thermal conductivity in z-direction",
       "equations": {
         "E_25": {
           "rhs": {
@@ -5619,68 +7244,7 @@
         "I_1"
       ],
       "label": "kq_z",
-      "modified": "2023-09-06 09:59:12",
-      "network": "material",
-      "port_variable": false,
-      "tokens": [],
-      "type": "property",
-      "units": [
-        -3,
-        0,
-        0,
-        1,
-        -1,
-        0,
-        0,
-        0
-      ]
-    },
-    "V_47": {
-      "IRI": "promo:kq",
-      "aliases": {
-        "global_ID": "V_47",
-        "python": "kq",
-        "cpp": "kq",
-        "matlab": "kq",
-        "latex": "{k^q}",
-        "internal_code": "kq"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_47",
-        "matlab": "kq(N)",
-        "latex": "{{k^q}}{_{N}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "thermal conductivity",
-      "equations": {
-        "E_26": {
-          "rhs": {
-            "global_ID": " F_20 D_0 V_44 D_7 V_45 D_7 V_46 D_1",
-            "matlab": null,
-            "latex": "\\text{Stack}\\left( {{k^q_x}}{_{N}},{{k^q_y}}{_{N}},{{k^q_z}}{_{N}} \\right)"
-          },
-          "type": "generic",
-          "doc": "thermal conductivity",
-          "network": "material",
-          "incidence_list": [
-            "V_44",
-            "V_45",
-            "V_46"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_47",
-            "matlab": "kq(N)",
-            "latex": "{{k^q}}{_{N}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_1"
-      ],
-      "label": "kq",
-      "modified": "2023-09-06 09:59:12",
+      "modified": "2023-10-26 16:10:42",
       "network": "material",
       "port_variable": false,
       "tokens": [],
@@ -5922,67 +7486,6 @@
         0
       ]
     },
-    "V_51": {
-      "IRI": "promo:kc",
-      "aliases": {
-        "global_ID": "V_51",
-        "python": "kc",
-        "cpp": "kc",
-        "matlab": "kc",
-        "latex": "{k^c}",
-        "internal_code": "kc"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_51",
-        "matlab": "kc(N)",
-        "latex": "{{k^c}}{_{N}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "convective mass conductivity",
-      "equations": {
-        "E_30": {
-          "rhs": {
-            "global_ID": " F_20 D_0 V_48 D_7 V_49 D_7 V_50 D_1",
-            "matlab": null,
-            "latex": "\\text{Stack}\\left( {{k^c_x}}{_{N}},{{k^c_y}}{_{N}},{{k^c_z}}{_{N}} \\right)"
-          },
-          "type": "generic",
-          "doc": "convective mass conductivity",
-          "network": "material",
-          "incidence_list": [
-            "V_48",
-            "V_49",
-            "V_50"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_51",
-            "matlab": "kc(N)",
-            "latex": "{{k^c}}{_{N}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_1"
-      ],
-      "label": "kc",
-      "modified": "2023-09-06 09:59:12",
-      "network": "material",
-      "port_variable": false,
-      "tokens": [],
-      "type": "property",
-      "units": [
-        1,
-        -1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     "V_52": {
       "IRI": "promo:kd_x",
       "aliases": {
@@ -6153,67 +7656,6 @@
         "I_5"
       ],
       "label": "kd_z",
-      "modified": "2023-09-06 09:59:12",
-      "network": "material",
-      "port_variable": false,
-      "tokens": [],
-      "type": "property",
-      "units": [
-        1,
-        -4,
-        2,
-        -1,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    "V_55": {
-      "IRI": "promo:kd",
-      "aliases": {
-        "global_ID": "V_55",
-        "python": "kd",
-        "cpp": "kd",
-        "matlab": "kd",
-        "latex": "{k^d}",
-        "internal_code": "kd"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_55",
-        "matlab": "kd(N)",
-        "latex": "{{k^d}}{_{{N S}}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "diffusional mass conductivity",
-      "equations": {
-        "E_34": {
-          "rhs": {
-            "global_ID": " F_20 D_0 V_52 D_7 V_53 D_7 V_54 D_1",
-            "matlab": null,
-            "latex": "\\text{Stack}\\left( {{k^d_x}}{_{{N S}}},{{k^d_y}}{_{{N S}}},{{k^d_z}}{_{{N S}}} \\right)"
-          },
-          "type": "generic",
-          "doc": "diffusional mass condctivity",
-          "network": "material",
-          "incidence_list": [
-            "V_52",
-            "V_53",
-            "V_54"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_55",
-            "matlab": "kd(N)",
-            "latex": "{{k^d}}{_{{N S}}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_5"
-      ],
-      "label": "kd",
       "modified": "2023-09-06 09:59:12",
       "network": "material",
       "port_variable": false,
@@ -7021,126 +8463,6 @@
         0
       ]
     },
-    "V_72": {
-      "IRI": "promo:Axz",
-      "aliases": {
-        "global_ID": "V_72",
-        "python": "Axz",
-        "cpp": "Axz",
-        "matlab": "Axz",
-        "latex": "{A_{xz}}",
-        "internal_code": "Axz"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_72",
-        "matlab": "Axz(N)",
-        "latex": "{{A_{xz}}}{_{N}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "cross sectional area xz",
-      "equations": {
-        "E_49": {
-          "rhs": {
-            "global_ID": "V_10 O_4 V_12",
-            "matlab": "r_x(N) .* r_z(N)",
-            "latex": "{{r_x}}{_{N}} \\, . \\, {{r_z}}{_{N}}"
-          },
-          "type": "generic",
-          "doc": "cross sectional area xz",
-          "network": "macroscopic",
-          "incidence_list": [
-            "V_10",
-            "V_12"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_72",
-            "matlab": "Axz(N)",
-            "latex": "{{A_{xz}}}{_{N}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_1"
-      ],
-      "label": "Axz",
-      "modified": "2023-09-06 09:59:12",
-      "network": "macroscopic",
-      "port_variable": false,
-      "tokens": [],
-      "type": "geometry",
-      "units": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    "V_73": {
-      "IRI": "promo:Axy",
-      "aliases": {
-        "global_ID": "V_73",
-        "python": "Axy",
-        "cpp": "Axy",
-        "matlab": "Axy",
-        "latex": "{A_{xy}}",
-        "internal_code": "Axy"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_73",
-        "matlab": "Axy(N)",
-        "latex": "{{A_{xy}}}{_{N}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "cross sectional area xy",
-      "equations": {
-        "E_50": {
-          "rhs": {
-            "global_ID": "V_10 O_4 V_11",
-            "matlab": "r_x(N) .* r_y(N)",
-            "latex": "{{r_x}}{_{N}} \\, . \\, {{r_y}}{_{N}}"
-          },
-          "type": "generic",
-          "doc": "cross sectional area xy",
-          "network": "macroscopic",
-          "incidence_list": [
-            "V_10",
-            "V_11"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_73",
-            "matlab": "Axy(N)",
-            "latex": "{{A_{xy}}}{_{N}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_1"
-      ],
-      "label": "Axy",
-      "modified": "2023-09-06 09:59:12",
-      "network": "macroscopic",
-      "port_variable": false,
-      "tokens": [],
-      "type": "geometry",
-      "units": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     "V_74": {
       "IRI": "promo:_density",
       "aliases": {
@@ -7532,65 +8854,6 @@
         0
       ]
     },
-    "V_80": {
-      "IRI": "promo:_kq",
-      "aliases": {
-        "global_ID": "V_80",
-        "python": "_kq",
-        "cpp": "_kq",
-        "matlab": "_kq",
-        "latex": "{\\_k^q}",
-        "internal_code": "_kq"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_80",
-        "matlab": "_kq(N)",
-        "latex": "{{\\_k^q}}{_{N}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "link variable kq to interface material >>> macroscopic",
-      "equations": {
-        "E_57": {
-          "rhs": {
-            "global_ID": "V_47",
-            "matlab": "kq(N)",
-            "latex": "{{k^q}}{_{N}}"
-          },
-          "type": "interface_link_equation",
-          "doc": "interface equation",
-          "network": "material >>> macroscopic",
-          "incidence_list": [
-            "V_47"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_80",
-            "matlab": "_kq(N)",
-            "latex": "{{\\_k^q}}{_{N}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_1"
-      ],
-      "label": "_kq",
-      "modified": "2023-09-06 09:59:12",
-      "network": "material >>> macroscopic",
-      "port_variable": false,
-      "tokens": [],
-      "type": "get",
-      "units": [
-        -3,
-        0,
-        0,
-        1,
-        -1,
-        0,
-        0,
-        0
-      ]
-    },
     "V_81": {
       "IRI": "promo:_kc_x",
       "aliases": {
@@ -7827,65 +9090,6 @@
         0
       ]
     },
-    "V_85": {
-      "IRI": "promo:_kc",
-      "aliases": {
-        "global_ID": "V_85",
-        "python": "_kc",
-        "cpp": "_kc",
-        "matlab": "_kc",
-        "latex": "{\\_k^c}",
-        "internal_code": "_kc"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_85",
-        "matlab": "_kc(N)",
-        "latex": "{{\\_k^c}}{_{N}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "link variable kc to interface material >>> macroscopic",
-      "equations": {
-        "E_62": {
-          "rhs": {
-            "global_ID": "V_51",
-            "matlab": "kc(N)",
-            "latex": "{{k^c}}{_{N}}"
-          },
-          "type": "interface_link_equation",
-          "doc": "interface equation",
-          "network": "material >>> macroscopic",
-          "incidence_list": [
-            "V_51"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_85",
-            "matlab": "_kc(N)",
-            "latex": "{{\\_k^c}}{_{N}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_1"
-      ],
-      "label": "_kc",
-      "modified": "2023-09-06 09:59:12",
-      "network": "material >>> macroscopic",
-      "port_variable": false,
-      "tokens": [],
-      "type": "get",
-      "units": [
-        1,
-        -1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
     "V_86": {
       "IRI": "promo:_kd_x",
       "aliases": {
@@ -8047,65 +9251,6 @@
         "I_5"
       ],
       "label": "_kd_z",
-      "modified": "2023-09-06 09:59:12",
-      "network": "material >>> macroscopic",
-      "port_variable": false,
-      "tokens": [],
-      "type": "get",
-      "units": [
-        1,
-        -4,
-        2,
-        -1,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    "V_89": {
-      "IRI": "promo:_kd",
-      "aliases": {
-        "global_ID": "V_89",
-        "python": "_kd",
-        "cpp": "_kd",
-        "matlab": "_kd",
-        "latex": "{\\_k^d}",
-        "internal_code": "_kd"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_89",
-        "matlab": "_kd(N)",
-        "latex": "{{\\_k^d}}{_{{N S}}}"
-      },
-      "created": "2023-09-06 09:59:12",
-      "doc": "link variable kd to interface material >>> macroscopic",
-      "equations": {
-        "E_66": {
-          "rhs": {
-            "global_ID": "V_55",
-            "matlab": "kd(N)",
-            "latex": "{{k^d}}{_{{N S}}}"
-          },
-          "type": "interface_link_equation",
-          "doc": "interface equation",
-          "network": "material >>> macroscopic",
-          "incidence_list": [
-            "V_55"
-          ],
-          "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
-          "lhs": {
-            "global_ID": "V_89",
-            "matlab": "_kd(N)",
-            "latex": "{{\\_k^d}}{_{{N S}}}"
-          }
-        }
-      },
-      "index_structures": [
-        "I_5"
-      ],
-      "label": "_kd",
       "modified": "2023-09-06 09:59:12",
       "network": "material >>> macroscopic",
       "port_variable": false,
@@ -8337,21 +9482,21 @@
       "equations": {
         "E_68": {
           "rhs": {
-            "global_ID": "V_71 O_3 F_11 D_0 V_86 D_1 O_4 V_91  O_5  I_5 O_5  V_19",
-            "matlab": "reduceproduct(khatrirao(Ayz(N), -1 .* _kd_x(N)) .* D_NS_AS(N, A), \"N_x_S\", chemPot(N))",
-            "latex": "{{A_{yz}}}{_{N}} \\, {\\odot} \\, \\left( -{{\\_k^d_x}}{_{{N S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {\\mu}{_{{N S}}}"
+            "global_ID": " V_215 O_3 F_11 D_0 V_209 D_1 O_4 V_91  O_5 I_5 O_5 V_19",
+            "matlab": "reduceproduct(khatrirao(Ayz_A(A), -1 .* _kd_x_A(A)) .* D_NS_AS(N, A), \"N_x_S\", chemPot(N))",
+            "latex": "{Ayz_A}{_{A}} \\, {\\odot} \\, \\left( -{_kd_x_A}{_{{A S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {\\mu}{_{{N S}}}"
           },
           "type": "generic",
           "doc": "diffusional mass flow in a given stream",
           "network": "macroscopic",
           "incidence_list": [
             "V_19",
-            "V_71",
-            "V_86",
+            "V_209",
+            "V_215",
             "V_91"
           ],
           "created": "2023-09-06 09:59:12",
-          "modified": "2023-09-06 09:59:12",
+          "modified": "2023-10-27 12:06:43",
           "lhs": {
             "global_ID": "V_93",
             "matlab": "fnd_AS(A)",
@@ -8360,21 +9505,21 @@
         },
         "E_152": {
           "rhs": {
-            "global_ID": " V_71 O_3 F_11 D_0 V_184 D_1 O_4 V_91  O_5 I_5 O_5 V_66",
-            "matlab": "reduceproduct(khatrirao(Ayz(N), -1 .* _k_d_Fick(N)) .* D_NS_AS(N, A), \"N_x_S\", c(N))",
-            "latex": "{{A_{yz}}}{_{N}} \\, {\\odot} \\, \\left( -{{\\_k^{d,Fick}}}{_{{N S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {c}{_{{N S}}}"
+            "global_ID": " V_215 O_3 F_11 D_0 V_205 D_1 O_4 V_91  O_5 I_5 O_5 V_66",
+            "matlab": "reduceproduct(khatrirao(Ayz_A(A), -1 .* _k_d_Fick_A(A)) .* D_NS_AS(N, A), \"N_x_S\", c(N))",
+            "latex": "{Ayz_A}{_{A}} \\, {\\odot} \\, \\left( -{{\\_k^{d,Fick,A}}}{_{{A S}}} \\right) \\, . \\, {D}{_{{N S}, {A S}}} \\stackrel{{N S}}{\\,\\star\\,} {c}{_{{N S}}}"
           },
           "type": "generic",
           "doc": "diffusional mass flow in a given stream",
           "network": "macroscopic",
           "incidence_list": [
-            "V_184",
+            "V_205",
+            "V_215",
             "V_66",
-            "V_71",
             "V_91"
           ],
           "created": "2023-10-16 16:14:41",
-          "modified": "2023-10-17 22:52:52",
+          "modified": "2023-10-27 12:06:18",
           "lhs": {
             "global_ID": "V_93",
             "matlab": "fnd_AS(A)",
@@ -9082,7 +10227,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 184,
-    "equation": 152
+    "variable": 215,
+    "equation": 179
   }
 }

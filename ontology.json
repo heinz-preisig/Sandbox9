@@ -356,7 +356,9 @@
     },
     "material": {
       "behaviour": {
-        "arc": [],
+        "arc": [
+          "property"
+        ],
         "graph": [
           "network",
           "projection",

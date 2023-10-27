@@ -1,18 +1,18 @@
 function self = times(op1, op2)
   if isscalar(op1) || isscalar(op2)
     % Case: a .* b_x or b_x .* a -> c_x    (N-dimensional matrix)
-    option = 1; 
+    option = 1;
   elseif strcmp(op1.indexLabels, op2.indexLabels)
     % Case: a_x .* b_x -> c_x              (N-dimensional matrices)
     option = 1;
   else
-    [commonLabels, iOp1, iOp2] = intersect(op1.indexLabels, op2.indexLabels);   
-  
+    [commonLabels, iOp1, iOp2] = intersect(op1.indexLabels, op2.indexLabels);
+
     if length(commonLabels) > 0
       % Only for a vector and a 2-dimesional matrix
       if iOp1 == iOp2
         % Case: a_x .* b_x,y or b_x,y .* a_x -> c_x,y
-        option = 1
+        option = 1;
       elseif isvector(op1)
         % Case: a_y .* b_x,y -> c_x,y
         option = 2;
@@ -25,19 +25,19 @@ function self = times(op1, op2)
       option = 4;
     endif
   endif
-  
+
   switch option
     case 1
       self = mdvTimes();
     case 2
-      self = mdvTimes(); 
+      self = mdvTimes();
     case 3
       self = mdvTimes();
     case 4
       sizeOp1 = size(op1);
       sizeOp2 = size(op2);
       % The dimension of the result is obtained by adding the dimensions
-      % of both operands. 
+      % of both operands.
       value = zeros([sizeOp1, sizeOp2]);
 
       % Cell array containing ":" for each of the dimensions of the result.
@@ -51,16 +51,16 @@ function self = times(op1, op2)
         [indexes{1:length(sizeOp1)}] = ind2sub(sizeOp1, i);
         value(indexes{:}) = op1.value(i) .* op2.value;
       endfor
-  
+
       indexLabels = cat(2, op1.indexLabels, op2.indexLabels);
       indexSets = cat(2, op1.indexSets, op2.indexSets);
 
-      % We use squeeze to account for the vectors having 2 dimensions in 
+      % We use squeeze to account for the vectors having 2 dimensions in
       % matlab and thus adding a dimension 1 in the middle if op1 is a
       % vector instead of a matrix.
       self = MultiDimVar(indexLabels, indexSets, squeeze(value));
   endswitch
-  
+
   function self = mdvTimes()
     if isscalar(op1)
       indexLabels = op2.indexLabels;
@@ -75,7 +75,7 @@ function self = times(op1, op2)
       indexLabels = op1.indexLabels;
       indexSets = op1.indexSets;
     endif
-    
+
     switch option
       case 1
         % To account for scalars that are not MultiDimVar
@@ -98,5 +98,5 @@ function self = times(op1, op2)
     endswitch
 
     self = MultiDimVar(indexLabels, indexSets, op1Value .* op2Value);
-  endfunction 
+  endfunction
 endfunction

@@ -17,7 +17,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}Helmholtz energy\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:126"}{ 106 }\hypertarget{"e:106"}{  } &
-    \begin{eq}{\phi}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}},{Ue}{_{N}} \right)\end{eq} &
+    \begin{eq}{\phi}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}},{{U^e}}{_{N}} \right)\end{eq} &
     \begin{lay}collected intensities\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:128"}{ 107 }\hypertarget{"e:107"}{  } &
@@ -121,7 +121,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}switches at to\end{lay} &
     \begin{lay}control --> macroscopic\end{lay} \\
         \hyperlink{"v:27"}{ 14 }\hypertarget{"e:14"}{  } &
-    \begin{eq}{Ue}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
+    \begin{eq}{{U^e}}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
     \begin{lay}electrical potential -- voltage\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:173"}{ 141 }\hypertarget{"e:141"}{  } &
@@ -141,16 +141,72 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}velocitiy in x-direction\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:93"}{ 152 }\hypertarget{"e:152"}{  } &
-    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{N}} \, {\odot} \, \left( -{{\_k^{d,Fick}}}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} &
+    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {Ayz_A}{_{A}} \, {\odot} \, \left( -{{\_k^{d,Fick,A}}}{_{{A S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} &
     \begin{lay}diffusional mass flow in a given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:187"}{ 153 }\hypertarget{"e:153"}{  } &
+    \begin{eq}{h}{_{{A S}}} := {I}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {h}{_{{N S}}}\end{eq} &
+    \begin{lay}partial molar enthalpies (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:188"}{ 154 }\hypertarget{"e:154"}{  } &
+    \begin{eq}{{k^{d,Fick}}}{_{{A S}}} := {I}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {{k^{d,Fick}}}{_{{N S}}}\end{eq} &
+    \begin{lay}Fick's diffusivity (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:189"}{ 155 }\hypertarget{"e:155"}{  } &
+    \begin{eq}{\rho}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {\rho}{_{N}}\end{eq} &
+    \begin{lay}density (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:190"}{ 156 }\hypertarget{"e:156"}{  } &
+    \begin{eq}{{k^{e,\xi}}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{k^{e,\xi}}}{_{N}}\end{eq} &
+    \begin{lay}simple model for the electrical conductivity as a function of the additive (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:191"}{ 157 }\hypertarget{"e:157"}{  } &
+    \begin{eq}{{k^c_x}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{k^c_x}}{_{N}}\end{eq} &
+    \begin{lay}convective mass conductivity in x-direction (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:192"}{ 158 }\hypertarget{"e:158"}{  } &
+    \begin{eq}{{k^c_y}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{k^c_y}}{_{N}}\end{eq} &
+    \begin{lay}convective mass conductivity in y-direction (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:193"}{ 159 }\hypertarget{"e:159"}{  } &
+    \begin{eq}{{k^c_z}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{k^c_z}}{_{N}}\end{eq} &
+    \begin{lay}convective mass conductivity in z-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
         \hyperlink{"v:29"}{ 16 }\hypertarget{"e:16"}{  } &
     \begin{eq}{{v_y}}{_{N}} := \ParDiff{{{r_y}}{_{N}}}{{t}{_{}}}\end{eq} &
     \begin{lay}velocity in y direction\end{lay} &
     \begin{lay}physical\end{lay} \\
+        \hyperlink{"v:194"}{ 160 }\hypertarget{"e:160"}{  } &
+    \begin{eq}{{k^d_x}}{_{{A S}}} := {I}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {{k^d_x}}{_{{N S}}}\end{eq} &
+    \begin{lay}diffusional mass conductivity in x-direction (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:195"}{ 161 }\hypertarget{"e:161"}{  } &
+    \begin{eq}{{k^d_y}}{_{{A S}}} := {I}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {{k^d_y}}{_{{N S}}}\end{eq} &
+    \begin{lay}diffusional mass conductivity in y-direction (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:196"}{ 162 }\hypertarget{"e:162"}{  } &
+    \begin{eq}{{k^d_z}}{_{{A S}}} := {I}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {{k^d_z}}{_{{N S}}}\end{eq} &
+    \begin{lay}diffusional mass conductivity in z-direction (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:197"}{ 163 }\hypertarget{"e:163"}{  } &
+    \begin{eq}{{k^q_x}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{k^q_x}}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in x-direction\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:198"}{ 164 }\hypertarget{"e:164"}{  } &
+    \begin{eq}{{k^q_y}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{k^q_y}}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in y-direction (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
+        \hyperlink{"v:199"}{ 165 }\hypertarget{"e:165"}{  } &
+    \begin{eq}{{k^q_z}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{k^q_z}}{_{N}}\end{eq} &
+    \begin{lay}thermal conductivity in z-direction (arc)\end{lay} &
+    \begin{lay}material\end{lay} \\
         \hyperlink{"v:30"}{ 17 }\hypertarget{"e:17"}{  } &
     \begin{eq}{{v_z}}{_{N}} := \ParDiff{{{r_z}}{_{N}}}{{t}{_{}}}\end{eq} &
     \begin{lay}velocity in z-direction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:215"}{ 179 }\hypertarget{"e:179"}{  } &
+    \begin{eq}{Ayz_A}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{A_{yz}}}{_{N}}\end{eq} &
+    \begin{lay}cross sectional area yz (arc)\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:42"}{ 21 }\hypertarget{"e:21"}{  } &
     \begin{eq}{{C_p}}{_{N}} := \ParDiff{{H}{_{N}}}{{T}{_{N}}}\end{eq} &
@@ -172,10 +228,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{k^q_z}}{_{N}} := \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{T}{_{N}}} \, . \, {{v_z}}{_{N}}\end{eq} &
     \begin{lay}thermal conductivity in z-direction'\end{lay} &
     \begin{lay}material\end{lay} \\
-        \hyperlink{"v:47"}{ 26 }\hypertarget{"e:26"}{  } &
-    \begin{eq}{{k^q}}{_{N}} := \text{Stack}\left( {{k^q_x}}{_{N}},{{k^q_y}}{_{N}},{{k^q_z}}{_{N}} \right)\end{eq} &
-    \begin{lay}thermal conductivity\end{lay} &
-    \begin{lay}material\end{lay} \\
         \hyperlink{"v:48"}{ 27 }\hypertarget{"e:27"}{  } &
     \begin{eq}{{k^c_x}}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {{v_x}}{_{N}}\end{eq} &
     \begin{lay}convecitve mass conductivity in x-direction\end{lay} &
@@ -188,10 +240,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{k^c_z}}{_{N}} := \left({\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}{_{{N S}}} \right)^{-1}\right) \, . \, \left( {V}{_{N}} \right)^{-1} \, . \, \ParDiff{{U}{_{N}}}{{p}{_{N}}} \, . \, {{v_z}}{_{N}}\end{eq} &
     \begin{lay}convecitve mass conductivity in z-direction\end{lay} &
     \begin{lay}material\end{lay} \\
-        \hyperlink{"v:51"}{ 30 }\hypertarget{"e:30"}{  } &
-    \begin{eq}{{k^c}}{_{N}} := \text{Stack}\left( {{k^c_x}}{_{N}},{{k^c_y}}{_{N}},{{k^c_z}}{_{N}} \right)\end{eq} &
-    \begin{lay}convective mass conductivity\end{lay} &
-    \begin{lay}material\end{lay} \\
         \hyperlink{"v:52"}{ 31 }\hypertarget{"e:31"}{  } &
     \begin{eq}{{k^d_x}}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({{v_x}}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
     \begin{lay}diffusional mass conductivity in x-direction\end{lay} &
@@ -203,10 +251,6 @@ no & equation &documentation &layer \\\hline\hline
         \hyperlink{"v:54"}{ 33 }\hypertarget{"e:33"}{  } &
     \begin{eq}{{k^d_z}}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({{v_z}}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} &
     \begin{lay}diffusional mass conductivity in z-direction\end{lay} &
-    \begin{lay}material\end{lay} \\
-        \hyperlink{"v:55"}{ 34 }\hypertarget{"e:34"}{  } &
-    \begin{eq}{{k^d}}{_{{N S}}} := \text{Stack}\left( {{k^d_x}}{_{{N S}}},{{k^d_y}}{_{{N S}}},{{k^d_z}}{_{{N S}}} \right)\end{eq} &
-    \begin{lay}diffusional mass condctivity\end{lay} &
     \begin{lay}material\end{lay} \\
         \hyperlink{"v:56"}{ 35 }\hypertarget{"e:35"}{  } &
     \begin{eq}{h}{_{{N S}}} := {H}{_{N}} \, {\odot} \, \left( {n}{_{{N S}}} \right)^{-1}\end{eq} &
@@ -236,14 +280,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{{A_{yz}}}{_{N}} := {{r_y}}{_{N}} \, . \, {{r_z}}{_{N}}\end{eq} &
     \begin{lay}cross sectional area yz\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-        \hyperlink{"v:72"}{ 49 }\hypertarget{"e:49"}{  } &
-    \begin{eq}{{A_{xz}}}{_{N}} := {{r_x}}{_{N}} \, . \, {{r_z}}{_{N}}\end{eq} &
-    \begin{lay}cross sectional area xz\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
-        \hyperlink{"v:73"}{ 50 }\hypertarget{"e:50"}{  } &
-    \begin{eq}{{A_{xy}}}{_{N}} := {{r_x}}{_{N}} \, . \, {{r_y}}{_{N}}\end{eq} &
-    \begin{lay}cross sectional area xy\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:17"}{ 6 }\hypertarget{"e:6"}{  } &
     \begin{eq}{p}{_{N}} := \left( -\ParDiff{{U}{_{N}}}{{V}{_{N}}} \right)\end{eq} &
     \begin{lay}thermodynamic pressure\end{lay} &
@@ -253,7 +289,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}volumetric flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:93"}{ 68 }\hypertarget{"e:68"}{  } &
-    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{N}} \, {\odot} \, \left( -{{\_k^d_x}}{_{{N S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} &
+    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {Ayz_A}{_{A}} \, {\odot} \, \left( -{_kd_x_A}{_{{A S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} &
     \begin{lay}diffusional mass flow in a given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:94"}{ 69 }\hypertarget{"e:69"}{  } &
@@ -341,15 +377,15 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}simple model for the electrical conductivity as a function of the additive\end{lay} &
     \begin{lay}material\end{lay} \\
         \hyperlink{"v:27"}{ 95 }\hypertarget{"e:95"}{  } &
-    \begin{eq}{Ue}{_{N}} := \left( {{\_R^e}}{_{N}} \right)^{-1} \, . \, {I}{_{N}}\end{eq} &
+    \begin{eq}{{U^e}}{_{N}} := \left( {{\_R^e}}{_{N}} \right)^{-1} \, . \, {I}{_{N}}\end{eq} &
     \begin{lay}electrical potential -- voltage\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:118"}{ 96 }\hypertarget{"e:96"}{  } &
-    \begin{eq}{{\dot{U}^e}}{_{N}} := {1}{_{}} \, . \, {Ue}{_{N}}\end{eq} &
+    \begin{eq}{{\dot{U}^e}}{_{N}} := {1}{_{}} \, . \, {{U^e}}{_{N}}\end{eq} &
     \begin{lay}Kirkhoff first law\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:118"}{ 97 }\hypertarget{"e:97"}{  } &
-    \begin{eq}{{\dot{U}^e}}{_{N}} := Root\left( {Ue}{_{N}}\right)\end{eq} &
+    \begin{eq}{{\dot{U}^e}}{_{N}} := Root\left( {{U^e}}{_{N}}\right)\end{eq} &
     \begin{lay}Kirkhoff first law\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hline
