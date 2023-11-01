@@ -383,5 +383,52 @@
         "output_vars": [
             "V_93"
         ]
+    },
+    "macroscopic.arc.mass|convection|lumped.ConvectiveFlowPulse": {
+        "index_set": "A_conv",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_173": [
+                    "E_181"
+                ],
+                "E_181": [
+                    "V_99",
+                    "V_217"
+                ],
+                "V_99": [
+                    "E_74"
+                ],
+                "V_217": [
+                    "E_180"
+                ],
+                "E_74": [
+                    "V_98",
+                    "V_92"
+                ],
+                "V_98": [],
+                "V_92": [],
+                "E_180": [
+                    "V_6",
+                    "V_5",
+                    "V_216"
+                ],
+                "V_6": [],
+                "V_5": [],
+                "V_216": []
+            }
+        ],
+        "init_vars": [
+            "V_6",
+            "V_216",
+            "V_92"
+        ],
+        "input_vars": [
+            "V_5",
+            "V_98"
+        ],
+        "output_vars": [
+            "V_173"
+        ]
     }
 }

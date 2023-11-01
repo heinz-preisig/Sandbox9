@@ -3953,25 +3953,6 @@
             "matlab": "fnc_AS_controlled(A)",
             "latex": "{\\hat{n}^{c,controlled}}{_{{A S}}}"
           }
-        },
-        "E_181": {
-          "rhs": {
-            "global_ID": " V_217 O_4 V_99"
-          },
-          "type": "generic",
-          "doc": "manipulate flow",
-          "network": "macroscopic",
-          "incidence_list": [
-            "V_217",
-            "V_99"
-          ],
-          "created": "2023-10-30 10:19:46",
-          "modified": "2023-10-30 10:19:46",
-          "lhs": {
-            "global_ID": "V_173",
-            "matlab": "fnc_AS_controlled(A)",
-            "latex": "{\\hat{n}^{c,controlled}}{_{{A S}}}"
-          }
         }
       },
       "index_structures": [
@@ -10330,6 +10311,6 @@
   },
   "Ontology_global_IDs": {
     "variable": 217,
-    "equation": 181
+    "equation": 180
   }
 }

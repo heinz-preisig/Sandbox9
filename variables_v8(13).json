@@ -3953,25 +3953,6 @@
             "matlab": "fnc_AS_controlled(A)",
             "latex": "{\\hat{n}^{c,controlled}}{_{{A S}}}"
           }
-        },
-        "E_181": {
-          "rhs": {
-            "global_ID": " V_217 O_4 V_99"
-          },
-          "type": "generic",
-          "doc": "manipulate flow",
-          "network": "macroscopic",
-          "incidence_list": [
-            "V_217",
-            "V_99"
-          ],
-          "created": "2023-10-30 10:19:46",
-          "modified": "2023-10-30 10:19:46",
-          "lhs": {
-            "global_ID": "V_173",
-            "matlab": "fnc_AS_controlled(A)",
-            "latex": "{\\hat{n}^{c,controlled}}{_{{A S}}}"
-          }
         }
       },
       "index_structures": [
@@ -6104,89 +6085,6 @@
       "units": [
         0,
         2,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    "V_216": {
-      "IRI": "promo:dt_pulse",
-      "aliases": {
-        "matlab": "dt_pulse",
-        "latex": "{\\Delta t}",
-        "internal_code": "dt_pulse",
-        "global_ID": "V_216"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_216"
-      },
-      "created": "2023-10-30 10:08:59",
-      "doc": "lenth of pulse",
-      "equations": {},
-      "index_structures": [],
-      "label": "dt_pulse",
-      "modified": "2023-10-30 10:09:34",
-      "network": "root",
-      "port_variable": true,
-      "tokens": [],
-      "type": "frame",
-      "units": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    "V_217": {
-      "IRI": "promo:pulse",
-      "aliases": {
-        "matlab": "pulse",
-        "latex": "pulse",
-        "internal_code": "pulse",
-        "global_ID": "V_217"
-      },
-      "compiled_lhs": {
-        "global_ID": "V_217"
-      },
-      "created": "2023-10-30 10:12:21",
-      "doc": "pulse function",
-      "equations": {
-        "E_180": {
-          "rhs": {
-            "global_ID": " F_16 D_0 V_5 O_1 V_6 D_1 O_1 F_16 D_0 V_5 O_1 D_0 V_6 O_0 V_216 D_1 D_1"
-          },
-          "type": "generic",
-          "doc": "pulse function",
-          "network": "root",
-          "incidence_list": [
-            "V_216",
-            "V_5",
-            "V_6"
-          ],
-          "created": "2023-10-30 10:12:21",
-          "modified": "2023-10-30 10:12:21",
-          "lhs": {
-            "global_ID": "V_217"
-          }
-        }
-      },
-      "index_structures": [],
-      "label": "pulse",
-      "modified": "2023-10-30 10:12:21",
-      "network": "root",
-      "port_variable": false,
-      "tokens": [],
-      "type": "frame",
-      "units": [
-        0,
-        0,
         0,
         0,
         0,
@@ -10329,7 +10227,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 217,
-    "equation": 181
+    "variable": 215,
+    "equation": 179
   }
 }

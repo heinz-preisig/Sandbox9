@@ -364,6 +364,16 @@
     "network": "macroscopic",
     "rhs": " I_N_A | N | Ayz"
   },
+  "E_180": {
+    "lhs": "pulse",
+    "network": "root",
+    "rhs": " sign ( t - to ) - sign ( t - ( to + dt_pulse ) )"
+  },
+  "E_181": {
+    "lhs": "fnc_AS_controlled",
+    "network": "macroscopic",
+    "rhs": " pulse . fnc_AS"
+  },
   "E_2": {
     "lhs": "zero",
     "network": "root",
