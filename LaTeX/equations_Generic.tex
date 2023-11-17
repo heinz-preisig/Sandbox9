@@ -16,10 +16,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{A}{_{N}} := {U}{_{N}}  - {T}{_{N}} \, . \, {S}{_{N}}\end{eq} &
     \begin{lay}Helmholtz energy\end{lay} &
     \begin{lay}physical\end{lay} \\
-        \hyperlink{"v:126"}{ 106 }\hypertarget{"e:106"}{  } &
-    \begin{eq}{\phi}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}},{{U^e}}{_{N}} \right)\end{eq} &
-    \begin{lay}collected intensities\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:128"}{ 107 }\hypertarget{"e:107"}{  } &
     \begin{eq}{{n^t}}{_{N}} := {{1}}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
     \begin{lay}total number of moles\end{lay} &
@@ -41,27 +37,23 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}state\end{lay} &
     \begin{lay}control\end{lay} \\
         \hyperlink{"v:141"}{ 113 }\hypertarget{"e:113"}{  } &
-    \begin{eq}{{\check{I}}}{_{N}} := {I}{_{N}}\end{eq} &
+    \begin{eq}{{\check{I}}}{_{N}} := {{\_I}}{_{N}}\end{eq} &
     \begin{lay}measured current\end{lay} &
     \begin{lay}control\end{lay} \\
         \hyperlink{"v:143"}{ 115 }\hypertarget{"e:115"}{  } &
-    \begin{eq}{{\check{U}^e}}{_{N}} := {Ue}{_{N}}\end{eq} &
+    \begin{eq}{{\check{U}^e}}{_{N}} := {{\_U^e}}{_{N}}\end{eq} &
     \begin{lay}measured electrical potential\end{lay} &
     \begin{lay}control\end{lay} \\
         \hyperlink{"v:144"}{ 116 }\hypertarget{"e:116"}{  } &
-    \begin{eq}{{\check{\xi}}}{_{}} := {\mapsto \xi}{_{}}\end{eq} &
+    \begin{eq}{{\check{\xi}}}{_{}} := {{\_\xi}}{_{}}\end{eq} &
     \begin{lay}measured additive fraction\end{lay} &
     \begin{lay}control\end{lay} \\
         \hyperlink{"v:145"}{ 117 }\hypertarget{"e:117"}{  } &
     \begin{eq}{R}{_{N}} := \left( {{\check{I}}}{_{N}} \right)^{-1} \, . \, {{\check{U}^e}}{_{N}}\end{eq} &
     \begin{lay}measured resistance \end{lay} &
     \begin{lay}control\end{lay} \\
-        \hyperlink{"v:146"}{ 118 }\hypertarget{"e:118"}{  } &
-    \begin{eq}{S}{_{}} := \text{MixedStack}\left( {{\check{I}}}{_{N}},{{\check{U}^e}}{_{N}},{R}{_{N}},{{\check{\xi}}}{_{}} \right)\end{eq} &
-    \begin{lay}quantities to be stored\end{lay} &
-    \begin{lay}control\end{lay} \\
         \hyperlink{"v:151"}{ 123 }\hypertarget{"e:123"}{  } &
-    \begin{eq}{c}{_{{N K}, {K S}}} := {P}{_{{N K}}} \, . \, \left({P}{_{{N S}, {K S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\right)\end{eq} &
+    \begin{eq}{c}{_{{N K}, {K S}}} := {P}{_{{N K}}} \, . \, \left({P}{_{{N S}, {K S}}} \stackrel{{N S}}{\,\star\,} {{\_c}}{_{{N S}}}\right)\end{eq} &
     \begin{lay}var doc : \end{lay} &
     \begin{lay}reactions\end{lay} \\
         \hyperlink{"v:153"}{ 125 }\hypertarget{"e:125"}{  } &
@@ -109,7 +101,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}chemical potential\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:170"}{ 137 }\hypertarget{"e:137"}{  } &
-    \begin{eq}{{\tilde n}}{_{{N S}}} := {\tilde{n}}{_{{N S}}}\end{eq} &
+    \begin{eq}{{\tilde n}}{_{{N S}}} := {{\_\tilde{n}}}{_{{N S}}}\end{eq} &
     \begin{lay}production term\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:171"}{ 138 }\hypertarget{"e:138"}{  } &
@@ -128,10 +120,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{\hat{n}^{c,controlled}}{_{{A S}}} := {s}{_{}} \, . \, {{\hat{n}^c}}{_{{A S}}}\end{eq} &
     \begin{lay}switched flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-        \hyperlink{"v:101"}{ 142 }\hypertarget{"e:142"}{  } &
-    \begin{eq}{\dot{n}}{_{{N S}}} := {F}{_{{N S}, {A S}}} \stackrel{{A S}}{\,\star\,} \text{Stack}\left( {{\hat{n}^c}}{_{{A S}}},{\hat{n}^{c,controlled}}{_{{A S}}} \right)\end{eq} &
-    \begin{lay}differential species balance switched\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:176"}{ 145 }\hypertarget{"e:145"}{  } &
     \begin{eq}{g}{_{{N S}}} := {n}{_{{N S}}}  + {n}{_{{N S}}}\end{eq} &
     \begin{lay}\end{lay} &
@@ -141,7 +129,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}velocitiy in x-direction\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:93"}{ 152 }\hypertarget{"e:152"}{  } &
-    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {Ayz_A}{_{A}} \, {\odot} \, \left( -{{\_k^{d,Fick,A}}}{_{{A S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} &
+    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{A}} \, {\odot} \, \left( -{{\_k^{d,Fick,A}}}{_{{A S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {c}{_{{N S}}}\end{eq} &
     \begin{lay}diffusional mass flow in a given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:187"}{ 153 }\hypertarget{"e:153"}{  } &
@@ -205,7 +193,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}velocity in z-direction\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:215"}{ 179 }\hypertarget{"e:179"}{  } &
-    \begin{eq}{Ayz_A}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{A_{yz}}}{_{N}}\end{eq} &
+    \begin{eq}{{A_{yz}}}{_{A}} := {I}{_{N, A}} \stackrel{N}{\,\star\,} {{A_{yz}}}{_{N}}\end{eq} &
     \begin{lay}cross sectional area yz (arc)\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:217"}{ 180 }\hypertarget{"e:180"}{  } &
@@ -216,6 +204,30 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{\hat{n}^{c,controlled}}{_{{A S}}} := {pulse}{_{}} \, . \, {{\hat{n}^c}}{_{{A S}}}\end{eq} &
     \begin{lay}manipulate flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:101"}{ 182 }\hypertarget{"e:182"}{  } &
+    \begin{eq}{\dot{n}}{_{{N S}}} := \text{Instantiate}({\dot{n}}{_{{N S}}}, {0}{_{}})\end{eq} &
+    \begin{lay}differential species balance -- event dynamic\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:218"}{ 183 }\hypertarget{"e:183"}{  } &
+    \begin{eq}{{T^{ref}}}{_{N}} := \text{Instantiate}({T}{_{N}}, -)\end{eq} &
+    \begin{lay}reference temperature\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:20"}{ 184 }\hypertarget{"e:184"}{  } &
+    \begin{eq}{H}{_{N}} := {{\_Cp}}{_{N}} \, . \, \left({T}{_{N}}  - {{T^{ref}}}{_{N}}\right)\end{eq} &
+    \begin{lay}enthalpy from constant heat capacity\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:18"}{ 185 }\hypertarget{"e:185"}{  } &
+    \begin{eq}{T}{_{N}} := Root\left( {H}{_{N}}\right)\end{eq} &
+    \begin{lay}temperature\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+        \hyperlink{"v:219"}{ 186 }\hypertarget{"e:186"}{  } &
+    \begin{eq}{{T^{\star}}}{_{N}} := \text{Instantiate}({{\_T}}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}temprature transmitter constant\end{lay} &
+    \begin{lay}control\end{lay} \\
+        \hyperlink{"v:220"}{ 187 }\hypertarget{"e:187"}{  } &
+    \begin{eq}{{\breve{T}}}{_{N}} := {{\_T}}{_{N}} \, . \, \left( {{T^{\star}}}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}temperature signal\end{lay} &
+    \begin{lay}control\end{lay} \\
         \hyperlink{"v:42"}{ 21 }\hypertarget{"e:21"}{  } &
     \begin{eq}{{C_p}}{_{N}} := \ParDiff{{H}{_{N}}}{{T}{_{N}}}\end{eq} &
     \begin{lay}total heat capacity at constant pressure\end{lay} &
@@ -265,11 +277,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}partial molar enthalpies\end{lay} &
     \begin{lay}material\end{lay} \\
         \hyperlink{"v:57"}{ 36 }\hypertarget{"e:36"}{  } &
-    \begin{eq}{m}{_{N}} := {\_\lambda}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
+    \begin{eq}{m}{_{N}} := {{\_\lambda}}{_{S}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {n}{_{{N S}}}\end{eq} &
     \begin{lay}total mass\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:59"}{ 38 }\hypertarget{"e:38"}{  } &
-    \begin{eq}{\rho}{_{N}} := {m}{_{N}} \, . \, \left( {V}{_{N}} \right)^{-1}\end{eq} &
+    \begin{eq}{\rho}{_{N}} := {{\_m}}{_{N}} \, . \, \left( {V}{_{N}} \right)^{-1}\end{eq} &
     \begin{lay}density\end{lay} &
     \begin{lay}material\end{lay} \\
         \hyperlink{"v:60"}{ 39 }\hypertarget{"e:39"}{  } &
@@ -293,11 +305,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}thermodynamic pressure\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:92"}{ 67 }\hypertarget{"e:67"}{  } &
-    \begin{eq}{\hat{V}}{_{A}} := \left( {\_\rho}{_{N}} \right)^{-1} \, . \, {{\_k^c_x}}{_{N}} \, . \, {{A_{yz}}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}}\end{eq} &
+    \begin{eq}{\hat{V}}{_{A}} := \left( {{\_\rho}}{_{N}} \right)^{-1} \, . \, {{\_k^c_x}}{_{N}} \, . \, {{A_{yz}}}{_{N}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {p}{_{N}}\end{eq} &
     \begin{lay}volumetric flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:93"}{ 68 }\hypertarget{"e:68"}{  } &
-    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {Ayz_A}{_{A}} \, {\odot} \, \left( -{_kd_x_A}{_{{A S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} &
+    \begin{eq}{{\hat{n}^{d}}}{_{{A S}}} := {{A_{yz}}}{_{A}} \, {\odot} \, \left( -{{\_k^d_x}}{_{{A S}}} \right) \, . \, {D}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\mu}{_{{N S}}}\end{eq} &
     \begin{lay}diffusional mass flow in a given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:94"}{ 69 }\hypertarget{"e:69"}{  } &
@@ -309,7 +321,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}temperature\end{lay} &
     \begin{lay}physical\end{lay} \\
         \hyperlink{"v:95"}{ 70 }\hypertarget{"e:70"}{  } &
-    \begin{eq}{{\hat{H}^d}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\_h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^{d}}}{_{{A S}}}\end{eq} &
+    \begin{eq}{{\hat{H}^d}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {{\_h}}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^{d}}}{_{{A S}}}\end{eq} &
     \begin{lay}enthalpy flow per diffusional mass stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:96"}{ 71 }\hypertarget{"e:71"}{  } &
@@ -333,11 +345,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}net molar convectional mass flow\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:101"}{ 76 }\hypertarget{"e:76"}{  } &
-    \begin{eq}{\dot{n}}{_{{N S}}} := {{\hat{n}^c}}{_{{N S}}}  + {{\hat{n}^{d}}}{_{{N S}}}  + {\tilde{n}}{_{{N S}}}\end{eq} &
+    \begin{eq}{\dot{n}}{_{{N S}}} := {{\hat{n}^c}}{_{{N S}}}  + {{\hat{n}^{d}}}{_{{N S}}}  + {{\_\tilde{n}}}{_{{N S}}}\end{eq} &
     \begin{lay}differential species balance\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:102"}{ 77 }\hypertarget{"e:77"}{  } &
-    \begin{eq}{{\hat{H}^c}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {\_h}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^c}}{_{{A S}}}\end{eq} &
+    \begin{eq}{{\hat{H}^c}}{_{A}} := \left({F}{_{{N S}, {A S}}} \stackrel{{N S}}{\,\star\,} {{\_h}}{_{{N S}}}\right) \stackrel{ S \, \in \, {A S} }{\,\star\,} {{\hat{n}^c}}{_{{A S}}}\end{eq} &
     \begin{lay}convective enthalpy flow for given stream\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
         \hyperlink{"v:103"}{ 78 }\hypertarget{"e:78"}{  } &

@@ -6,21 +6,32 @@
       "named_network": "A-solid",
       "class": "node_simple",
       "type": "constant|infinity",
-      "variant": "PowerSource",
-      "instantiated_variables": {},
-      "tokens": {},
-      "injected_typed_tokens": {}
+      "variant": "MaterialSource",
+      "instantiated_variables": {
+        "V_17": 1.0,
+        "V_66": 1.0
+      },
+      "tokens": {
+        "mass": [
+          "A"
+        ]
+      },
+      "injected_typed_tokens": {
+        "mass": [
+          "A"
+        ]
+      }
     },
     "2": {
       "name": "default",
       "network": "liquid",
       "named_network": "A-liquid",
       "class": "node_simple",
-      "type": "constant|infinity",
-      "variant": "PowerSource",
+      "type": "dynamic|lumped",
+      "variant": "MassControlVolume",
       "instantiated_variables": {},
       "tokens": {},
-      "injected_typed_tokens": {}
+      "conversions": {}
     }
   },
   "arcs": {},

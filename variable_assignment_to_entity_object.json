@@ -430,5 +430,926 @@
         "output_vars": [
             "V_173"
         ]
+    },
+    "macroscopic.node.energy|constant|infinity.EnergySource": {
+        "index_set": "N_cons",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_105": []
+            },
+            {
+                "V_107": []
+            }
+        ],
+        "init_vars": [
+            "V_105",
+            "V_107"
+        ],
+        "input_vars": [],
+        "output_vars": [
+            "V_105",
+            "V_107"
+        ]
+    },
+    "material >>> macroscopic (kq_z_A -> _kq_z_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_214": [
+                    "E_178"
+                ],
+                "E_178": [
+                    "V_199"
+                ],
+                "V_199": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_199"
+        ],
+        "output_vars": [
+            "V_214"
+        ]
+    },
+    "material >>> macroscopic (kq_x -> _kq_x)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_76": [
+                    "E_53"
+                ],
+                "E_53": [
+                    "V_44"
+                ],
+                "V_44": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_44"
+        ],
+        "output_vars": [
+            "V_76"
+        ]
+    },
+    "material >>> macroscopic (kd_y_A -> _kd_y_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_210": [
+                    "E_174"
+                ],
+                "E_174": [
+                    "V_195"
+                ],
+                "V_195": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_195"
+        ],
+        "output_vars": [
+            "V_210"
+        ]
+    },
+    "macroscopic >>> control (T -> _T)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_125": [
+                    "E_105"
+                ],
+                "E_105": [
+                    "V_18"
+                ],
+                "V_18": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_18"
+        ],
+        "output_vars": [
+            "V_125"
+        ]
+    },
+    "macroscopic >>> control (i -> _i)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_119": [
+                    "E_99"
+                ],
+                "E_99": [
+                    "V_113"
+                ],
+                "V_113": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_113"
+        ],
+        "output_vars": [
+            "V_119"
+        ]
+    },
+    "material >>> macroscopic (k_d_Fick_A -> _k_d_Fick_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_205": [
+                    "E_169"
+                ],
+                "E_169": [
+                    "V_188"
+                ],
+                "V_188": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_188"
+        ],
+        "output_vars": [
+            "V_205"
+        ]
+    },
+    "material >>> macroscopic (kc_x -> _kc_x)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_81": [
+                    "E_58"
+                ],
+                "E_58": [
+                    "V_48"
+                ],
+                "V_48": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_48"
+        ],
+        "output_vars": [
+            "V_81"
+        ]
+    },
+    "material >>> macroscopic (density -> _density)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_74": [
+                    "E_51"
+                ],
+                "E_51": [
+                    "V_59"
+                ],
+                "V_59": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_59"
+        ],
+        "output_vars": [
+            "V_74"
+        ]
+    },
+    "material >>> macroscopic (kq_y_A -> _kq_y_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_213": [
+                    "E_177"
+                ],
+                "E_177": [
+                    "V_198"
+                ],
+                "V_198": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_198"
+        ],
+        "output_vars": [
+            "V_213"
+        ]
+    },
+    "material >>> macroscopic (kc_y -> _kc_y)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_83": [
+                    "E_60"
+                ],
+                "E_60": [
+                    "V_49"
+                ],
+                "V_49": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_49"
+        ],
+        "output_vars": [
+            "V_83"
+        ]
+    },
+    "material >>> macroscopic (additive -> _additive)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_140": [
+                    "E_112"
+                ],
+                "E_112": [
+                    "V_112"
+                ],
+                "V_112": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_112"
+        ],
+        "output_vars": [
+            "V_140"
+        ]
+    },
+    "material >>> macroscopic (kc_x_A -> _kc_x_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_206": [
+                    "E_170"
+                ],
+                "E_170": [
+                    "V_191"
+                ],
+                "V_191": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_191"
+        ],
+        "output_vars": [
+            "V_206"
+        ]
+    },
+    "material >>> macroscopic (kd_x -> _kd_x)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_86": [
+                    "E_63"
+                ],
+                "E_63": [
+                    "V_52"
+                ],
+                "V_52": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_52"
+        ],
+        "output_vars": [
+            "V_86"
+        ]
+    },
+    "material >>> macroscopic (h -> _h)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_75": [
+                    "E_52"
+                ],
+                "E_52": [
+                    "V_56"
+                ],
+                "V_56": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_56"
+        ],
+        "output_vars": [
+            "V_75"
+        ]
+    },
+    "material >>> macroscopic (h_A -> _h_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_204": [
+                    "E_168"
+                ],
+                "E_168": [
+                    "V_187"
+                ],
+                "V_187": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_187"
+        ],
+        "output_vars": [
+            "V_204"
+        ]
+    },
+    "material >>> macroscopic (Cv -> _Cv)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_77": [
+                    "E_54"
+                ],
+                "E_54": [
+                    "V_43"
+                ],
+                "V_43": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_43"
+        ],
+        "output_vars": [
+            "V_77"
+        ]
+    },
+    "macroscopic >>> material (i -> _i)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_114": [
+                    "E_90"
+                ],
+                "E_90": [
+                    "V_113"
+                ],
+                "V_113": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_113"
+        ],
+        "output_vars": [
+            "V_114"
+        ]
+    },
+    "material >>> macroscopic (density_A -> _density_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_202": [
+                    "E_166"
+                ],
+                "E_166": [
+                    "V_189"
+                ],
+                "V_189": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_189"
+        ],
+        "output_vars": [
+            "V_202"
+        ]
+    },
+    "material >>> macroscopic (Cp -> _Cp)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_82": [
+                    "E_59"
+                ],
+                "E_59": [
+                    "V_42"
+                ],
+                "V_42": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_42"
+        ],
+        "output_vars": [
+            "V_82"
+        ]
+    },
+    "material >>> macroscopic (kd_y -> _kd_y)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_87": [
+                    "E_64"
+                ],
+                "E_64": [
+                    "V_53"
+                ],
+                "V_53": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_53"
+        ],
+        "output_vars": [
+            "V_87"
+        ]
+    },
+    "macroscopic >>> reactions (c -> _c)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_67": [
+                    "E_45"
+                ],
+                "E_45": [
+                    "V_66"
+                ],
+                "V_66": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_66"
+        ],
+        "output_vars": [
+            "V_67"
+        ]
+    },
+    "reactions >>> macroscopic (nProd -> _nProd)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_164": [
+                    "E_131"
+                ],
+                "E_131": [
+                    "V_163"
+                ],
+                "V_163": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_163"
+        ],
+        "output_vars": [
+            "V_164"
+        ]
+    },
+    "material >>> control (additive -> _additive)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_124": [
+                    "E_104"
+                ],
+                "E_104": [
+                    "V_112"
+                ],
+                "V_112": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_112"
+        ],
+        "output_vars": [
+            "V_124"
+        ]
+    },
+    "material >>> macroscopic (kq_y -> _kq_y)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_78": [
+                    "E_55"
+                ],
+                "E_55": [
+                    "V_45"
+                ],
+                "V_45": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_45"
+        ],
+        "output_vars": [
+            "V_78"
+        ]
+    },
+    "material >>> macroscopic (kc_z_A -> _kc_z_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_208": [
+                    "E_172"
+                ],
+                "E_172": [
+                    "V_193"
+                ],
+                "V_193": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_193"
+        ],
+        "output_vars": [
+            "V_208"
+        ]
+    },
+    "material >>> macroscopic (kd_x_A -> _kd_x_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_209": [
+                    "E_173"
+                ],
+                "E_173": [
+                    "V_194"
+                ],
+                "V_194": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_194"
+        ],
+        "output_vars": [
+            "V_209"
+        ]
+    },
+    "material >>> macroscopic (elConductC -> _elConductC)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_117": [
+                    "E_94"
+                ],
+                "E_94": [
+                    "V_116"
+                ],
+                "V_116": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_116"
+        ],
+        "output_vars": [
+            "V_117"
+        ]
+    },
+    "material >>> macroscopic (elConductC_A -> _elConductC_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_203": [
+                    "E_167"
+                ],
+                "E_167": [
+                    "V_190"
+                ],
+                "V_190": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_190"
+        ],
+        "output_vars": [
+            "V_203"
+        ]
+    },
+    "material >>> macroscopic (kc_z -> _kc_z)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_84": [
+                    "E_61"
+                ],
+                "E_61": [
+                    "V_50"
+                ],
+                "V_50": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_50"
+        ],
+        "output_vars": [
+            "V_84"
+        ]
+    },
+    "material >>> macroscopic (kq_x_A -> _kq_x_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_212": [
+                    "E_176"
+                ],
+                "E_176": [
+                    "V_197"
+                ],
+                "V_197": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_197"
+        ],
+        "output_vars": [
+            "V_212"
+        ]
+    },
+    "material >>> macroscopic (k_d_Fick -> _k_d_Fick)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_184": [
+                    "E_151"
+                ],
+                "E_151": [
+                    "V_183"
+                ],
+                "V_183": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_183"
+        ],
+        "output_vars": [
+            "V_184"
+        ]
+    },
+    "material >>> macroscopic (kc_y_A -> _kc_y_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_207": [
+                    "E_171"
+                ],
+                "E_171": [
+                    "V_192"
+                ],
+                "V_192": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_192"
+        ],
+        "output_vars": [
+            "V_207"
+        ]
+    },
+    "macroscopic >>> control (Ue -> _Ue)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_142": [
+                    "E_114"
+                ],
+                "E_114": [
+                    "V_27"
+                ],
+                "V_27": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_27"
+        ],
+        "output_vars": [
+            "V_142"
+        ]
+    },
+    "control >>> macroscopic (switch -> _switch)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_172": [
+                    "E_139"
+                ],
+                "E_139": [
+                    "V_171"
+                ],
+                "V_171": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_171"
+        ],
+        "output_vars": [
+            "V_172"
+        ]
+    },
+    "material >>> macroscopic (kq_z -> _kq_z)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_79": [
+                    "E_56"
+                ],
+                "E_56": [
+                    "V_46"
+                ],
+                "V_46": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_46"
+        ],
+        "output_vars": [
+            "V_79"
+        ]
+    },
+    "macroscopic >>> material (m -> _m)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_58": [
+                    "E_37"
+                ],
+                "E_37": [
+                    "V_57"
+                ],
+                "V_57": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_57"
+        ],
+        "output_vars": [
+            "V_58"
+        ]
+    },
+    "material >>> macroscopic (Mm -> _Mm)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_41": [
+                    "E_20"
+                ],
+                "E_20": [
+                    "V_40"
+                ],
+                "V_40": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_40"
+        ],
+        "output_vars": [
+            "V_41"
+        ]
+    },
+    "material >>> macroscopic (kd_z -> _kd_z)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_88": [
+                    "E_65"
+                ],
+                "E_65": [
+                    "V_54"
+                ],
+                "V_54": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_54"
+        ],
+        "output_vars": [
+            "V_88"
+        ]
+    },
+    "material >>> macroscopic (kd_z_A -> _kd_z_A)": {
+        "index_set": null,
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_211": [
+                    "E_175"
+                ],
+                "E_175": [
+                    "V_196"
+                ],
+                "V_196": []
+            }
+        ],
+        "init_vars": [],
+        "input_vars": [
+            "V_196"
+        ],
+        "output_vars": [
+            "V_211"
+        ]
+    },
+    "control.node.signal|event|AE.temperatureInput": {
+        "index_set": "N_even",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_220": [
+                    "E_187"
+                ],
+                "E_187": [
+                    "V_125",
+                    "V_219"
+                ],
+                "V_125": [],
+                "V_219": []
+            }
+        ],
+        "init_vars": [
+            "V_219"
+        ],
+        "input_vars": [
+            "V_125"
+        ],
+        "output_vars": [
+            "V_220"
+        ]
+    },
+    "macroscopic.node.mass|constant|infinity.MaterialSink": {
+        "index_set": "N_cons",
+        "integrators": {},
+        "var_eq_forest": [
+            {
+                "V_17": []
+            }
+        ],
+        "init_vars": [
+            "V_17"
+        ],
+        "input_vars": [],
+        "output_vars": [
+            "V_17"
+        ]
     }
 }

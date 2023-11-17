@@ -1,0 +1,226 @@
+{
+  "nodes": {
+    "1": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "variant": "MaterialSource",
+      "instantiated_variables": {},
+      "tokens": {
+        "mass": []
+      },
+      "injected_typed_tokens": {},
+      "mass": []
+    },
+    "2": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "dynamic|lumped",
+      "variant": "MassControlVolume",
+      "instantiated_variables": {},
+      "tokens": {
+        "mass": [],
+        "information": []
+      },
+      "conversions": {},
+      "mass": []
+    },
+    "3": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "event|AE",
+      "variant": "temperatureInput",
+      "instantiated_variables": {},
+      "tokens": {},
+      "conversions": {}
+    },
+    "4": {
+      "name": "default",
+      "network": "solid >>> control",
+      "named_network": "A-solid >>> A-control",
+      "class": "node_interface",
+      "type": "node_interface",
+      "variant": null,
+      "instantiated_variables": {}
+    },
+    "5": {
+      "name": "default",
+      "network": "liquid",
+      "named_network": "A-liquid",
+      "class": "node_simple",
+      "type": "dynamic|lumped",
+      "variant": "MassControlVolume",
+      "instantiated_variables": {},
+      "tokens": {},
+      "conversions": {}
+    }
+  },
+  "arcs": {
+    "0": {
+      "name": "1 | 2",
+      "source": 1,
+      "sink": 2,
+      "token": "mass",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "convection",
+      "nature": "lumped",
+      "variant": "ConvectiveFlowPulse",
+      "instantiated_variables": {}
+    },
+    "1": {
+      "name": "2 | 4",
+      "source": 2,
+      "sink": 4,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "interface",
+      "instantiated_variables": {}
+    },
+    "2": {
+      "name": "4 | 3",
+      "source": 4,
+      "sink": 3,
+      "token": "information",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional",
+      "variant": "interface",
+      "instantiated_variables": {}
+    }
+  },
+  "named_networks": {
+    "network__named_network": {
+      "control": [
+        "A-control"
+      ],
+      "energy": [
+        "A-energy"
+      ],
+      "gas": [
+        "A-gas"
+      ],
+      "liquid": [
+        "A-liquid"
+      ],
+      "material": [
+        "A-material"
+      ],
+      "reactions": [
+        "A-reactions"
+      ],
+      "solid": [
+        "A-solid"
+      ]
+    },
+    "A-control": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-energy": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-gas": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-liquid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-material": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-reactions": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-solid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    }
+  },
+  "token_domains": {
+    "charge": {},
+    "energy": {},
+    "mass": {
+      "0": [
+        1,
+        2
+      ]
+    },
+    "signal": {}
+  },
+  "typed_token_domains": {
+    "mass": {
+      "0": {
+        "species": {}
+      }
+    }
+  },
+  "token_incidence_matrix": {
+    "0": {
+      "mass": {
+        "1": [
+          0
+        ],
+        "2": [
+          0
+        ]
+      }
+    }
+  },
+  "typed_token_incidence_matrix": {
+    "mass": {
+      "0": {}
+    }
+  },
+  "typed_token_lists": {
+    "mass": {
+      "0": []
+    }
+  }
+}

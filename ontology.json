@@ -51,6 +51,80 @@
       },
       "type": "inter"
     },
+    "energy": {
+      "behaviour": {
+        "arc": [
+          "transport",
+          "geometry"
+        ],
+        "graph": [
+          "network",
+          "projection",
+          "differenceOperator"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "effort",
+          "secondaryState",
+          "conversion",
+          "diffState",
+          "internalTransport"
+        ]
+      },
+      "children": [],
+      "name": "energy",
+      "parents": [
+        "macroscopic",
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped"
+          ]
+        },
+        "token": {
+          "charge": [],
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "intra"
+    },
     "fluid": {
       "behaviour": {
         "arc": [
@@ -302,7 +376,8 @@
       },
       "children": [
         "solid",
-        "fluid"
+        "fluid",
+        "energy"
       ],
       "name": "macroscopic",
       "parents": [
@@ -661,6 +736,7 @@
     "name_space": false,
     "network_enable_adding_indices": {
       "control": true,
+      "energy": false,
       "fluid": false,
       "gas": false,
       "liquid": false,

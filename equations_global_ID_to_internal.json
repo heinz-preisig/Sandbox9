@@ -19,11 +19,6 @@
     "network": "macroscopic >>> control",
     "rhs": " T"
   },
-  "E_106": {
-    "lhs": "intensities",
-    "network": "macroscopic",
-    "rhs": " MixedStack ( p , T , chemPot , c , Ue )"
-  },
   "E_107": {
     "lhs": "nTotal",
     "network": "macroscopic",
@@ -83,11 +78,6 @@
     "lhs": "RComputed",
     "network": "control",
     "rhs": " inv ( Imeasured ) . UeMeasured"
-  },
-  "E_118": {
-    "lhs": "store",
-    "network": "control",
-    "rhs": " MixedStack ( Imeasured , UeMeasured , RComputed , addMeasured )"
   },
   "E_119": {
     "lhs": "setPoint",
@@ -193,11 +183,6 @@
     "lhs": "fnc_AS_controlled",
     "network": "macroscopic",
     "rhs": " _switch . fnc_AS"
-  },
-  "E_142": {
-    "lhs": "dndt",
-    "network": "macroscopic",
-    "rhs": " F_NS_AS | A & S | Stack ( fnc_AS , fnc_AS_controlled )"
   },
   "E_145": {
     "lhs": "g",
@@ -373,6 +358,31 @@
     "lhs": "fnc_AS_controlled",
     "network": "macroscopic",
     "rhs": " pulse . fnc_AS"
+  },
+  "E_182": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": " Instantiate ( dndt , zero )"
+  },
+  "E_183": {
+    "lhs": "T_ref",
+    "network": "macroscopic",
+    "rhs": " Instantiate ( T  )"
+  },
+  "E_184": {
+    "lhs": "H",
+    "network": "macroscopic",
+    "rhs": " _Cp . ( T - T_ref )"
+  },
+  "E_185": {
+    "lhs": "T",
+    "network": "macroscopic",
+    "rhs": " Root ( H )"
+  },
+  "E_186": {
+    "lhs": "T_norm",
+    "network": "control",
+    "rhs": " Instantiate ( _T , value )"
   },
   "E_2": {
     "lhs": "zero",
@@ -753,5 +763,10 @@
     "lhs": "_i",
     "network": "macroscopic >>> control",
     "rhs": " i"
+  },
+  "E_187": {
+    "lhs": "T_measured",
+    "network": "control",
+    "rhs": " _T . inv ( T_norm )"
   }
 }
